@@ -3,5 +3,5 @@ $title = "About";
 $basePath = "";
 include 'inc/header.php';
 ?>
-<p>This is the about page. Add your biography or project description here.</p>
+<p>Hello this is my exercise 2.</p>
 <?php include 'inc/footer.php'; ?>
