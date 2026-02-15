@@ -16,6 +16,12 @@
   --bg-color: #ffffff;
 }
 
+/* Light mode - Active nav link */
+.nav-links a.active {
+  background-color: #A4D6EB;
+  border: 2px solid #03A6EA;
+}
+
 body.dark {
   --nav-bg: #1e1e1e;
   --nav-hover: #2e2e2e;
@@ -75,9 +81,9 @@ body {
   bottom: 0;            /* sticks to the bottom of top bar */
   left: 0;
   width: 100%;          /* full page width */
-  height: 1px;          /* thickness of the line */
-  background-color: #ccc; /* light gray color */
-  z-index: 10;          /* sits above background */
+  height: 2px;          /* thickness of the line */
+  background-color: #E1E5EB; /* light gray color */
+  z-index: 10;        /* sits above background */
 }
 
 /* ===== VERTICAL DIVIDER NEXT TO SIDEBAR ===== */
@@ -86,9 +92,9 @@ body {
   position: absolute;
   top: 0px;
   right: 0;
-  width: 1px;
-  height: 75px;
-  background-color: #ccc;
+  width: 2px;
+  height: 1080px;
+  background-color: #E1E5EB;
 }
 
 /* ===== NAV LINKS ===== */
@@ -543,4 +549,391 @@ margin-top: 3px;
 
 .timeframe.selected {
   background-color: #A4D6EB;
+}
+
+/* ===== SETTINGS PAGE ===== */
+.settings-container {
+  display: flex;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.settings-notifications,
+.settings-account {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  padding: 5px;
+  width: 50%;
+  height: calc(100vh - 145px);
+  position: relative;  /* ADD THIS LINE */
+}
+
+.settings-notifications h2,
+.settings-account h2 {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1F2A38;
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+.settings-divider,
+.notification-divider {
+  width: calc(100% + 10px);
+  height: 2px;
+  background-color: #E1E5EB;
+  margin-left: -5px;
+  margin-bottom: 15px;
+}
+
+/* ===== NOTIFICATION ITEMS ===== */
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.checkbox-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.settings-checkbox {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #E1E5EB;
+  border-radius: 4px;
+}
+
+.checkbox-container:hover .checkmark {
+  border-color: #03A6EA;
+}
+
+.settings-checkbox:checked ~ .checkmark {
+  background-color: #03A6EA;
+  border-color: #03A6EA;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.settings-checkbox:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox-container .checkmark::after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2A38;
+  margin-bottom: 4px;
+}
+
+.notification-description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #2C3644;
+}
+
+/* ===== RADIO BUTTONS ===== */
+.notification-method {
+  padding: 10px;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.settings-radio {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.radio-dot {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #E1E5EB;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.radio-container:hover .radio-dot {
+  border-color: #03A6EA;
+}
+
+.settings-radio:checked ~ .radio-dot {
+  border-color: #03A6EA;
+  background-color: #fff;
+}
+
+.settings-radio:checked ~ .radio-dot::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #03A6EA;
+}
+
+/* ===== ACCOUNT SECTION ===== */
+.account-section {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.account-input {
+  width: 100%;
+  padding: 12px;  /* INCREASED from 8px to make taller */
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #2C3644;
+  border: 2px solid #E1E5EB;
+  background-color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.account-input::placeholder {
+  color: #E1E5EB;
+}
+
+/* ===== ACCOUNT BUTTONS ===== */
+.account-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  right: 5px;
+}
+
+.btn-save,
+.btn-cancel {
+  flex: 1;  /* makes both buttons equal width */
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #03A6EA;
+  transition: background-color 0.3s;
+}
+
+.btn-save {
+  background-color: #A4D6EB;
+  color: #1F2A38;
+}
+
+.btn-save:hover {
+  background-color: #03A6EA;
+}
+
+.btn-cancel {
+  background-color: #F5F7FA;
+  border-color: #E1E5EB;
+  color: #1F2A38;
+}
+
+.btn-cancel:hover {
+  background-color: #E1E5EB;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark {
+  background-color: #0F141A;
+}
+
+body.dark .sidebar {
+  background-color: #0F141A;
+}
+
+body.dark .top-bar {
+  background-color: #0F141A;
+}
+
+body.dark .main-content {
+  background-color: #0F141A;
+  color: #E8ECF2;
+}
+
+body.dark .dashboard-title {
+  color: #E8ECF2;
+}
+
+/* Dark mode - White boxes become dark */
+body.dark .settings-notifications,
+body.dark .settings-account,
+body.dark .account-overview,
+body.dark .portfolio-summary,
+body.dark .stock-list-container,
+body.dark .chart-container {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+/* Dark mode - All headings */
+body.dark .settings-notifications h2,
+body.dark .settings-account h2,
+body.dark .account-overview h2,
+body.dark .portfolio-summary h2 {
+  color: #E8ECF2;
+}
+
+/* Dark mode - Divider lines */
+body.dark .settings-divider,
+body.dark .notification-divider,
+body.dark .top-bar-divider,
+body.dark .sidebar::after {
+  background-color: #2C3644;
+}
+
+/* Dark mode - Text colors */
+body.dark .notification-title,
+body.dark .notification-description,
+body.dark .account-type,
+body.dark .account-amount,
+body.dark .portfolio-type,
+body.dark .portfolio-amount {
+  color: #E8ECF2;
+}
+
+/* Dark mode - Checkboxes */
+body.dark .checkmark {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .settings-checkbox:checked ~ .checkmark {
+  background-color: #3A6EA5;
+  border-color: #3A6EA5;
+}
+
+/* Dark mode - Radio buttons */
+body.dark .radio-dot {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .settings-radio:checked ~ .radio-dot {
+  border-color: #3A6EA5;
+}
+
+body.dark .settings-radio:checked ~ .radio-dot::after {
+  background-color: #3A6EA5;
+}
+
+/* Dark mode - Input fields */
+body.dark .account-input {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+  color: #E8ECF2;
+}
+
+body.dark .account-input::placeholder {
+  color: #2C3644;
+}
+
+/* Dark mode - Buttons */
+body.dark .btn-save {
+  background-color: #3A6EA5;
+  border-color: #2C3644;
+  color: #E8ECF2;
+}
+
+body.dark .btn-save:hover {
+  background-color: #2C5580;
+}
+
+body.dark .btn-cancel {
+  background-color: #0F141A;
+  border-color: #2C3644;
+  color: #E8ECF2;
+}
+
+body.dark .btn-cancel:hover {
+  background-color: #1F2A38;
+}
+
+/* Dark mode - Theme switch background */
+body.dark .slider {
+  background-color: #1F2A38;
+}
+
+/* Dark mode - Nav links */
+body.dark .nav-links a {
+  color: #E8ECF2;
+}
+
+body.dark .nav-links a:hover {
+  background-color: #3A6EA5;
+  border-color: #3A6EA5;
+}
+
+body.dark .nav-links a.active {
+  background-color: #3A6EA5;
+  border-color: #3A6EA5;
+}
+
+/* Dark mode - Search bar */
+body.dark .search-bar {
+  background-color: #1F2A38;
+  border-color: #3A6EA5;  /* CHANGED from #2C3644 to #3A6EA5 */
+  color: #E8ECF2;
+}
+
+body.dark .search-bar::placeholder {
+  color: #E8ECF2;  /* CHANGED from #2C3644 to #E8ECF2 */
+}
+
+/* Dark mode - Input fields */
+body.dark .account-input {
+  background-color: #1F2A38;
+  border-color: #3A6EA5;  /* CHANGED from #2C3644 to #3A6EA5 */
+  color: #E8ECF2;
+}
+
+body.dark .account-input::placeholder {
+  color: #E8ECF2;  /* CHANGED from #2C3644 to #E8ECF2 */
 }

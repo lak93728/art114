@@ -31,7 +31,7 @@
 
   <!-- Portfolio Summary Box -->
   <div class="portfolio-summary">
-    <h2>Portfolio Summary</h2>
+    <h2>PORTFOLIO SUMMARY</h2>
 
     <div class="portfolio-row">
       <div class="portfolio-col">

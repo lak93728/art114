@@ -20,17 +20,17 @@
   </div>
 <div class="top-bar-right">
   <img 
-    src="/art114/project1/images/Bell.png" 
+    src="/art114/project1/images/notificationlight.png" 
     alt="Notifications" 
     class="top-icon"
   >
   <img 
-    src="/art114/project1/images/User.png" 
+    src="/art114/project1/images/userlight.png" 
     alt="User Profile" 
     class="top-icon"
   >
   <img 
-    src="/art114/project1/images/login.png" 
+    src="/art114/project1/images/loginlight.png" 
     alt="Login / Logout" 
     class="top-icon"
   >
@@ -40,4 +40,3 @@
 </div>
 
 </header>
-
