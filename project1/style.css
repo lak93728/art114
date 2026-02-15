@@ -303,6 +303,7 @@ body {
   padding: 10px;
   padding-top: 90px;
   min-height: 100vh;
+  position: relative;  /* ADD THIS */
 }
 
 .portfolio-summary {
@@ -354,8 +355,8 @@ body {
   margin-right: 40px;  
   display: flex;
   flex-direction: column;
-  width: 220px;                /* narrow */
-  height: 160px;         /* scrollable height */
+  width: 425px;                /* narrow */
+  height: 50px;         /* scrollable height */
 }
 
 /* Top blue header */
@@ -481,9 +482,8 @@ margin-top: 3px;
 }
 
 #portfolioChart {
-  margin-left: 15px;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  margin-bottom: -30px;
+  margin-top: 0px;
   box-sizing: border-box;
   overflow: visible;
   margin: 0;
@@ -493,15 +493,13 @@ margin-top: 3px;
 
 .chart-container {
   background-color: #ffffff;       /* white background */
-  border: 2px solid #E1E5EB;      /* gray border like other boxes */             /* rounded corners */
-  margin-top: -87px;                /* space above chart */
-  width: 105%;                       /* match Portfolio Summary width */
+     /* gray border like other boxes */             /* rounded corners */
+  margin-top: -30px;                /* space above chart */
+  width: 100%;                       /* match Portfolio Summary width */
   height: 250px; 
   display: flex;        /* ensures inner chart can stretch */
   justify-content: center;
   align-items: center;                  /* fixed height for ECharts */
-  padding-left: 20px;   /* match grid.left */
-  padding-right: -60px;  /* match grid.right */
   box-sizing: border-box;
   overflow: visible;    /* allow labels to render fully */
 }
@@ -512,11 +510,12 @@ margin-top: 3px;
 }
 
 .chart-controls {
-  position: absolute;   /* allows placement in top-right */
-  top: 0;               /* flush with top of wrapper */
-  right: 0;             /* flush with right edge */
+  position: relative;  /* CHANGED from absolute */
   display: flex;
-  gap: 5px;             /* space between boxes */
+  justify-content: flex-end;  /* ADD THIS - aligns buttons to the right */
+  gap: 5px;
+  margin-top: 5px;  /* ADD THIS - space above buttons */
+  margin-right: 25px;  /* ADD THIS - space from right edge */
 }
 
 .timeframe {
@@ -1150,4 +1149,160 @@ body.dark .system-time {
   color: #2C3644;
   white-space: nowrap;
   text-align: right;
+}
+
+/* ===== MARKET OVERVIEW ===== */
+.market-overview-container {
+  flex: 1;
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  height: 50px;
+}
+
+.market-overview-header {
+  background-color: #03A6EA;
+  color: #000000;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 18px;
+  width: 100%;  
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.market-overview-subheader {
+  background-color: #E1E5EB;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+  margin-bottom: 2px;
+  width: 100%;    
+  padding-right: 20px;
+}
+
+.market-overview-subheader .index-title {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.market-overview-subheader .value-title {
+  margin-left: -100px;
+  margin-right: 75px;
+}
+
+.market-overview-list {
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 5px;
+}
+
+.market-overview-list .column span {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans', sans-serif;
+  padding-top: 8px;
+}
+
+.market-overview-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.market-overview-list::-webkit-scrollbar-track {
+  background: #d3d3d3;
+  border-radius: 4px;
+}
+
+.market-overview-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+/* Dark mode for market overview */
+body.dark .market-overview-container {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+.right-side-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 375px;
+}
+
+/* ===== RECENT TRANSACTIONS TABLE ===== */
+.transactions-container {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  margin-top: 5px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 480px);  /* Matches portfolio-and-stocks width */
+}
+
+.transactions-header {
+  background-color: #03A6EA;
+  color: #000000;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  width: 100%;  
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.transactions-subheader {
+  background-color: #E1E5EB;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  display: grid;
+  grid-template-columns: 90px 180px 70px 70px 70px;
+  gap: 10px;
+  padding: 6px 15px;
+  font-weight: 500;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-row {
+  display: grid;
+  grid-template-columns: 90px 180px 70px 70px 70px;
+  gap: 10px;
+  padding: 8px 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #1F2A38;
+  border-bottom: 1px solid #E1E5EB;
+}
+
+.transaction-row:last-child {
+  border-bottom: none;
+}
+
+/* Dark mode */
+body.dark .transactions-container {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .transaction-row {
+  color: #E8ECF2;
+  border-bottom-color: #2C3644;
 }
