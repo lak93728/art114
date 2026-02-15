@@ -1246,23 +1246,26 @@ body.dark .market-overview-container {
 .transactions-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-  margin-top: 5px;
+  margin-top: -30px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
-  width: calc(100% - 480px);  /* Matches portfolio-and-stocks width */
+  width: 815px;
+  height: 185px;  /* Fills remaining space to bottom of screen */
+  overflow-y: auto;  /* Scroll if needed */
 }
 
 .transactions-header {
   background-color: #03A6EA;
   color: #000000;
   font-family: 'Azeret Mono', monospace;
-  font-size: 14px;
+  font-size: 22px;
   width: 100%;  
-  height: 30px;
+  height: 45px;
   display: flex;
   align-items: center;
   padding-left: 15px;
+  flex-shrink: 0;  /* Prevent header from shrinking */
 }
 
 .transactions-subheader {
@@ -1270,21 +1273,24 @@ body.dark .market-overview-container {
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   display: grid;
-  grid-template-columns: 90px 180px 70px 70px 70px;
-  gap: 10px;
+   grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - increased widths */
+  gap: 47px;  /* CHANGED from 10px to 30px - more space between columns */
   padding: 6px 15px;
   font-weight: 500;
+  flex-shrink: 0;  /* Prevent subheader from shrinking */
 }
 
 .transactions-list {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;  /* Scroll the list */
+  flex: 1;  /* Take remaining space */
 }
 
 .transaction-row {
   display: grid;
-  grid-template-columns: 90px 180px 70px 70px 70px;
-  gap: 10px;
+  grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - matches subheader */
+  gap: 47px; 
   padding: 8px 15px;
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
@@ -1296,6 +1302,21 @@ body.dark .market-overview-container {
   border-bottom: none;
 }
 
+/* Scrollbar for transactions list */
+.transactions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transactions-list::-webkit-scrollbar-track {
+  background: #E1E5EB;
+  border-radius: 4px;
+}
+
+.transactions-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
 /* Dark mode */
 body.dark .transactions-container {
   background-color: #1F2A38;
@@ -1305,4 +1326,96 @@ body.dark .transactions-container {
 body.dark .transaction-row {
   color: #E8ECF2;
   border-bottom-color: #2C3644;
+}
+
+body.dark .transactions-list::-webkit-scrollbar-track {
+  background: #2C3644;
+}
+
+/* ===== NEWS CONTAINER ===== */
+.news-container {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  padding: 5px;
+  margin-top: 10px;
+  width: 425px;
+  height: calc(100vh - 690px);  /* Fills remaining space to bottom of screen */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-container h2 {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  color: #1F2A38;
+  margin-bottom: 12px;
+  font-weight: 400;
+  padding-left: 5px;
+  height: calc(100vh - 310px); 
+}
+
+.news-item {
+  padding: 10px 5px;
+  border-bottom: 1px solid #E1E5EB;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #1F2A38;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.news-time {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  color: #2C3644;
+}
+
+/* Scrollbar for news */
+.news-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-container::-webkit-scrollbar-track {
+  background: #E1E5EB;
+  border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+/* Dark mode */
+body.dark .news-container {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .news-container h2 {
+  color: #E8ECF2;
+}
+
+body.dark .news-item {
+  border-bottom-color: #2C3644;
+}
+
+body.dark .news-title {
+  color: #E8ECF2;
+}
+
+body.dark .news-time {
+  color: #E8ECF2;
+}
+
+body.dark .news-container::-webkit-scrollbar-track {
+  background: #2C3644;
 }

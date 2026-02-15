@@ -58,13 +58,8 @@
 
     <div class="chart-container">
       <div id="portfolioChart"></div>
-
-      <!-- RECENT TRANSACTIONS TABLE -->
-
     </div>
   </div>
-
-  
 
    <!-- RIGHT SIDE WRAPPER FOR STOCK LIST + MARKET OVERVIEW -->
   <div class="right-side-wrapper">
@@ -170,12 +165,112 @@
       </div>
     </div>
 
+    <!-- NEWS CONTAINER -->
+    <div class="news-container">
+      <h2>NEWS</h2>
+      
+      <div class="news-item">
+        <div class="news-title">Apple announces new AI features coming to iPhone lineup</div>
+        <div class="news-time">1 hour ago</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Federal Reserve holds interest rates steady amid economic uncertainty</div>
+        <div class="news-time">2 hours ago</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Tesla stock surges on quarterly earnings beat</div>
+        <div class="news-time">3 hours ago</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Microsoft partners with major cloud provider for expanded services</div>
+        <div class="news-time">4 hours ago</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">NVIDIA launches next-generation GPU architecture</div>
+        <div class="news-time">5 hours ago</div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-title">Amazon expands same-day delivery to 50 new cities</div>
+        <div class="news-time">6 hours ago</div>
+      </div>
+    </div>
+
   </div> <!-- End right-side-wrapper -->
 
 
-  
+  </div> <!-- End portfolio-and-stocks -->
 
+  <!-- RECENT TRANSACTIONS TABLE -->
+  <div class="transactions-container">
+    <div class="transactions-header">
+      <span>RECENT TRANSACTIONS</span>
+    </div>
 
+    <div class="transactions-subheader">
+      <span>Date</span>
+      <span>Company</span>
+      <span>Ticker</span>
+      <span>Shares</span>
+      <span>Price</span>
+    </div>
+
+    <div class="transactions-list">
+      <div class="transaction-row">
+        <span>02/15/2026</span>
+        <span>Apple Inc.</span>
+        <span>AAPL</span>
+        <span>10</span>
+        <span>$175.23</span>
+      </div>
+
+      <div class="transaction-row">
+        <span>02/14/2026</span>
+        <span>Microsoft Corporation</span>
+        <span>MSFT</span>
+        <span>5</span>
+        <span>$315.56</span>
+      </div>
+
+      <div class="transaction-row">
+        <span>02/13/2026</span>
+        <span>NVIDIA Corporation</span>
+        <span>NVDA</span>
+        <span>15</span>
+        <span>$132.91</span>
+      </div>
+
+      <div class="transaction-row">
+        <span>02/12/2026</span>
+        <span>Amazon.com Inc.</span>
+        <span>AMZN</span>
+        <span>8</span>
+        <span>$153.50</span>
+      </div>
+
+      <div class="transaction-row">
+        <span>02/11/2026</span>
+        <span>Tesla Inc.</span>
+        <span>TSLA</span>
+        <span>12</span>
+        <span>$198.00</span>
+      </div>
+
+      <div class="transaction-row">
+        <span>02/10/2026</span>
+        <span>Meta Platforms Inc.</span>
+        <span>META</span>
+        <span>6</span>
+        <span>$372.22</span>
+      </div>
+    </div>
+  </div>
+
+</main>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/footer.php'; ?>
 
