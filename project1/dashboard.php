@@ -40,7 +40,7 @@
       </div>
 
       <div class="portfolio-col">
-        <div class="portfolio-type">Today’s Change</div>
+        <div class="portfolio-type">Today's Change</div>
         <div class="portfolio-amount">$32,000.00</div>
       </div>
 
@@ -50,10 +50,6 @@
       </div>
     </div>
   </div>
-
-
-  
-  
 
   <!-- Stock List Container (RIGHT SIDE) -->
   <div class="stock-list-container">
@@ -109,18 +105,10 @@
         <span class="red">-0.58%</span>
       </div>
 
-
-      
-
     </div>
   </div>
 
 </div>
-
-
-
-
-
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/footer.php'; ?>
 
@@ -136,80 +124,81 @@
   <div id="portfolioChart"></div>
 </div>
 
-
-
 <script>
-  // Wait until the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    const toggle = document.getElementById('theme-switch');
+  document.addEventListener('DOMContentLoaded', function () {
+    const chartDom = document.getElementById('portfolioChart');
+    const myChart = echarts.init(chartDom);
 
-    toggle.addEventListener('change', function() {
-      document.body.classList.toggle('dark');
-    });
+    const option = {
+      grid: {
+        left: 80,    // increased for label space
+        right: 80,   // increased to prevent cutoff
+        top: 20,
+        bottom: 30
+      },
+
+      xAxis: {
+        type: 'category',
+        data: [
+          '25-02-02', '', '', '', '', '', '', '', '26-02-02'
+        ],
+        axisLine: {
+          lineStyle: {
+            color: '#E1E5EB'
+          }
+        },
+        axisLabel: {
+          fontFamily: 'DM Sans',
+          fontSize: 12
+        }
+      },
+
+      yAxis: {
+        type: 'value',
+        min: 0,
+        max: 100000,
+        interval: 20000,
+        splitNumber: 4,
+        axisLabel: {
+          fontFamily: 'DM Sans',
+          fontSize: 12,
+          formatter: v => '$' + v.toLocaleString()
+        },
+        splitLine: {
+          lineStyle: {
+            color: '#E1E5EB'
+          }
+        }
+      },
+
+      tooltip: {
+        trigger: 'axis',
+        formatter: params => {
+          const p = params[0];
+          return `${p.axisValue}<br/>Value: $${p.data.toLocaleString()}`;
+        }
+      },
+
+      series: [
+        {
+          data: [
+            65604, 72000, 78000, 85000, 88000, 92000, 95000, 90000, 85432.50
+          ],
+          type: 'line',
+          smooth: false,
+          lineStyle: {
+            color: '#03A6EA',
+            width: 3,
+            type: 'solid'
+          },
+          symbol: 'none'
+        }
+      ]
+    };
+
+    myChart.setOption(option);
+    window.addEventListener('resize', () => { myChart.resize(); });
   });
 </script>
 
-<script>
-  const chartDom = document.getElementById('portfolioChart');
-  const myChart = echarts.init(chartDom);
-
-  const option = {
-    grid: {
-      left: 50,
-      right: 20,
-      top: 20,
-      bottom: 30
-    },
-
-    xAxis: {
-      type: 'category',
-      data: ['2025-02-01', '', '', '', '2026-02-01'],
-      axisLine: {
-        lineStyle: {
-          color: '#E1E5EB'
-        }
-      },
-      axisLabel: {
-        fontFamily: 'DM Sans',
-        fontSize: 12
-      }
-    },
-
-    yAxis: {
-      type: 'value',
-      min: 0,
-      max: 100000,
-      interval: 20000,
-      splitNumber: 4,
-      axisLabel: {
-        fontFamily: 'DM Sans',
-        fontSize: 12
-      },
-      splitLine: {
-        lineStyle: {
-          color: '#E1E5EB'
-        }
-      }
-    },
-
-    series: [
-      {
-        data: [65604, 24954, 79482, 10684, 96737],
-        type: 'line',
-        smooth: true,
-        lineStyle: {
-          color: '#03A6EA',
-          width: 3,
-          type: 'solid'
-        },
-        symbol: 'none',
-    
-      }
-    ]
-  };
-
-  myChart.setOption(option);
-</script>
-
-
-</body> 
+</body>

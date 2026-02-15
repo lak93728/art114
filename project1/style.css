@@ -477,24 +477,27 @@ margin-top: 3px;
 #portfolioChart {
   margin-left: 15px;
   margin-bottom: 15px;
-margin-top: 30px;
-  width: 85% !important;
-  height: 180px !important;
+  margin-top: 30px;
+  box-sizing: border-box;
+  overflow: visible;
+  margin: 0;
+  width: 100% !important;
+  height: 200px !important; /* keep whatever height you prefer */
 }
-
-
 
 .chart-container {
   background-color: #ffffff;       /* white background */
   border: 2px solid #E1E5EB;      /* gray border like other boxes */             /* rounded corners */
-  margin-left: 5pxpx; 
-  margin-right: 16px;                  /* inner spacing */
   margin-top: -87px;                /* space above chart */
   width: 105%;                       /* match Portfolio Summary width */
   height: 250px; 
   display: flex;        /* ensures inner chart can stretch */
   justify-content: center;
   align-items: center;                  /* fixed height for ECharts */
+  padding-left: 20px;   /* match grid.left */
+  padding-right: -60px;  /* match grid.right */
+  box-sizing: border-box;
+  overflow: visible;    /* allow labels to render fully */
 }
 
 .chart-wrapper {
