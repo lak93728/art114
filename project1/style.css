@@ -585,6 +585,7 @@ margin-top: 3px;
   background-color: #E1E5EB;
   margin-left: -5px;
   margin-bottom: 15px;
+  margin-top: 0;  /* ADD THIS */
 }
 
 /* ===== NOTIFICATION ITEMS ===== */
@@ -936,4 +937,217 @@ body.dark .account-input {
 
 body.dark .account-input::placeholder {
   color: #E8ECF2;  /* CHANGED from #2C3644 to #E8ECF2 */
+}
+
+/* ===== ALERTS PAGE ===== */
+.alerts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 40px;
+}
+
+.alerts-box {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  padding: 5px;
+  height: calc((100vh - 140px) / 2);
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.alerts-box h2 {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1F2A38;
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+.alerts-box .settings-divider {
+  width: calc(100% + 10px);
+  height: 2px;
+  background-color: #E1E5EB;
+  margin-left: -5px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.alerts-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.alerts-box::-webkit-scrollbar-track {
+  background: #E1E5EB;
+  border-radius: 4px;
+}
+
+.alerts-box::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+.alert-item {
+  display: grid;
+  grid-template-columns: 8px 60px 2fr 1fr 120px 30px;
+  gap: 15px;
+  align-items: center;
+  padding: 0px 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2A38;
+}
+
+.alert-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #1F2A38;
+  border-radius: 50%;
+}
+
+.alert-symbol {
+  font-weight: 500;
+}
+
+.alert-detail {
+  white-space: nowrap;
+}
+
+.alert-time {
+  color: #2C3644;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.alert-close {
+  font-size: 24px;
+  cursor: pointer;
+  color: #2C3644;
+  line-height: 1;
+  text-align: center;
+}
+
+.alert-close:hover {
+  color: #1F2A38;
+}
+
+/* Dark mode for alerts page */
+body.dark .alerts-box {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .alerts-box h2 {
+  color: #E8ECF2;
+}
+
+body.dark .alerts-box::-webkit-scrollbar-track {
+  background: #2C3644;
+}
+
+body.dark .alert-item {
+  color: #E8ECF2;
+}
+
+body.dark .alert-dot {
+  background-color: #E8ECF2;
+}
+
+body.dark .alert-time {
+  color: #E8ECF2;
+}
+
+body.dark .alert-close {
+  color: #E8ECF2;
+}
+
+body.dark .alert-close:hover {
+  color: #3A6EA5;
+}
+
+.alert-dot-read {
+  width: 8px;
+  height: 8px;
+  background-color: #E1E5EB;
+  border-radius: 50%;
+}
+
+body.dark .alert-dot-read {
+  background-color: #2C3644;
+}
+
+.system-message-item {
+  display: grid;
+  grid-template-columns: 20px 1fr 120px;
+  gap: 15px;
+  align-items: center;
+  padding: 0px 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2A38;
+}
+
+.system-icon {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #1F2A38;
+}
+
+.system-message-text {
+  /* takes up remaining space */
+}
+
+.system-time {
+  color: #2C3644;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Dark mode for system messages */
+body.dark .system-message-item {
+  color: #E8ECF2;
+}
+
+body.dark .system-icon {
+  color: #E8ECF2;
+}
+
+body.dark .system-time {
+  color: #E8ECF2;
+}
+
+/* Fix timestamp alignment for both alerts and system messages */
+.alert-item {
+  display: grid;
+  grid-template-columns: 8px 60px 2fr 1fr 120px 30px;
+  gap: 15px;
+  align-items: center;
+  padding: 0px 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2A38;
+}
+
+/* Fix timestamp alignment - add space for invisible close button */
+.system-message-item {
+  display: grid;
+  grid-template-columns: 20px 1fr 120px 30px;  /* Added 30px for invisible close button space */
+  gap: 15px;
+  align-items: center;
+  padding: 0px 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #1F2A38;
+}
+
+/* Ensure time columns have same width and alignment */
+.alert-time,
+.system-time {
+  width: 120px;
+  color: #2C3644;
+  white-space: nowrap;
+  text-align: right;
 }
