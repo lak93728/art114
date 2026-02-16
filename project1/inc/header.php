@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+<link rel="icon" type="bluepeak-logo-1.png" href="/art114/project1/images//bluepeak-logo-1.png">
+
 <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 
   <meta charset="UTF-8">
