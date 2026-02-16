@@ -49,7 +49,7 @@
       <div class="portfolio-col">
         <div class="portfolio-type">Total Value</div>
         <div class="portfolio-amount">$85,432.50</div>
-      </div>
+</div>
 
       <div class="portfolio-col">
         <div class="portfolio-type">Today's Change</div>
@@ -61,6 +61,9 @@
         <div class="portfolio-amount">$8,000.00</div>
       </div>
     </div>
+
+    
+      <div class="portfolio-divider"></div>
 
     <!-- CHART CONTROLS AND CONTAINER NOW INSIDE PORTFOLIO SUMMARY -->
     <div class="chart-controls">
@@ -294,9 +297,10 @@
 
     function updateChart() {
       // Check if dark mode is active
-      const isDarkMode = document.body.classList.contains('dark-mode');
-      const textColor = isDarkMode ? '#2C3644' : '';
-      const lineColor = isDarkMode ? '#2C3644' : '#E1E5EB';
+      const isDarkMode = document.body.classList.contains('dark');
+      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  // White in dark mode, gray in light mode
+      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
+      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
 
       const option = {
         grid: {
@@ -313,7 +317,7 @@
           ],
           axisLine: {
             lineStyle: {
-              color: lineColor
+              color: axisLineColor
             }
           },
           axisLabel: {

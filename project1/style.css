@@ -265,7 +265,7 @@ body {
 /* Heading */
 .account-overview h2 {
   font-family: 'Azeret Mono', monospace;
-  font-size: 14px;
+  font-size: 18px;
   color: #1F2A38;
   margin-bottom: 12px;
   font-weight: 200;
@@ -317,10 +317,11 @@ body {
 
 .portfolio-summary h2 {
   font-family: 'Azeret Mono', monospace;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   color: #1F2A38;
   margin-bottom: 12px;
+  
 }
 
 .portfolio-row {
@@ -345,6 +346,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   color: #1F2A38;
+  
 }
 
 .stock-list-container {
@@ -456,19 +458,70 @@ margin-left: 35px;
   color: red;
 }
 
-/* Custom scrollbar */
-.stock-list::-webkit-scrollbar {
+/* Custom scrollbar - WATCH LIST & MARKET OVERVIEW STYLE */
+.stock-list::-webkit-scrollbar,
+.market-overview-list::-webkit-scrollbar {
   width: 8px;
 }
 
-.stock-list::-webkit-scrollbar-track {
+.stock-list::-webkit-scrollbar-track,
+.market-overview-list::-webkit-scrollbar-track {
   background: #d3d3d3;
   border-radius: 4px;
 }
 
-.stock-list::-webkit-scrollbar-thumb {
+.stock-list::-webkit-scrollbar-thumb,
+.market-overview-list::-webkit-scrollbar-thumb {
   background-color: #999999;
   border-radius: 4px;
+}
+
+/* ALL OTHER SCROLLBARS - MATCHING STYLE */
+.alerts-box::-webkit-scrollbar,
+.news-container::-webkit-scrollbar,
+.transactions-list::-webkit-scrollbar,
+.portfolio-assets-list::-webkit-scrollbar,
+.portfolio-transactions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.alerts-box::-webkit-scrollbar-track,
+.news-container::-webkit-scrollbar-track,
+.transactions-list::-webkit-scrollbar-track,
+.portfolio-assets-list::-webkit-scrollbar-track,
+.portfolio-transactions-list::-webkit-scrollbar-track {
+  background: #d3d3d3;
+  border-radius: 4px;
+}
+
+.alerts-box::-webkit-scrollbar-thumb,
+.news-container::-webkit-scrollbar-thumb,
+.transactions-list::-webkit-scrollbar-thumb,
+.portfolio-assets-list::-webkit-scrollbar-thumb,
+.portfolio-transactions-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+/* DARK MODE - ALL SCROLLBARS */
+body.dark .stock-list::-webkit-scrollbar-track,
+body.dark .market-overview-list::-webkit-scrollbar-track,
+body.dark .alerts-box::-webkit-scrollbar-track,
+body.dark .news-container::-webkit-scrollbar-track,
+body.dark .transactions-list::-webkit-scrollbar-track,
+body.dark .portfolio-assets-list::-webkit-scrollbar-track,
+body.dark .portfolio-transactions-list::-webkit-scrollbar-track {
+  background: #d3d3d3;
+}
+
+body.dark .stock-list::-webkit-scrollbar-thumb,
+body.dark .market-overview-list::-webkit-scrollbar-thumb,
+body.dark .alerts-box::-webkit-scrollbar-thumb,
+body.dark .news-container::-webkit-scrollbar-thumb,
+body.dark .transactions-list::-webkit-scrollbar-thumb,
+body.dark .portfolio-assets-list::-webkit-scrollbar-thumb,
+body.dark .portfolio-transactions-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
 }
 
 .portfolio-and-stocks {
@@ -977,20 +1030,6 @@ body.dark .account-input::placeholder {
   margin-bottom: 10px !important;
 }
 
-.alerts-box::-webkit-scrollbar {
-  width: 8px;
-}
-
-.alerts-box::-webkit-scrollbar-track {
-  background: #E1E5EB;
-  border-radius: 4px;
-}
-
-.alerts-box::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 .alert-item {
   display: grid;
   grid-template-columns: 8px 60px 2fr 1fr 120px 30px;
@@ -1043,10 +1082,6 @@ body.dark .alerts-box {
 
 body.dark .alerts-box h2 {
   color: #E8ECF2;
-}
-
-body.dark .alerts-box::-webkit-scrollbar-track {
-  background: #2C3644;
 }
 
 body.dark .alert-item {
@@ -1218,20 +1253,6 @@ body.dark .system-time {
   padding-top: 8px;
 }
 
-.market-overview-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.market-overview-list::-webkit-scrollbar-track {
-  background: #d3d3d3;
-  border-radius: 4px;
-}
-
-.market-overview-list::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 /* Dark mode for market overview */
 body.dark .market-overview-container {
   background-color: #1F2A38;
@@ -1306,21 +1327,6 @@ body.dark .market-overview-container {
   border-bottom: none;
 }
 
-/* Scrollbar for transactions list */
-.transactions-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.transactions-list::-webkit-scrollbar-track {
-  background: #E1E5EB;
-  border-radius: 4px;
-}
-
-.transactions-list::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 /* Dark mode */
 body.dark .transactions-container {
   background-color: #1F2A38;
@@ -1330,10 +1336,6 @@ body.dark .transactions-container {
 body.dark .transaction-row {
   color: #E8ECF2;
   border-bottom-color: #2C3644;
-}
-
-body.dark .transactions-list::-webkit-scrollbar-track {
-  background: #2C3644;
 }
 
 /* ===== NEWS CONTAINER ===== */
@@ -1384,21 +1386,6 @@ body.dark .transactions-list::-webkit-scrollbar-track {
   color: #2C3644;
 }
 
-/* Scrollbar for news */
-.news-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.news-container::-webkit-scrollbar-track {
-  background: #E1E5EB;
-  border-radius: 4px;
-}
-
-.news-container::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 /* Dark mode */
 body.dark .news-container {
   background-color: #1F2A38;
@@ -1419,10 +1406,6 @@ body.dark .news-title {
 
 body.dark .news-time {
   color: #E8ECF2;
-}
-
-body.dark .news-container::-webkit-scrollbar-track {
-  background: #2C3644;
 }
 
 /* Dark mode - Blue headers */
@@ -1526,7 +1509,7 @@ body.dark .notification-bar {
 
 .portfolio-summary-box .portfolio-type {
   font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   color: #2C3644;
   margin-bottom: 8px;
@@ -1534,7 +1517,7 @@ body.dark .notification-bar {
 
 .portfolio-summary-box .portfolio-amount {
   font-family: 'Azeret Mono', monospace;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #1F2A38;
 }
@@ -1599,21 +1582,6 @@ body.dark .notification-bar {
   border-bottom: none;
 }
 
-/* Scrollbar for assets list */
-.portfolio-assets-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.portfolio-assets-list::-webkit-scrollbar-track {
-  background: #E1E5EB;
-  border-radius: 4px;
-}
-
-.portfolio-assets-list::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 /* Portfolio Transactions Table */
 .portfolio-transactions-container {
   background-color: #ffffff;
@@ -1623,7 +1591,7 @@ body.dark .notification-bar {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  height: 240px;  /* Reduced from 300px */
+  height: 230px;  /* Reduced from 300px */
   overflow: hidden;
 }
 
@@ -1675,21 +1643,6 @@ body.dark .notification-bar {
   border-bottom: none;
 }
 
-/* Scrollbar for transactions list */
-.portfolio-transactions-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.portfolio-transactions-list::-webkit-scrollbar-track {
-  background: #E1E5EB;
-  border-radius: 4px;
-}
-
-.portfolio-transactions-list::-webkit-scrollbar-thumb {
-  background-color: #999999;
-  border-radius: 4px;
-}
-
 /* Dark mode for portfolio page */
 body.dark .portfolio-summary-box {
   background-color: #1F2A38;
@@ -1723,11 +1676,6 @@ body.dark .portfolio-asset-row,
 body.dark .portfolio-transaction-row {
   color: #E8ECF2;
   border-bottom-color: #2C3644;
-}
-
-body.dark .portfolio-assets-list::-webkit-scrollbar-track,
-body.dark .portfolio-transactions-list::-webkit-scrollbar-track {
-  background: #2C3644;
 }
 
 /* ===== STOCK DETAIL PAGE STYLES ===== */
@@ -1928,4 +1876,17 @@ body.dark .stock-news h2 {
 body.dark #portfolioChart text,
 body.dark #stockPriceChart text {
   fill: #E8ECF2 !important;
+}
+
+.portfolio-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #E1E5EB;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+/* Dark mode - Portfolio divider */
+body.dark .portfolio-divider {
+  background-color: #2C3644;
 }

@@ -190,69 +190,97 @@
     const chartDom = document.getElementById('stockPriceChart');
     const myChart = echarts.init(chartDom);
 
-    const option = {
-      grid: {
-        left: 70,
-        right: 40,
-        top: 20,
-        bottom: 30
-      },
+    function updateChart() {
+      // Check if dark mode is active
+      const isDarkMode = document.body.classList.contains('dark');
+      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  // White in dark mode, gray in light mode
+      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
+      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
 
-      xAxis: {
-        type: 'category',
-        data: ['10:00 AM', '12:00 PM', '2:00 PM', '4:00 PM', '6:00 PM', '8:00 PM'],
-        axisLine: {
-          lineStyle: {
-            color: '#E1E5EB'
+      const option = {
+        grid: {
+          left: 70,
+          right: 40,
+          top: 20,
+          bottom: 30
+        },
+
+        xAxis: {
+          type: 'category',
+          data: ['10:00 AM', '12:00 PM', '2:00 PM', '4:00 PM', '6:00 PM', '8:00 PM'],
+          axisLine: {
+            lineStyle: {
+              color: axisLineColor
+            }
+          },
+          axisLabel: {
+            fontFamily: 'DM Sans',
+            fontSize: 12,
+            color: textColor
           }
         },
-        axisLabel: {
-          fontFamily: 'DM Sans',
-          fontSize: 12
-        }
-      },
 
-      yAxis: {
-        type: 'value',
-        min: 0,
-        max: 250,
-        interval: 50,
-        axisLabel: {
-          fontFamily: 'DM Sans',
-          fontSize: 12,
-          formatter: v => '$' + v
-        },
-        splitLine: {
-          lineStyle: {
-            color: '#E1E5EB'
+        yAxis: {
+          type: 'value',
+          min: 0,
+          max: 250,
+          interval: 50,
+          axisLabel: {
+            fontFamily: 'DM Sans',
+            fontSize: 12,
+            color: textColor,
+            formatter: v => '$' + v
+          },
+          splitLine: {
+            lineStyle: {
+              color: lineColor
+            }
           }
+        },
+
+        tooltip: {
+          trigger: 'axis',
+          formatter: params => {
+            const p = params[0];
+            return `${p.axisValue}<br/>Price: $${p.data}`;
+          }
+        },
+
+        series: [
+          {
+            data: [171.50, 180.20, 165.80, 185.50, 170.23, 190.00],  // More dramatic ups and downs
+            type: 'line',
+            smooth: false,
+            lineStyle: {
+              color: '#03A6EA',
+              width: 3,
+              type: 'solid'
+            },
+            symbol: 'none'
+          }
+        ]
+      };
+
+      myChart.setOption(option);
+    }
+
+    // Initial chart render
+    updateChart();
+
+    // Listen for dark mode toggle changes
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'class') {
+          updateChart();
         }
-      },
+      });
+    });
 
-      tooltip: {
-        trigger: 'axis',
-        formatter: params => {
-          const p = params[0];
-          return `${p.axisValue}<br/>Price: $${p.data}`;
-        }
-      },
+    observer.observe(document.body, {
+      attributes: true
+    });
 
-   series: [
-  {
-    data: [171.50, 180.20, 165.80, 185.50, 170.23, 190.00],  // More dramatic ups and downs
-    type: 'line',
-    smooth: false,
-    lineStyle: {
-      color: '#03A6EA',
-      width: 3,
-      type: 'solid'
-    },
-    symbol: 'none'
-  }
-]
-    };
-
-    myChart.setOption(option);
+    // Handle window resize
     window.addEventListener('resize', () => { myChart.resize(); });
   });
 </script>
