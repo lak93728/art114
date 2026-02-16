@@ -396,26 +396,11 @@
 
 function closeNotification() {
   const notificationBar = document.getElementById('notificationBar');
-  const mainContent = document.querySelector('.main-content');
   
   if (notificationBar) {
     notificationBar.style.display = 'none';
   }
-  if (mainContent) {
-    mainContent.classList.remove('with-notification');
-  }
 }
-
-// Optional: Show notification on page load
-document.addEventListener('DOMContentLoaded', function() {
-  const mainContent = document.querySelector('.main-content');
-  const notificationBar = document.getElementById('notificationBar');
-  
-  if (notificationBar && !notificationBar.classList.contains('hidden')) {
-    mainContent.classList.add('with-notification');
-  }
-});
-
 </script>
 
 

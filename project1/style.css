@@ -352,13 +352,14 @@ body {
 .stock-list-container {
   flex: 1;                  /* take remaining horizontal space */
   background-color: #ffffff;
-  border: 1px solid #E1E5EB;
+  border: 2px solid #E1E5EB;
    margin-top: 10px;           /* NEW */
   margin-right: 40px;  
   display: flex;
   flex-direction: column;
   width: 425px;                /* narrow */
-  height: 175px;         /* scrollable height */
+  height: 175px; 
+  margin-bottom: 5px;        /* scrollable height */
 }
 
 /* Top blue header */
@@ -431,7 +432,7 @@ margin-left: 35px;
 
 .column-symbol {
   font-size: 12px;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-right: 5px;
 }
 
@@ -544,7 +545,7 @@ margin-top: 3px;
   overflow: visible;
   margin: 0;
   width: 100% !important;
-  height: 200px !important; /* keep whatever height you prefer */
+  height: 150px !important; /* keep whatever height you prefer */
 }
 
 .chart-container {
@@ -552,7 +553,7 @@ margin-top: 3px;
      /* gray border like other boxes */             /* rounded corners */
   margin-top: -30px;                /* space above chart */
   width: 100%;                       /* match Portfolio Summary width */
-  height: 250px; 
+  height: 175px; 
   display: flex;        /* ensures inner chart can stretch */
   justify-content: center;
   align-items: center;                  /* fixed height for ECharts */
@@ -585,6 +586,7 @@ margin-top: 3px;
   color: #1F2A38;
   cursor: pointer;
   margin-top: 10px;
+  margin-bottom: 5px;
   transition: background-color 0.2s;
 }
 
@@ -639,7 +641,7 @@ margin-top: 3px;
   height: 2px;
   background-color: #E1E5EB;
   margin-left: -5px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   margin-top: 0;  /* ADD THIS */
 }
 
@@ -647,8 +649,10 @@ margin-top: 3px;
 .notification-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 0px;
+  padding: 5px;
+ width: 100%;  /* ADD THIS */
+  box-sizing: border-box
 }
 
 .checkbox-container {
@@ -657,6 +661,7 @@ margin-top: 3px;
   cursor: pointer;
   margin-right: 15px;
   flex-shrink: 0;
+  margin-top: 18px
 }
 
 .settings-checkbox {
@@ -696,7 +701,7 @@ margin-top: 3px;
 }
 
 .checkbox-container .checkmark::after {
-  left: 7px;
+  left: 8px;
   top: 3px;
   width: 6px;
   height: 12px;
@@ -707,24 +712,32 @@ margin-top: 3px;
 
 .notification-text {
   flex: 1;
+  text-align: left;
+   max-width: 100%;  /* ADD THIS */
+  word-wrap: break-word;  /* ADD THIS */
+  overflow-wrap: break-word; 
 }
 
 .notification-title {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   color: #1F2A38;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
+  text-align: left;
 }
 
 .notification-description {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   color: #2C3644;
+  text-align: left;
+  margin-top: -25px;
 }
 
 /* ===== RADIO BUTTONS ===== */
 .notification-method {
   padding: 10px;
+  margin-top: 35px;  /* ADD THIS - moves the entire section down */
 }
 
 .radio-container {
@@ -771,6 +784,10 @@ margin-top: 3px;
   height: 10px;
   border-radius: 50%;
   background-color: #03A6EA;
+}
+
+.radio-container span:not(.radio-dot) {
+  margin-top: 2px;  /* ADD THIS - moves text down slightly to align with radio button */
 }
 
 /* ===== ACCOUNT SECTION ===== */
@@ -1194,7 +1211,7 @@ body.dark .system-time {
   flex: 1;
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-  margin-top: 10px;
+  margin-top: 3px;
   display: flex;
   flex-direction: column;
   width: 425px;
@@ -1235,8 +1252,7 @@ body.dark .system-time {
 }
 
 .market-overview-subheader .value-title {
-  margin-left: -100px;
-  margin-right: 75px;
+  margin-right: 103px;
 }
 
 .market-overview-list {
@@ -1251,6 +1267,7 @@ body.dark .system-time {
   flex-direction: column;
   font-family: 'DM Sans', sans-serif;
   padding-top: 8px;
+  margin-left: 5px;
 }
 
 /* Dark mode for market overview */
@@ -1262,7 +1279,7 @@ body.dark .market-overview-container {
 .right-side-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2px;
   height: 525px;
 }
 
@@ -1270,12 +1287,12 @@ body.dark .market-overview-container {
 .transactions-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-  margin-top: -185px;
+  margin-top: -230px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
   width: 787px;
-  height: 185px;  /* Fills remaining space to bottom of screen */
+  height: 233px;  /* Fills remaining space to bottom of screen */
   overflow-y: auto;
   overflow-x: hidden;  /* Scroll if needed */
 }
@@ -1284,9 +1301,9 @@ body.dark .market-overview-container {
   background-color: #03A6EA;
   color: #000000;
   font-family: 'Azeret Mono', monospace;
-  font-size: 22px;
+  font-size: 18px;
   width: 100%;  
-  height: 45px;
+  height: 40px;
   display: flex;
   align-items: center;
   padding-left: 15px;
@@ -1320,7 +1337,7 @@ body.dark .market-overview-container {
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   color: #1F2A38;
-  border-bottom: 1px solid #E1E5EB;
+  border-bottom: 2px solid #E1E5EB;
 }
 
 .transaction-row:last-child {
@@ -1365,7 +1382,7 @@ body.dark .transaction-row {
 
 .news-item {
   padding: 10px 5px;
-  border-bottom: 1px solid #E1E5EB;
+  border-bottom: 2px solid #E1E5EB;
 }
 
 .news-item:last-child {
@@ -1425,64 +1442,54 @@ body.dark .transactions-subheader {
 }
 
 /* ===== NOTIFICATION BAR ===== */
-/* ===== NOTIFICATION BAR ===== */
 .notification-bar {
   position: fixed;
-  top: 75px;  /* Directly below the top bar */
-  left: 0;  /* Changed from 220px to 0 - starts from left edge */
-  width: 100%;  /* Changed from calc(100% - 220px) to 100% - full width */
-  height: 80px;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 50px;
   background-color: #F0F69C;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  z-index: 25;  /* Changed from 9 to 25 - higher than sidebar (z-index: 20) */
+  z-index: 25;
   box-sizing: border-box;
-}
-
-.notification-bar.hidden {
-  display: none;
 }
 
 .notification-left {
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   margin-left: 250px;
   color: #1F2A38;
-  margin-bottom: 10px;
+  margin-bottom: 0;  /* CHANGED from 00px to 0 */
 }
 
 .notification-text {
   flex: 1;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
-  font-size: 22px;
+  font-size: 18px;  /* REDUCED from 22px */
   color: #1F2A38;
   font-weight: 500;
+  line-height: 50px;
+  margin-right: 100px;
+
 }
 
 .notification-close {
-  width: 30px;
-  height: 30px;
-  border: 2px solid #1F2A38;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 24px;  /* CHANGED from 20px to match alerts page */
   cursor: pointer;
-  font-size: 20px;
-  color: #1F2A38;
-  transition: background-color 0.3s;
+  color: #1F2A38;  /* CHANGED - removed border, width, height */
+  line-height: 1;
+  text-align: center;
+  transition: color 0.3s;  /* CHANGED from background-color */
+  padding: 0 10px;  /* ADD THIS - some clickable area */
 }
 
 .notification-close:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Adjust main content when notification is visible */
-.main-content.with-notification {
-  padding-top: 130px;  /* 90px + 40px notification height */
+  color: #000000;  /* CHANGED - darken on hover instead of background */
 }
 
 /* Dark mode for notification bar */
@@ -1575,7 +1582,7 @@ body.dark .notification-bar {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   color: #1F2A38;
-  border-bottom: 1px solid #E1E5EB;
+  border-bottom: 2px solid #E1E5EB;
 }
 
 .portfolio-asset-row:last-child {
@@ -1636,7 +1643,7 @@ body.dark .notification-bar {
   font-family: 'DM Sans', sans-serif;
   font-size: 12px;
   color: #1F2A38;
-  border-bottom: 1px solid #E1E5EB;
+  border-bottom: 2px solid #E1E5EB;
 }
 
 .portfolio-transaction-row:last-child {
@@ -1768,10 +1775,12 @@ body.dark .portfolio-transaction-row {
 }
 
 .stock-divider {
-  width: 100%;
+  width: calc(100% + 30px);
   height: 2px;
   background-color: #E1E5EB;
   margin-bottom: 15px;
+  margin-left: -15px;  /* ADD THIS - offsets the padding */
+  margin-right: -15px;  /* ADD THIS - offsets the padding */
 }
 
 .stock-chart-wrapper {
@@ -1869,7 +1878,7 @@ body.dark .stock-btn:hover {
 }
 
 body.dark .stock-news h2 {
-  color: #3A6EA5;
+  color: #E8ECF2;
 }
 
 /* Dark mode - Chart axis text */
@@ -1889,4 +1898,35 @@ body.dark #stockPriceChart text {
 /* Dark mode - Portfolio divider */
 body.dark .portfolio-divider {
   background-color: #2C3644;
+}
+
+/* Dark mode - Chart timeframe buttons */
+body.dark .timeframe.inactive {
+  background-color: #1F2A38;
+  border: 2px solid #2C3644;
+  color: #E8ECF2;
+}
+
+body.dark .timeframe.inactive:hover {
+  background-color: #2C3644;
+}
+
+body.dark .timeframe.selected {
+  background-color: #3A6EA5;
+  color: #E8ECF2;  /* Dark text on light blue background */
+}
+
+body.dark .timeframe.selected:hover {
+  background-color: #3A6EA5;
+}
+
+.timeframe:hover {
+  background-color: #A4D6EB;
+  border: 2px solid #03A6EA;
+}
+
+/* Dark mode hover states */
+body.dark .timeframe:hover {
+  background-color: #3A6EA5;
+  border: 2px solid #3A6EA5;
 }

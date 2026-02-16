@@ -29,9 +29,9 @@
         <div class="stock-divider"></div>
         
         <div class="chart-controls">
-          <div class="timeframe inactive">1D</div>
+          <div class="timeframe selected">1D</div>
           <div class="timeframe inactive">1M</div>
-          <div class="timeframe selected">1Y</div>
+          <div class="timeframe inactive">1Y</div>
         </div>
 
         <div class="stock-chart-wrapper">
