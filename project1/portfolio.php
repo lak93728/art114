@@ -3,7 +3,7 @@
 
 <main class="main-content">
 
-  <!-- ROW 1: Portfolio Header and Summary Boxes -->
+  <!-- row 1: rortfolio header and summary boxes -->
   <h1 class="dashboard-title">Portfolio</h1>
 
   <div class="portfolio-summary-row">
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <!-- ROW 2: Assets Table -->
+  <!-- row 2: assets table -->
   <div class="portfolio-assets-container">
     <div class="portfolio-assets-header">
       <span>ASSETS</span>
@@ -142,7 +142,7 @@
     </div>
   </div>
 
-  <!-- ROW 3: Transaction History Table -->
+  <!-- row 3: transaction history table -->
   <div class="portfolio-transactions-container">
     <div class="portfolio-transactions-header">
       <span>TRANSACTION HISTORY</span>

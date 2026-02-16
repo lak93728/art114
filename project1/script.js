@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Script loaded');
   
-  // Chart code (only runs if portfolioChart exists)
+  // chart code from echarts (only runs if portfolioChart exists)
   const chartDom = document.getElementById('portfolioChart');
   if (chartDom) {
     const myChart = echarts.init(chartDom);
@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', () => { myChart.resize(); });
   }
 
-  // Dark mode toggle
+  // dark mode toggle
   const themeSwitch = document.getElementById('theme-switch');
   console.log('Theme switch found:', themeSwitch);
   
-  // Function to swap icons
+  // function to swap icons
   function swapIcons(isDark) {
     const icons = document.querySelectorAll('.top-icon');
     if (icons.length === 3) {
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   if (themeSwitch) {
-    // Check for saved theme preference or default to 'light'
+    // check for saved theme preference or default to 'light'
     const currentTheme = localStorage.getItem('theme') || 'light';
     console.log('Current theme:', currentTheme);
     
-    // Apply the saved theme on page load
+    // applies the saved theme on page load
     if (currentTheme === 'dark') {
       document.body.classList.add('dark');
       themeSwitch.checked = true;
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('Dark mode applied on load');
     }
     
-    // Theme toggle event listener
+    // theme toggle event listener
     themeSwitch.addEventListener('change', function() {
       console.log('Switch clicked! Checked:', this.checked);
       if (this.checked) {

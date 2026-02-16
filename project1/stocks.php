@@ -5,10 +5,10 @@
 
   <div class="stock-detail-layout">
     
-    <!-- LEFT COLUMN (2/3 width) -->
+    <!-- left column -->
     <div class="stock-detail-left">
       
-      <!-- Stock Header with Price and Buttons -->
+      <!-- stock header with price and buttons -->
       <div class="stock-detail-header">
         <div class="stock-header-info">
           <h1 class="dashboard-title">Apple Inc. (AAPL)</h1>
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <!-- Price Chart Container -->
+      <!-- price chart container -->
       <div class="stock-chart-container">
         <h2 class="stock-section-title">PRICE CHART</h2>
         <div class="stock-divider"></div>
@@ -39,13 +39,13 @@
         </div>
       </div>
 
-      <!-- Key Metrics Container -->
+      <!-- key metrics container -->
       <div class="stock-metrics-container">
         <h2 class="stock-section-title">KEY METRICS</h2>
         <div class="stock-divider"></div>
 
         <div class="metrics-grid">
-          <!-- Row 1 -->
+          <!-- row 1 -->
           <div class="metric-item">
             <div class="metric-label">Open</div>
             <div class="metric-value">$171.50</div>
@@ -71,7 +71,7 @@
             <div class="metric-value">28.5</div>
           </div>
 
-          <!-- Row 2 -->
+          <!-- row 2 -->
           <div class="metric-item">
             <div class="metric-label">Dividend</div>
             <div class="metric-value">$0.96</div>
@@ -101,7 +101,7 @@
 
     </div>
 
-    <!-- RIGHT COLUMN (1/3 width) - News -->
+    <!-- right column: news -->
     <div class="stock-detail-right">
       <div class="news-container stock-news">
         <h2>NEWS</h2>
@@ -191,11 +191,11 @@
     const myChart = echarts.init(chartDom);
 
     function updateChart() {
-      // Check if dark mode is active
+      // dark mode stuff
       const isDarkMode = document.body.classList.contains('dark');
-      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  // White in dark mode, gray in light mode
-      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
-      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
+      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  
+      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  
+      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB'; 
 
       const option = {
         grid: {
@@ -264,10 +264,10 @@
       myChart.setOption(option);
     }
 
-    // Initial chart render
+    // initial chart render
     updateChart();
 
-    // Listen for dark mode toggle changes
+    //lListen for dark mode toggle changes
     const observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         if (mutation.attributeName === 'class') {
@@ -280,7 +280,7 @@
       attributes: true
     });
 
-    // Handle window resize
+    // handle window resize
     window.addEventListener('resize', () => { myChart.resize(); });
   });
 </script>

@@ -10,7 +10,7 @@
       <h2>PRICE ALERTS</h2>
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 1 -->
+      <!-- alert 1 -->
       <div class="alert-item">
         <span class="alert-dot"></span>
         <span class="alert-symbol">AAPL</span>
@@ -22,7 +22,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 2 -->
+      <!-- alert 2 -->
       <div class="alert-item">
         <span class="alert-dot"></span>
         <span class="alert-symbol">TSLA</span>
@@ -34,7 +34,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 3 -->
+      <!-- alert  3 -->
       <div class="alert-item">
         <span class="alert-dot"></span>
         <span class="alert-symbol">MSFT</span>
@@ -46,7 +46,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 4 - READ (gray dot) -->
+      <!-- alert  4 - the read gray dot -->
       <div class="alert-item">
         <span class="alert-dot-read"></span>
         <span class="alert-symbol">GOOGL</span>
@@ -58,7 +58,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 5 - READ (gray dot) -->
+      <!-- alert  5 - the read gray do  -->
       <div class="alert-item">
         <span class="alert-dot-read"></span>
         <span class="alert-symbol">AMZN</span>
@@ -70,7 +70,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 6 - READ (gray dot) -->
+      <!-- alert  6 - the read gray dot -->
       <div class="alert-item">
         <span class="alert-dot-read"></span>
         <span class="alert-symbol">NVDA</span>
@@ -82,7 +82,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- Alert Item 7 - READ (gray dot) -->
+      <!-- alert  7 - the read gray dot -->
       <div class="alert-item">
         <span class="alert-dot-read"></span>
         <span class="alert-symbol">META</span>
@@ -96,12 +96,12 @@
       
     </div>
     
-    <!-- System Messages Box -->
+    <!-- system messages box -->
     <div class="alerts-box">
       <h2>SYSTEM MESSAGES</h2>
       <div class="settings-divider"></div>
       
-      <!-- System Message 1 -->
+      <!-- Syssystem message 1 -->
       <div class="system-message-item">
         <span class="system-icon">!</span>
         <span class="system-message-text">Your account statement for January is now available</span>
@@ -110,7 +110,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 2 -->
+      <!-- system message 2 -->
       <div class="system-message-item">
         <span class="system-icon">✓</span>
         <span class="system-message-text">Your password was successfully updated</span>
@@ -119,7 +119,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 3 -->
+      <!-- system message 3 -->
       <div class="system-message-item">
         <span class="system-icon">!</span>
         <span class="system-message-text">Scheduled maintenance on February 20th from 2-4 AM EST</span>
@@ -128,7 +128,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 4 -->
+      <!-- system message 4 -->
       <div class="system-message-item">
         <span class="system-icon">✓</span>
         <span class="system-message-text">Two-factor authentication has been enabled for your account</span>
@@ -137,7 +137,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 5 -->
+      <!-- system message 5 -->
       <div class="system-message-item">
         <span class="system-icon">!</span>
         <span class="system-message-text">New security features are now available in Settings</span>
@@ -146,7 +146,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 6 -->
+      <!-- system message 6 -->
       <div class="system-message-item">
         <span class="system-icon">✓</span>
         <span class="system-message-text">Your trade order for 50 shares of AAPL has been executed</span>
@@ -155,7 +155,7 @@
       
       <div class="settings-divider"></div>
       
-      <!-- System Message 7 -->
+      <!-- system message 7 -->
       <div class="system-message-item">
         <span class="system-icon">!</span>
         <span class="system-message-text">Market will be closed on February 17th for Presidents' Day</span>

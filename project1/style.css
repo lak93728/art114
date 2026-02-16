@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap');
 
 
-/* ===== RESET ===== */
+/* ===== reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===== THEME VARIABLES ===== */
+/* ===== theme variables ===== */
 :root {
   --nav-bg: #f4f4f4;
   --nav-hover: #e0e0e0;
@@ -16,7 +16,7 @@
   --bg-color: #ffffff;
 }
 
-/* Light mode - Active nav link */
+/* light mode active nav link */
 .nav-links a.active {
   background-color: #A4D6EB;
   border: 2px solid #03A6EA;
@@ -34,45 +34,44 @@ body.dark .main-content {
   background-color: #111111;
   color: #f1f1f1;
 }
-/* ===== BASE STYLES ===== */
+/* ===== base styles ===== */
 body {
   font-family: 'DM Sans', Arial, sans-serif;
-  background-color: #F5F7FA; /* NEW BACKGROUND */
+  background-color: #F5F7FA;
   color: var(--text-color);
   overflow: hidden;
 }
 
 
-/* ===== SIDEBAR ===== */
+/* ===== sidebar ===== */
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   width: 220px;              
   height: 100vh;
-  background-color: var(--nav-bg);
   display: flex;
   flex-direction: column;    /* stack items vertically */
   justify-content: space-between;  /* pushes button to bottom */
   z-index: 20;
-  padding-top: 0;            /* optional */
-   background-color: white
+  padding-top: 0;
+  background-color: white
 }
 
 
 .logo-area {
-  height: 120px;            /* keeps same overall area */
+  height: 120px;       
   display: flex;
-  flex-direction: column;    /* stack items vertically if needed */
+  flex-direction: column;    /* stack items vertically */
   justify-content: flex-start; /* aligns items to the top */
-  align-items: center;       /* keeps it horizontally centered */
-  padding-top: 8px;          /* small top margin */
+  align-items: center;   
+  padding-top: 8px;       
 }
-/* ===== LOGO IMAGE ===== */
+/* ===== logo ===== */
 .logo {
-  width:55%;          /* logo takes up 80% of sidebar width */
-  max-width: 100px;    /* absolute maximum */
-  height: 60px;        /* maintain aspect ratio */
+  width:55%;         
+  max-width: 100px;  
+  height: 60px;        
   object-fit: contain;
 }
 
@@ -80,13 +79,13 @@ body {
   position: absolute;   /* overlay without affecting layout */
   bottom: 0;            /* sticks to the bottom of top bar */
   left: 0;
-  width: 100%;          /* full page width */
-  height: 2px;          /* thickness of the line */
-  background-color: #E1E5EB; /* light gray color */
-  z-index: 10;        /* sits above background */
+  width: 100%;        
+  height: 2px;         
+  background-color: #E1E5EB;
+  z-index: 10;   
 }
 
-/* ===== VERTICAL DIVIDER NEXT TO SIDEBAR ===== */
+/* ===== vertical divider next to sidebar ===== */
 .sidebar::after {
   content: "";
   position: absolute;
@@ -97,12 +96,11 @@ body {
   background-color: #E1E5EB;
 }
 
-/* ===== NAV LINKS ===== */
 .nav-links {
   list-style: none;
-  padding: 0;            /* remove default padding */
-  margin-top: -30px;       /* small spacing below logo */
-  flex-grow: 0;           /* prevent links from stretching */
+  padding: 0;            
+  margin-top: -30px;    
+  flex-grow: 0;          
 }
 
 .nav-links li {
@@ -115,7 +113,7 @@ body {
   text-decoration: none;
   color: var(--text-color);
   font-size: 16px;
-   border: 2px solid transparent;  /* default no border */           /* optional for smooth box corners */
+   border: 2px solid transparent; 
   transition: all 0.3s; 
 }
 
@@ -124,23 +122,22 @@ body {
   background-color: #A4D6EB;  /* fill color */
 }
 
-/* ===== DARK MODE BUTTON ===== */
+/* ===== dark mode button ===== */
 .theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* space between text and switch */
+  gap: 10px; 
   padding: 20px;
 }
 
-/* Label text */
 .theme-label {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   color: var(--text-color);
 }
 
-/* The switch container */
+/* the switch container */
 .switch {
   position: relative;
   display: inline-block;
@@ -148,14 +145,14 @@ body {
   height: 24px;
 }
 
-/* Hide default checkbox */
+/* hide default checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider / track */
+/* the slider/track */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -163,12 +160,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2196F3; /* blue track */
+  background-color: #2196F3;
   border-radius: 24px;
   transition: 0.4s;
 }
 
-/* The circle inside */
 .slider::before {
   position: absolute;
   content: "";
@@ -181,12 +177,11 @@ body {
   transition: 0.4s;
 }
 
-/* When checked, move the circle to the right */
 .switch input:checked + .slider::before {
   transform: translateX(26px);
 }
 
-/* ===== TOP BAR ===== */
+/* ===== top bar ===== */
 .top-bar {
   position: fixed;
   top: 0;
@@ -200,7 +195,7 @@ body {
   z-index: 10;
 }
 
-/* ===== SEARCH BAR ===== */
+/* ===== search bar ===== */
 .top-bar-left {
   margin-left: 15px;
 }
@@ -209,17 +204,17 @@ body {
   width: 280px;
   padding: 8px 12px;
   font-size: 14px;
- border: 2px solid #03A6EA; /* new border color */         /* optional for rounded edges */
-  outline: none;              /* removes default focus outline */
+ border: 2px solid #03A6EA;
+  outline: none;          
   transition: border 0.3s;
 }
 
 .search-bar:focus {
-  border-color: #03A6EA;     /* stays the same color on focus */
+  border-color: #03A6EA;  
 
 }
 
-/* ===== ICON PLACEHOLDERS ===== */
+/* ===== icon placeholders ===== */
 .top-bar-right {
   display: flex;
   gap: 20px;
@@ -235,11 +230,10 @@ body {
 }
 
 .top-icon:hover {
-  background-color: #e0e0e0;   /* light gray hover */
+  background-color: #e0e0e0; 
 }
 
-
-/* ===== MAIN CONTENT ===== */
+/* ===== main content ===== */
 .dashboard-title {
   font-family: 'Azeret Mono', monospace;
   font-size: 18px;
@@ -249,12 +243,11 @@ body {
 }
 
 .logo {
-  max-width: 200px;   /* wider logo */
-  max-height: 90px;   /* taller logo */
+  max-width: 200px;   
+  max-height: 90px;   
   object-fit: contain;
 }
 
-/* ===== ACCOUNT OVERVIEW ===== */
 .account-overview {
   background-color: #ffffff;
   padding: 5px;
@@ -262,7 +255,7 @@ body {
   border: 2px solid #E1E5EB;
 }
 
-/* Heading */
+/* heading */
 .account-overview h2 {
   font-family: 'Azeret Mono', monospace;
   font-size: 18px;
@@ -271,18 +264,17 @@ body {
   font-weight: 200;
 }
 
-/* Row layout */
+/* row layout */
 .account-row {
   display: flex;
   align-items: flex-start;
 }
 
-/* Column */
+/* column */
 .account-col {
   margin-right: 150px;
 }
 
-/* Account type text (Individual, IRA, Retirement 401k) */
 .account-type {
   font-family: 'DM Sans', sans-serif;
   font-size: 10px;
@@ -290,7 +282,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* Account amount text */
 .account-amount {
   font-family: 'Azeret Mono', monospace;
   font-size: 12px;
@@ -303,16 +294,16 @@ body {
   padding: 10px;
   padding-top: 90px;
   min-height: 100vh;
-  position: relative;  /* ADD THIS */
+  position: relative;
 }
 
 .portfolio-summary {
   background-color: #ffffff;
   padding: 5px;
   margin-right: 5px;
-  border: 2px solid #E1E5EB;  /* same gray border as account overview */
-  width: 63%;                  /* half the width of account overview */
-  margin-top: 10px;            /* space below account overview */
+  border: 2px solid #E1E5EB;  
+  width: 63%;               
+  margin-top: 10px;        
 }
 
 .portfolio-summary h2 {
@@ -330,7 +321,7 @@ body {
 }
 
 .portfolio-col {
-  margin-right: 150px;           /* spacing between columns */
+  margin-right: 150px;       
 }
 
 .portfolio-type {
@@ -350,19 +341,18 @@ body {
 }
 
 .stock-list-container {
-  flex: 1;                  /* take remaining horizontal space */
+  flex: 1;           
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-   margin-top: 10px;           /* NEW */
+  margin-top: 10px;
   margin-right: 40px;  
   display: flex;
   flex-direction: column;
-  width: 425px;                /* narrow */
+  width: 425px;         
   height: 175px; 
-  margin-bottom: 5px;        /* scrollable height */
+  margin-bottom: 5px; 
 }
 
-/* Top blue header */
 .stock-header {
   background-color: #03A6EA;
   color: #000000;
@@ -384,7 +374,6 @@ body {
   margin-right: 20px;
 }
 
-/* Gray subheader */
 .stock-subheader {
   background-color: #E1E5EB;
   font-family: 'DM Sans', sans-serif;
@@ -404,11 +393,10 @@ padding-right: 20px;
 }
 
 .stock-subheader .price-title {
-  margin-left: -100PX;   /* move left */
+  margin-left: -100PX;  
   margin-right: 75px;
 }
 
-/* Scrollable list */
 .stock-list {
   display: flex;
   overflow-y: auto;
@@ -416,7 +404,6 @@ padding-right: 20px;
   padding-left: 5px;
 }
 
-/* Columns */
 .stock-list .column span{
   display: flex;
   flex-direction: column;
@@ -450,7 +437,6 @@ margin-left: 35px;
   margin-left: 25px;
 }
 
-/* Green/red colors for changes */
 .green {
   color: green;
 }
@@ -459,7 +445,7 @@ margin-left: 35px;
   color: red;
 }
 
-/* Custom scrollbar - WATCH LIST & MARKET OVERVIEW STYLE */
+/* scrollbar */
 .stock-list::-webkit-scrollbar,
 .market-overview-list::-webkit-scrollbar {
   width: 8px;
@@ -477,7 +463,7 @@ margin-left: 35px;
   border-radius: 4px;
 }
 
-/* ALL OTHER SCROLLBARS - MATCHING STYLE */
+/* all the other scroll bars */
 .alerts-box::-webkit-scrollbar,
 .news-container::-webkit-scrollbar,
 .transactions-list::-webkit-scrollbar,
@@ -504,7 +490,7 @@ margin-left: 35px;
   border-radius: 4px;
 }
 
-/* DARK MODE - ALL SCROLLBARS */
+/* dark mode scroll bars */
 body.dark .stock-list::-webkit-scrollbar-track,
 body.dark .market-overview-list::-webkit-scrollbar-track,
 body.dark .alerts-box::-webkit-scrollbar-track,
@@ -528,7 +514,7 @@ body.dark .portfolio-transactions-list::-webkit-scrollbar-thumb {
 .portfolio-and-stocks {
   display: flex;
   align-items: flex-start;
-  gap: 10px; /* space between the two boxes */
+  gap: 10px;
 }
 
 .column-name span,
@@ -545,34 +531,33 @@ margin-top: 3px;
   overflow: visible;
   margin: 0;
   width: 100% !important;
-  height: 150px !important; /* keep whatever height you prefer */
+  height: 150px !important; 
 }
 
 .chart-container {
-  background-color: #ffffff;       /* white background */
-     /* gray border like other boxes */             /* rounded corners */
-  margin-top: -30px;                /* space above chart */
-  width: 100%;                       /* match Portfolio Summary width */
+  background-color: #ffffff;     
+  margin-top: -30px;              
+  width: 100%;                  
   height: 175px; 
-  display: flex;        /* ensures inner chart can stretch */
+  display: flex;       
   justify-content: center;
-  align-items: center;                  /* fixed height for ECharts */
+  align-items: center;               
   box-sizing: border-box;
-  overflow: visible;    /* allow labels to render fully */
+  overflow: visible;  
 }
 
 .chart-wrapper {
-  position: relative;   /* so child absolute can be relative to this */
-  width: 60%;           /* same width as Portfolio Summary / chart container */
+  position: relative;  
+  width: 60%;         
 }
 
 .chart-controls {
-  position: relative;  /* CHANGED from absolute */
+  position: relative;  
   display: flex;
-  justify-content: flex-end;  /* ADD THIS - aligns buttons to the right */
+  justify-content: flex-end;
   gap: 5px;
-  margin-top: 5px;  /* ADD THIS - space above buttons */
-  margin-right: 25px;  /* ADD THIS - space from right edge */
+  margin-top: 5px;  
+  margin-right: 25px;  
 }
 
 .timeframe {
@@ -590,25 +575,25 @@ margin-top: 3px;
   transition: background-color 0.2s;
 }
 
-/* Hover for active boxes */
+/* hover for active boxes */
 .timeframe.selected:hover {
-  background-color: #A4D6EB;   /* slightly darker blue on hover */
+  background-color: #A4D6EB; 
 }
 
-/* Inactive box stays gray */
+/* inactive box stays gray */
 .timeframe.inactive {
   background-color: white;
 }
 
 .timeframe.inactive:hover {
-  background-color: #E1E5EB;   /* no hover change */
+  background-color: #E1E5EB; 
 }
 
 .timeframe.selected {
   background-color: #A4D6EB;
 }
 
-/* ===== SETTINGS PAGE ===== */
+/* ===== settings page stuff ===== */
 .settings-container {
   display: flex;
   gap: 10px;
@@ -622,7 +607,7 @@ margin-top: 3px;
   padding: 5px;
   width: 50%;
   height: calc(100vh - 145px);
-  position: relative;  /* ADD THIS LINE */
+  position: relative;  
 }
 
 .settings-notifications h2,
@@ -642,16 +627,16 @@ margin-top: 3px;
   background-color: #E1E5EB;
   margin-left: -5px;
   margin-bottom: 0px;
-  margin-top: 0;  /* ADD THIS */
+  margin-top: 0; 
 }
 
-/* ===== NOTIFICATION ITEMS ===== */
+/* ===== notification stuff in that page ===== */
 .notification-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0px;
   padding: 5px;
- width: 100%;  /* ADD THIS */
+ width: 100%; 
   box-sizing: border-box
 }
 
@@ -713,8 +698,8 @@ margin-top: 3px;
 .notification-text {
   flex: 1;
   text-align: left;
-   max-width: 100%;  /* ADD THIS */
-  word-wrap: break-word;  /* ADD THIS */
+   max-width: 100%; 
+  word-wrap: break-word;  
   overflow-wrap: break-word; 
 }
 
@@ -734,10 +719,10 @@ margin-top: 3px;
   margin-top: -25px;
 }
 
-/* ===== RADIO BUTTONS ===== */
+/* ===== radio buttons ===== */
 .notification-method {
   padding: 10px;
-  margin-top: 35px;  /* ADD THIS - moves the entire section down */
+  margin-top: 35px;  
 }
 
 .radio-container {
@@ -787,10 +772,10 @@ margin-top: 3px;
 }
 
 .radio-container span:not(.radio-dot) {
-  margin-top: 2px;  /* ADD THIS - moves text down slightly to align with radio button */
+  margin-top: 2px;  
 }
 
-/* ===== ACCOUNT SECTION ===== */
+/* ===== account section in same page ===== */
 .account-section {
   padding: 10px;
   margin-bottom: 20px;
@@ -798,7 +783,7 @@ margin-top: 3px;
 
 .account-input {
   width: 100%;
-  padding: 12px;  /* INCREASED from 8px to make taller */
+  padding: 12px; 
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   color: #2C3644;
@@ -812,7 +797,7 @@ margin-top: 3px;
   color: #E1E5EB;
 }
 
-/* ===== ACCOUNT BUTTONS ===== */
+/* ===== account buttons ===== */
 .account-buttons {
   display: flex;
   gap: 10px;
@@ -825,7 +810,7 @@ margin-top: 3px;
 
 .btn-save,
 .btn-cancel {
-  flex: 1;  /* makes both buttons equal width */
+  flex: 1; 
   padding: 10px 20px;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -853,7 +838,7 @@ margin-top: 3px;
   background-color: #E1E5EB;
 }
 
-/* ===== DARK MODE STYLES ===== */
+/* ===== dark mode styles ===== */
 body.dark {
   background-color: #0F141A;
 }
@@ -875,7 +860,7 @@ body.dark .dashboard-title {
   color: #E8ECF2;
 }
 
-/* Dark mode - White boxes become dark */
+/* dark mode: white boxes */
 body.dark .settings-notifications,
 body.dark .settings-account,
 body.dark .account-overview,
@@ -886,7 +871,7 @@ body.dark .chart-container {
   border-color: #2C3644;
 }
 
-/* Dark mode - All headings */
+/* dark mode: headings */
 body.dark .settings-notifications h2,
 body.dark .settings-account h2,
 body.dark .account-overview h2,
@@ -894,7 +879,7 @@ body.dark .portfolio-summary h2 {
   color: #E8ECF2;
 }
 
-/* Dark mode - Divider lines */
+/* dark mode: divider lines */
 body.dark .settings-divider,
 body.dark .notification-divider,
 body.dark .top-bar-divider,
@@ -902,7 +887,7 @@ body.dark .sidebar::after {
   background-color: #2C3644;
 }
 
-/* Dark mode - Text colors */
+/* dark mode: text colors */
 body.dark .notification-title,
 body.dark .notification-description,
 body.dark .account-type,
@@ -912,7 +897,7 @@ body.dark .portfolio-amount {
   color: #E8ECF2;
 }
 
-/* Dark mode - Checkboxes */
+/* dark mode: checkboxes */
 body.dark .checkmark {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -923,7 +908,7 @@ body.dark .settings-checkbox:checked ~ .checkmark {
   border-color: #3A6EA5;
 }
 
-/* Dark mode - Radio buttons */
+/* dark mode: radio buttons */
 body.dark .radio-dot {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -937,7 +922,7 @@ body.dark .settings-radio:checked ~ .radio-dot::after {
   background-color: #3A6EA5;
 }
 
-/* Dark mode - Input fields */
+/* dark mode: text fields */
 body.dark .account-input {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -948,7 +933,7 @@ body.dark .account-input::placeholder {
   color: #2C3644;
 }
 
-/* Dark mode - Buttons */
+/* dark mode: buttons */
 body.dark .btn-save {
   background-color: #3A6EA5;
   border-color: #2C3644;
@@ -969,12 +954,12 @@ body.dark .btn-cancel:hover {
   background-color: #1F2A38;
 }
 
-/* Dark mode - Theme switch background */
+/* dark mode: theme switch background */
 body.dark .slider {
   background-color: #1F2A38;
 }
 
-/* Dark mode - Nav links */
+/* dark mode: nav links */
 body.dark .nav-links a {
   color: #E8ECF2;
 }
@@ -989,29 +974,29 @@ body.dark .nav-links a.active {
   border-color: #3A6EA5;
 }
 
-/* Dark mode - Search bar */
+/* dark mode: search bar */
 body.dark .search-bar {
   background-color: #1F2A38;
-  border-color: #3A6EA5;  /* CHANGED from #2C3644 to #3A6EA5 */
+  border-color: #3A6EA5; 
   color: #E8ECF2;
 }
 
 body.dark .search-bar::placeholder {
-  color: #E8ECF2;  /* CHANGED from #2C3644 to #E8ECF2 */
+  color: #E8ECF2;  
 }
 
 /* Dark mode - Input fields */
 body.dark .account-input {
   background-color: #1F2A38;
-  border-color: #3A6EA5;  /* CHANGED from #2C3644 to #3A6EA5 */
+  border-color: #3A6EA5;  
   color: #E8ECF2;
 }
 
 body.dark .account-input::placeholder {
-  color: #E8ECF2;  /* CHANGED from #2C3644 to #E8ECF2 */
+  color: #E8ECF2; 
 }
 
-/* ===== ALERTS PAGE ===== */
+/* ===== alerts page ===== */
 .alerts-container {
   display: flex;
   flex-direction: column;
@@ -1091,7 +1076,7 @@ body.dark .account-input::placeholder {
   color: #1F2A38;
 }
 
-/* Dark mode for alerts page */
+/* dark mode for alerts page */
 body.dark .alerts-box {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -1132,17 +1117,6 @@ body.dark .alert-dot-read {
   background-color: #2C3644;
 }
 
-.system-message-item {
-  display: grid;
-  grid-template-columns: 20px 1fr 120px;
-  gap: 15px;
-  align-items: center;
-  padding: 0px 5px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: #1F2A38;
-}
-
 .system-icon {
   font-size: 16px;
   font-weight: bold;
@@ -1160,7 +1134,7 @@ body.dark .alert-dot-read {
   text-align: right;
 }
 
-/* Dark mode for system messages */
+/* dark mode for system messages */
 body.dark .system-message-item {
   color: #E8ECF2;
 }
@@ -1173,22 +1147,9 @@ body.dark .system-time {
   color: #E8ECF2;
 }
 
-/* Fix timestamp alignment for both alerts and system messages */
-.alert-item {
-  display: grid;
-  grid-template-columns: 8px 60px 2fr 1fr 120px 30px;
-  gap: 15px;
-  align-items: center;
-  padding: 0px 5px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
-  color: #1F2A38;
-}
-
-/* Fix timestamp alignment - add space for invisible close button */
 .system-message-item {
   display: grid;
-  grid-template-columns: 20px 1fr 120px 30px;  /* Added 30px for invisible close button space */
+  grid-template-columns: 20px 1fr 120px 30px;  
   gap: 15px;
   align-items: center;
   padding: 0px 5px;
@@ -1197,7 +1158,6 @@ body.dark .system-time {
   color: #1F2A38;
 }
 
-/* Ensure time columns have same width and alignment */
 .alert-time,
 .system-time {
   width: 120px;
@@ -1206,7 +1166,7 @@ body.dark .system-time {
   text-align: right;
 }
 
-/* ===== MARKET OVERVIEW ===== */
+/* ===== market overview ===== */
 .market-overview-container {
   flex: 1;
   background-color: #ffffff;
@@ -1270,7 +1230,7 @@ body.dark .system-time {
   margin-left: 5px;
 }
 
-/* Dark mode for market overview */
+/* dark mode for market overview */
 body.dark .market-overview-container {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -1283,7 +1243,7 @@ body.dark .market-overview-container {
   height: 525px;
 }
 
-/* ===== RECENT TRANSACTIONS TABLE ===== */
+/* ===== recent transactions table ===== */
 .transactions-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
@@ -1292,9 +1252,9 @@ body.dark .market-overview-container {
   display: flex;
   flex-direction: column;
   width: 787px;
-  height: 233px;  /* Fills remaining space to bottom of screen */
+  height: 233px;  
   overflow-y: auto;
-  overflow-x: hidden;  /* Scroll if needed */
+  overflow-x: hidden;
 }
 
 .transactions-header {
@@ -1307,7 +1267,7 @@ body.dark .market-overview-container {
   display: flex;
   align-items: center;
   padding-left: 15px;
-  flex-shrink: 0;  /* Prevent header from shrinking */
+  flex-shrink: 0;
 }
 
 .transactions-subheader {
@@ -1315,23 +1275,23 @@ body.dark .market-overview-container {
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
   display: grid;
-   grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - increased widths */
-  gap: 37px;  /* CHANGED from 10px to 30px - more space between columns */
+   grid-template-columns: 90px 200px 100px 100px 100px;  
+  gap: 37px;  
   padding: 6px 15px;
   font-weight: 500;
-  flex-shrink: 0;  /* Prevent subheader from shrinking */
+  flex-shrink: 0; 
 }
 
 .transactions-list {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;  /* Scroll the list */
-  flex: 1;  /* Take remaining space */
+  overflow-y: auto; 
+  flex: 1;  
 }
 
 .transaction-row {
   display: grid;
-  grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - matches subheader */
+  grid-template-columns: 90px 200px 100px 100px 100px; 
   gap: 37px; 
   padding: 8px 15px;
   font-family: 'DM Sans', sans-serif;
@@ -1344,7 +1304,7 @@ body.dark .market-overview-container {
   border-bottom: none;
 }
 
-/* Dark mode */
+/* dark mode */
 body.dark .transactions-container {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -1355,14 +1315,14 @@ body.dark .transaction-row {
   border-bottom-color: #2C3644;
 }
 
-/* ===== NEWS CONTAINER ===== */
+/* ===== news container ===== */
 .news-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
   padding: 5px;
   margin-top: 10px;
   width: 425px;
-  height: 300px;  /* Fills remaining space to bottom of screen */
+  height: 300px;  
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -1425,7 +1385,7 @@ body.dark .news-time {
   color: #E8ECF2;
 }
 
-/* Dark mode - Blue headers */
+/* dark mode: blue headers */
 body.dark .stock-header,
 body.dark .market-overview-header,
 body.dark .transactions-header {
@@ -1433,15 +1393,15 @@ body.dark .transactions-header {
 color: #ffffff;
 }
 
-/* Dark mode - Gray subheaders */
+/* dark mode: gray subheaders */
 body.dark .stock-subheader,
 body.dark .market-overview-subheader,
 body.dark .transactions-subheader {
   background-color: #2C4B6C;
-  color: #ffffff;  /* White text for better contrast */
+  color: #ffffff; 
 }
 
-/* ===== NOTIFICATION BAR ===== */
+/* ===== notification bar ===== */
 .notification-bar {
   position: fixed;
   top: 75px;
@@ -1463,14 +1423,14 @@ body.dark .transactions-subheader {
   font-size: 30px;
   margin-left: 250px;
   color: #1F2A38;
-  margin-bottom: 0;  /* CHANGED from 00px to 0 */
+  margin-bottom: 0; 
 }
 
 .notification-text {
   flex: 1;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
-  font-size: 18px;  /* REDUCED from 22px */
+  font-size: 18px;
   color: #1F2A38;
   font-weight: 500;
   line-height: 50px;
@@ -1479,30 +1439,30 @@ body.dark .transactions-subheader {
 }
 
 .notification-close {
-  font-size: 24px;  /* CHANGED from 20px to match alerts page */
+  font-size: 24px;
   cursor: pointer;
-  color: #1F2A38;  /* CHANGED - removed border, width, height */
+  color: #1F2A38; 
   line-height: 1;
   text-align: center;
-  transition: color 0.3s;  /* CHANGED from background-color */
-  padding: 0 10px;  /* ADD THIS - some clickable area */
+  transition: color 0.3s;  
+  padding: 0 10px;  
 }
 
 .notification-close:hover {
-  color: #000000;  /* CHANGED - darken on hover instead of background */
+  color: #000000; 
 }
 
-/* Dark mode for notification bar */
+/* dark mode for notification bar */
 body.dark .notification-bar {
-  background-color: #F0F69C;  /* Keep same yellow color */
+  background-color: #F0F69C; 
 }
 
-/* ===== PORTFOLIO PAGE STYLES ===== */
+/* ===== portfolio page styles ===== */
 
-/* Portfolio Summary Row */
+/* portfolio summary row */
 .portfolio-summary-row {
   display: flex;
-  gap: 50px;  /* Reduced from 20px to 10px */
+  gap: 50px;  
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -1510,8 +1470,8 @@ body.dark .notification-bar {
 .portfolio-summary-box {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-  padding: 10px 30px;  /* Changed from 15px 20px - shorter and wider */
-  min-width: 385px;  /* Increased from 200px */
+  padding: 10px 30px;  
+  min-width: 385px; 
 }
 
 .portfolio-summary-box .portfolio-type {
@@ -1529,7 +1489,7 @@ body.dark .notification-bar {
   color: #1F2A38;
 }
 
-/* Portfolio Assets Table */
+/* portfolio assets table */
 .portfolio-assets-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
@@ -1537,7 +1497,7 @@ body.dark .notification-bar {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  height: 280px;  /* Reduced from 350px */
+  height: 280px;  
   overflow: hidden;
 }
 
@@ -1589,7 +1549,7 @@ body.dark .notification-bar {
   border-bottom: none;
 }
 
-/* Portfolio Transactions Table */
+/* portfolio transactions table */
 .portfolio-transactions-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
@@ -1598,7 +1558,7 @@ body.dark .notification-bar {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  height: 230px;  /* Reduced from 300px */
+  height: 230px;  
   overflow: hidden;
 }
 
@@ -1650,7 +1610,7 @@ body.dark .notification-bar {
   border-bottom: none;
 }
 
-/* Dark mode for portfolio page */
+/* dark mode for portfolio page */
 body.dark .portfolio-summary-box {
   background-color: #1F2A38;
   border-color: #2C3644;
@@ -1685,9 +1645,7 @@ body.dark .portfolio-transaction-row {
   border-bottom-color: #2C3644;
 }
 
-/* ===== STOCK DETAIL PAGE STYLES ===== */
-
-/* Two Column Layout */
+/* ===== stock detail page styles ===== */
 .stock-detail-layout {
   display: flex;
   gap: 10px;
@@ -1696,17 +1654,16 @@ body.dark .portfolio-transaction-row {
 }
 
 .stock-detail-left {
-  flex: 2;  /* Takes up 2/3 of the width */
+  flex: 2; 
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .stock-detail-right {
-  flex: 1;  /* Takes up 1/3 of the width */
+  flex: 1; 
 }
 
-/* Stock Header Section */
 .stock-detail-header {
   margin-bottom: 2px;
 }
@@ -1759,7 +1716,7 @@ body.dark .portfolio-transaction-row {
   border-color: #03A6EA;
 }
 
-/* Price Chart Container */
+/* price chart container */
 .stock-chart-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
@@ -1779,13 +1736,13 @@ body.dark .portfolio-transaction-row {
   height: 2px;
   background-color: #E1E5EB;
   margin-bottom: 15px;
-  margin-left: -15px;  /* ADD THIS - offsets the padding */
-  margin-right: -15px;  /* ADD THIS - offsets the padding */
+  margin-left: -15px; 
+  margin-right: -15px; 
 }
 
 .stock-chart-wrapper {
   width: 100%;
-  height: 250px;  /* Reduced from 300px */
+  height: 250px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1793,10 +1750,10 @@ body.dark .portfolio-transaction-row {
 
 #stockPriceChart {
   width: 100% !important;
-  height: 250px !important;  /* Reduced from 300px */
+  height: 250px !important; 
 }
 
-/* Key Metrics Container */
+/* key metrics container */
 .stock-metrics-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
@@ -1829,7 +1786,7 @@ body.dark .portfolio-transaction-row {
   font-weight: 400;
 }
 
-/* News Container for Stock Detail Page */
+/* news Container for stock detail page */
 .stock-news {
   height: calc(100vh - 107px);
   margin: 5px;
@@ -1847,7 +1804,7 @@ body.dark .portfolio-transaction-row {
   padding-left: 5px;
 }
 
-/* Dark mode for stock detail page */
+/* dark mode for stock detail page */
 body.dark .stock-chart-container,
 body.dark .stock-metrics-container {
   background-color: #1F2A38;
@@ -1881,7 +1838,7 @@ body.dark .stock-news h2 {
   color: #E8ECF2;
 }
 
-/* Dark mode - Chart axis text */
+/* dark mode: chart axis text */
 body.dark #portfolioChart text,
 body.dark #stockPriceChart text {
   fill: #E8ECF2 !important;
@@ -1895,12 +1852,12 @@ body.dark #stockPriceChart text {
   margin-top: 10px;
 }
 
-/* Dark mode - Portfolio divider */
+/* dark mode: portfolio divider */
 body.dark .portfolio-divider {
   background-color: #2C3644;
 }
 
-/* Dark mode - Chart timeframe buttons */
+/* dark mode: chart timeframe buttons */
 body.dark .timeframe.inactive {
   background-color: #1F2A38;
   border: 2px solid #2C3644;
@@ -1913,7 +1870,7 @@ body.dark .timeframe.inactive:hover {
 
 body.dark .timeframe.selected {
   background-color: #3A6EA5;
-  color: #E8ECF2;  /* Dark text on light blue background */
+  color: #E8ECF2; 
 }
 
 body.dark .timeframe.selected:hover {

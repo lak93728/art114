@@ -5,12 +5,12 @@
   <h1 class="dashboard-title">Settings</h1>
   
   <div class="settings-container">
-    <!-- Left Column: Notifications -->
+    <!-- left column: notifications -->
     <div class="settings-notifications">
       <h2>NOTIFICATIONS</h2>
       <div class="settings-divider"></div>
       
-      <!-- Price Alerts -->
+      <!-- price alerts -->
       <div class="notification-item">
         <label class="checkbox-container">
           <input type="checkbox" class="settings-checkbox">
@@ -22,10 +22,10 @@
         </div>
       </div>
 
-      <!-- Divider -->
+      <!-- divider -->
       <div class="notification-divider"></div>
 
-      <!-- Order Confirmations -->
+      <!-- order confirmations -->
       <div class="notification-item">
         <label class="checkbox-container">
           <input type="checkbox" class="settings-checkbox">
@@ -37,10 +37,10 @@
         </div>
       </div>
 
-      <!-- Divider -->
+      <!-- another divider -->
       <div class="notification-divider"></div>
 
-      <!-- Market News -->
+      <!-- market news -->
       <div class="notification-item">
         <label class="checkbox-container">
           <input type="checkbox" class="settings-checkbox">
@@ -52,10 +52,10 @@
         </div>
       </div>
 
-      <!-- Divider -->
+      <!-- another divider -->
       <div class="notification-divider"></div>
 
-      <!-- Portfolio Updates -->
+      <!-- portfolio updates -->
       <div class="notification-item">
         <label class="checkbox-container">
           <input type="checkbox" class="settings-checkbox">
@@ -67,10 +67,10 @@
         </div>
       </div>
 
-      <!-- Divider -->
+      <!-- divider -->
       <div class="notification-divider"></div>
 
-      <!-- Notification Method -->
+      <!-- notification method -->
       <div class="notification-method">
         <div class="notification-description" style="margin-bottom: 10px;">Notification Method</div>
         
@@ -95,30 +95,30 @@
       
     </div>
     
-<!-- Right Column: Account -->
+<!-- right column: account -->
 <div class="settings-account">
   <h2>ACCOUNT</h2>
   <div class="settings-divider"></div>
   
-  <!-- Email -->
+  <!-- email -->
   <div class="account-section">
     <div class="notification-title" style="margin-bottom: 8px;">Email</div>
     <input type="text" class="account-input" placeholder="abc123@gmail.com" readonly>
   </div>
 
-  <!-- Username -->
+  <!-- username -->
   <div class="account-section">
     <div class="notification-title" style="margin-bottom: 8px;">Username</div>
     <input type="text" class="account-input" placeholder="johndoe" readonly>
   </div>
 
-  <!-- Phone Number -->
+  <!-- phone number -->
   <div class="account-section">
     <div class="notification-title" style="margin-bottom: 8px;">Phone Number</div>
     <input type="text" class="account-input" placeholder="123-456-7890" readonly>
   </div>
 
-  <!-- Buttons -->
+  <!-- buttons -->
   <div class="account-buttons">
     <button class="btn-save">Save Changes</button>
     <button class="btn-cancel">Cancel</button>

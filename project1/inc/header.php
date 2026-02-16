@@ -11,7 +11,7 @@
  <link rel="stylesheet" href="/art114/project1/style.css">
 </head>
 
-<body><!-- TOP BAR -->
+<body><!-- topbar/nav section -->
 <header class="top-bar">
   <div class="top-bar-left">
     <input 

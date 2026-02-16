@@ -1,10 +1,10 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/header.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/nav.php'; ?>
 
-<!-- NOTIFICATION BAR -->
+<!-- notification or alert bar -->
 <div class="notification-bar" id="notificationBar">
   <div class="notification-left">
-    ⤴  <!-- Zig-zag up arrow -->
+    ⤴  <!-- curved up arrow for alert -->
   </div>
   <div class="notification-text">
     Opportunity Alert: AAPL surges — BUY interest increasing
@@ -41,7 +41,7 @@
 
   <div class="portfolio-and-stocks">
 
-  <!-- Portfolio Summary Box WITH CHART INSIDE -->
+  <!-- portfolio summary box that i connected to the chart now -->
   <div class="portfolio-summary">
     <h2>PORTFOLIO SUMMARY</h2>
 
@@ -65,7 +65,7 @@
     
       <div class="portfolio-divider"></div>
 
-    <!-- CHART CONTROLS AND CONTAINER NOW INSIDE PORTFOLIO SUMMARY -->
+    <!-- same thing with the buttons added -->
     <div class="chart-controls">
       <div class="timeframe inactive">1D</div>
       <div class="timeframe inactive">1M</div>
@@ -77,10 +77,10 @@
     </div>
   </div>
 
-   <!-- RIGHT SIDE WRAPPER FOR STOCK LIST + MARKET OVERVIEW -->
+   <!-- right side wrapper with watch list and market overview -->
   <div class="right-side-wrapper">
     
-    <!-- Stock List Container -->
+    <!-- stock list with watch list container -->
     <div class="stock-list-container">
       <div class="stock-header">
         <span>WATCH LIST</span>
@@ -131,7 +131,7 @@
       </div>
     </div>
 
-    <!-- MARKET OVERVIEW - directly below stock list -->
+    <!-- market overview directly below watch list -->
     <div class="market-overview-container">
       <div class="market-overview-header">
         <span>MARKET OVERVIEW</span>
@@ -181,7 +181,7 @@
       </div>
     </div>
 
-    <!-- NEWS CONTAINER -->
+    <!-- news container -->
     <div class="news-container">
       <h2>NEWS</h2>
       
@@ -216,12 +216,12 @@
       </div>
     </div>
 
-  </div> <!-- End right-side-wrapper -->
+  </div> <!-- this is the end of the right side stuff -->
 
 
-  </div> <!-- End portfolio-and-stocks -->
+  </div> <!-- and this is the end of portfolio and stocks stuff  -->
 
-  <!-- RECENT TRANSACTIONS TABLE -->
+  <!-- recent transactions table -->
   <div class="transactions-container">
     <div class="transactions-header">
       <span>RECENT TRANSACTIONS</span>
@@ -296,11 +296,11 @@
     const myChart = echarts.init(chartDom);
 
     function updateChart() {
-      // Check if dark mode is active
+      // dark mode stuff
       const isDarkMode = document.body.classList.contains('dark');
-      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  // White in dark mode, gray in light mode
-      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
-      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  // White in dark mode, light gray in light mode
+      const textColor = isDarkMode ? '#FFFFFF' : '#2C3644';  
+      const lineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  
+      const axisLineColor = isDarkMode ? '#FFFFFF' : '#E1E5EB';  
 
       const option = {
         grid: {
@@ -377,7 +377,7 @@
     // Initial chart render
     updateChart();
 
-    // Listen for dark mode toggle changes
+    // dakr mode toggle changes 
     const observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         if (mutation.attributeName === 'class') {
@@ -390,7 +390,7 @@
       attributes: true
     });
 
-    // Handle window resize
+    // dont move content with alert pop up
     window.addEventListener('resize', () => { myChart.resize(); });
   });
 
