@@ -299,7 +299,7 @@ body {
 }
 
 .main-content {
-  margin-left: 220px;
+  margin-left: 250px;
   padding: 10px;
   padding-top: 90px;
   min-height: 100vh;
@@ -356,7 +356,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 425px;                /* narrow */
-  height: 50px;         /* scrollable height */
+  height: 175px;         /* scrollable height */
 }
 
 /* Top blue header */
@@ -424,10 +424,11 @@ padding-right: 20px;
 .column-price {
 font-size: 14px;
 margin-right: 2px;
+margin-left: 35px;
 }
 
 .column-symbol {
-  font-size: 14px;
+  font-size: 12px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -436,6 +437,8 @@ margin-right: 2px;
   font-size: 10px;
   margin-left: 20px;
   margin-right: 140px;
+  margin-top: 0px;
+  line-height: .6;
 }
 
 .column-change {
@@ -1160,7 +1163,7 @@ body.dark .system-time {
   display: flex;
   flex-direction: column;
   width: 425px;
-  height: 50px;
+  height: 175px;
 }
 
 .market-overview-header {
@@ -1239,20 +1242,21 @@ body.dark .market-overview-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 375px;
+  height: 525px;
 }
 
 /* ===== RECENT TRANSACTIONS TABLE ===== */
 .transactions-container {
   background-color: #ffffff;
   border: 2px solid #E1E5EB;
-  margin-top: -30px;
+  margin-top: -185px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
-  width: 815px;
+  width: 787px;
   height: 185px;  /* Fills remaining space to bottom of screen */
-  overflow-y: auto;  /* Scroll if needed */
+  overflow-y: auto;
+  overflow-x: hidden;  /* Scroll if needed */
 }
 
 .transactions-header {
@@ -1274,7 +1278,7 @@ body.dark .market-overview-container {
   font-size: 11px;
   display: grid;
    grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - increased widths */
-  gap: 47px;  /* CHANGED from 10px to 30px - more space between columns */
+  gap: 37px;  /* CHANGED from 10px to 30px - more space between columns */
   padding: 6px 15px;
   font-weight: 500;
   flex-shrink: 0;  /* Prevent subheader from shrinking */
@@ -1290,7 +1294,7 @@ body.dark .market-overview-container {
 .transaction-row {
   display: grid;
   grid-template-columns: 90px 200px 100px 100px 100px;  /* CHANGED - matches subheader */
-  gap: 47px; 
+  gap: 37px; 
   padding: 8px 15px;
   font-family: 'DM Sans', sans-serif;
   font-size: 11px;
@@ -1339,7 +1343,7 @@ body.dark .transactions-list::-webkit-scrollbar-track {
   padding: 5px;
   margin-top: 10px;
   width: 425px;
-  height: calc(100vh - 690px);  /* Fills remaining space to bottom of screen */
+  height: 300px;  /* Fills remaining space to bottom of screen */
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -1348,9 +1352,10 @@ body.dark .transactions-list::-webkit-scrollbar-track {
 
 .news-container h2 {
   font-family: 'Azeret Mono', monospace;
-  font-size: 14px;
+  font-size: 18px;
   color: #1F2A38;
   margin-bottom: 12px;
+  margin-top: 5px;
   font-weight: 400;
   padding-left: 5px;
   height: calc(100vh - 310px); 
@@ -1417,5 +1422,310 @@ body.dark .news-time {
 }
 
 body.dark .news-container::-webkit-scrollbar-track {
+  background: #2C3644;
+}
+
+/* Dark mode - Blue headers */
+body.dark .stock-header,
+body.dark .market-overview-header,
+body.dark .transactions-header {
+  background-color: #102034;
+color: #ffffff;
+}
+
+/* Dark mode - Gray subheaders */
+body.dark .stock-subheader,
+body.dark .market-overview-subheader,
+body.dark .transactions-subheader {
+  background-color: #2C4B6C;
+  color: #ffffff;  /* White text for better contrast */
+}
+
+/* ===== NOTIFICATION BAR ===== */
+/* ===== NOTIFICATION BAR ===== */
+.notification-bar {
+  position: fixed;
+  top: 75px;  /* Directly below the top bar */
+  left: 0;  /* Changed from 220px to 0 - starts from left edge */
+  width: 100%;  /* Changed from calc(100% - 220px) to 100% - full width */
+  height: 80px;
+  background-color: #F0F69C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 25;  /* Changed from 9 to 25 - higher than sidebar (z-index: 20) */
+  box-sizing: border-box;
+}
+
+.notification-bar.hidden {
+  display: none;
+}
+
+.notification-left {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  margin-left: 250px;
+  color: #1F2A38;
+  margin-bottom: 10px;
+}
+
+.notification-text {
+  flex: 1;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 22px;
+  color: #1F2A38;
+  font-weight: 500;
+}
+
+.notification-close {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #1F2A38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #1F2A38;
+  transition: background-color 0.3s;
+}
+
+.notification-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust main content when notification is visible */
+.main-content.with-notification {
+  padding-top: 130px;  /* 90px + 40px notification height */
+}
+
+/* Dark mode for notification bar */
+body.dark .notification-bar {
+  background-color: #F0F69C;  /* Keep same yellow color */
+}
+
+/* ===== PORTFOLIO PAGE STYLES ===== */
+
+/* Portfolio Summary Row */
+.portfolio-summary-row {
+  display: flex;
+  gap: 50px;  /* Reduced from 20px to 10px */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-summary-box {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  padding: 10px 30px;  /* Changed from 15px 20px - shorter and wider */
+  min-width: 385px;  /* Increased from 200px */
+}
+
+.portfolio-summary-box .portfolio-type {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #2C3644;
+  margin-bottom: 8px;
+}
+
+.portfolio-summary-box .portfolio-amount {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1F2A38;
+}
+
+/* Portfolio Assets Table */
+.portfolio-assets-container {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 280px;  /* Reduced from 350px */
+  overflow: hidden;
+}
+
+.portfolio-assets-header {
+  background-color: #03A6EA;
+  color: #000000;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  flex-shrink: 0;
+}
+
+.portfolio-assets-subheader {
+  background-color: #E1E5EB;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 80px 250px 80px 100px 120px 120px 100px;
+  gap: 60px;
+  padding: 8px 20px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.portfolio-assets-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.portfolio-asset-row {
+  display: grid;
+  grid-template-columns: 80px 250px 80px 100px 120px 120px 100px;
+  gap: 60px;
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #1F2A38;
+  border-bottom: 1px solid #E1E5EB;
+}
+
+.portfolio-asset-row:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar for assets list */
+.portfolio-assets-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.portfolio-assets-list::-webkit-scrollbar-track {
+  background: #E1E5EB;
+  border-radius: 4px;
+}
+
+.portfolio-assets-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+/* Portfolio Transactions Table */
+.portfolio-transactions-container {
+  background-color: #ffffff;
+  border: 2px solid #E1E5EB;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 240px;  /* Reduced from 300px */
+  overflow: hidden;
+}
+
+.portfolio-transactions-header {
+  background-color: #03A6EA;
+  color: #000000;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  flex-shrink: 0;
+}
+
+.portfolio-transactions-subheader {
+  background-color: #E1E5EB;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px;
+  gap: 100px;
+  padding: 8px 20px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.portfolio-transactions-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.portfolio-transaction-row {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px;
+  gap: 100px;
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #1F2A38;
+  border-bottom: 1px solid #E1E5EB;
+}
+
+.portfolio-transaction-row:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar for transactions list */
+.portfolio-transactions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.portfolio-transactions-list::-webkit-scrollbar-track {
+  background: #E1E5EB;
+  border-radius: 4px;
+}
+
+.portfolio-transactions-list::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 4px;
+}
+
+/* Dark mode for portfolio page */
+body.dark .portfolio-summary-box {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .portfolio-summary-box .portfolio-type,
+body.dark .portfolio-summary-box .portfolio-amount {
+  color: #E8ECF2;
+}
+
+body.dark .portfolio-assets-container,
+body.dark .portfolio-transactions-container {
+  background-color: #1F2A38;
+  border-color: #2C3644;
+}
+
+body.dark .portfolio-assets-header,
+body.dark .portfolio-transactions-header {
+  background-color: #102034;
+  color: #ffffff;
+}
+
+body.dark .portfolio-assets-subheader,
+body.dark .portfolio-transactions-subheader {
+  background-color: #3A6EA5;
+  color: #ffffff;
+}
+
+body.dark .portfolio-asset-row,
+body.dark .portfolio-transaction-row {
+  color: #E8ECF2;
+  border-bottom-color: #2C3644;
+}
+
+body.dark .portfolio-assets-list::-webkit-scrollbar-track,
+body.dark .portfolio-transactions-list::-webkit-scrollbar-track {
   background: #2C3644;
 }

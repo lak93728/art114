@@ -1,6 +1,19 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/header.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/art114/project1/inc/nav.php'; ?>
 
+<!-- NOTIFICATION BAR -->
+<div class="notification-bar" id="notificationBar">
+  <div class="notification-left">
+    ⤴  <!-- Zig-zag up arrow -->
+  </div>
+  <div class="notification-text">
+    Opportunity Alert: AAPL surges — BUY interest increasing
+  </div>
+  <div class="notification-close" onclick="closeNotification()">
+    ×
+  </div>
+</div>
+
 <main class="main-content">
 
   <h1 class="dashboard-title">Dashboard</h1>
@@ -137,12 +150,12 @@
         </div>
 
         <div class="column column-name">
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
-          <span>.</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
         <div class="column column-price">
@@ -349,6 +362,27 @@
     myChart.setOption(option);
     window.addEventListener('resize', () => { myChart.resize(); });
   });
+
+function closeNotification() {
+  const notificationBar = document.getElementById('notificationBar');
+  const mainContent = document.querySelector('.main-content');
+  
+  notificationBar.classList.add('hidden');
+  mainContent.classList.remove('with-notification');
+}
+
+// Optional: Show notification on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const mainContent = document.querySelector('.main-content');
+  const notificationBar = document.getElementById('notificationBar');
+  
+  if (notificationBar && !notificationBar.classList.contains('hidden')) {
+    mainContent.classList.add('with-notification');
+  }
+});
+
 </script>
+
+
 
 </body>
