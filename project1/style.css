@@ -1685,7 +1685,7 @@ body.dark .portfolio-transaction-row {
   display: flex;
   gap: 10px;
   margin-right: 10px;
-  margin-left: -25px;
+  margin-left: -5px;
 }
 
 .stock-detail-left {
