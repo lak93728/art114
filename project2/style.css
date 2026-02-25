@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Geologica', sans-serif;
+  background-color: #ffffff;
+   overflow: hidden;
+}
+
+.splash-container {
+  width: 1440px;
+  max-width: 100%;
+  min-height: 900px;
+  display: flex;
+  flex-direction: row;
+  padding: 40px 60px;
+
+}
+
+/* ===== LEFT COLUMN ===== */
+.splash-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: -150px;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 400px;
+  object-fit: contain;
+}
+
+.headline {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  color: #000000;
+  margin-top: -80px;
+  margin-left: 10px;
+}
+
+.subheadline {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: #000000;
+  line-height: 1.4;
+  max-width: 650px;
+  margin-top: 20px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+/* ===== RIGHT COLUMN ===== */
+.splash-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  width: 650px;
+  height: auto;
+  background-color: #FFF5F2;
+  border-radius: 15px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-right: -100px;
+  margin-left: 20px;
+}
+
+.welcome-text {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #000000;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-family: 'Geologica', sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
+.form-group input {
+  font-family: 'Geologica', sans-serif;
+  font-size: 20px;
+  color: #767676;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus {
+  border-color: #3A7D82;
+}
+
+.signup-link {
+  font-size: 18px;
+  margin-top: 4px;
+  color: #6B6B6B;
+}
+
+.signup-link a {
+  color: #6B6B6B;
+  text-decoration: underline;
+}
+
+.login-btn {
+  background-color: #FC5552;
+  color: #ffffff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+  margin-top: 6px;
+  transition: background-color 0.2s ease;
+  margin-left: 150px;
+}
+
+
+.login-btn:hover {
+  background-color: #e03e3b;
+}
+
