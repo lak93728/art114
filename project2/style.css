@@ -7,7 +7,7 @@
 body {
   font-family: 'Geologica', sans-serif;
   background-color: #ffffff;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 .splash-container {
@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: row;
   padding: 40px 60px;
-
 }
 
 /* ===== LEFT COLUMN ===== */
@@ -26,14 +25,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  margin-top: -150px;
   margin-left: 20px;
+  padding-top: 0px;
+  gap: 80px;
 }
 
 .logo {
   width: 400px;
+  height: 100px;
   object-fit: contain;
+  object-position: left top;
 }
 
 .headline {
@@ -41,8 +42,6 @@ body {
   font-weight: 700;
   font-size: 70px;
   color: #000000;
-  margin-top: -80px;
-  margin-left: 10px;
 }
 
 .subheadline {
@@ -52,9 +51,8 @@ body {
   color: #000000;
   line-height: 1.4;
   max-width: 650px;
-  margin-top: 20px;
   text-align: left;
-  margin-left: 10px;
+  margin-top: 16px;
 }
 
 /* ===== RIGHT COLUMN ===== */
@@ -140,8 +138,102 @@ body {
   margin-left: 150px;
 }
 
-
 .login-btn:hover {
   background-color: #e03e3b;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .splash-container {
+    flex-direction: column;
+    padding: 30px 24px;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .splash-left {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+
+  .headline {
+    font-size: 36px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .subheadline {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .splash-right {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
+
+  .login-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 30px 24px;
+  }
+
+  .welcome-text {
+    font-size: 36px;
+  }
+
+  .login-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .splash-left {
+    gap: 80px;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .logo {
+    width: 400px;
+    height: 100px;
+  }
+
+  .headline {
+    font-size: 70px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .subheadline {
+    font-size: 30px;
+    margin-left: 0;
+  }
+
+  .login-box {
+    width: 650px;
+    margin-right: -100px;
+    margin-left: 20px;
+  }
+
+  .login-btn {
+    width: 200px;
+    margin-left: 150px;
+  }
+}
