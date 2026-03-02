@@ -10,6 +10,11 @@ body {
   overflow: hidden;
 }
 
+body.feed-page {
+  overflow: auto;
+}
+
+/* ===== SPLASH PAGE ===== */
 .splash-container {
   width: 1440px;
   max-width: 100%;
@@ -19,7 +24,6 @@ body {
   padding: 40px 60px;
 }
 
-/* ===== LEFT COLUMN ===== */
 .splash-left {
   flex: 1;
   display: flex;
@@ -55,7 +59,6 @@ body {
   margin-top: 16px;
 }
 
-/* ===== RIGHT COLUMN ===== */
 .splash-right {
   flex: 1;
   display: flex;
@@ -142,6 +145,92 @@ body {
   background-color: #e03e3b;
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #FFF5F2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 30px;
+  gap: 65px;
+  box-sizing: border-box;
+   padding: 0 50px 0 50px;
+  
+}
+
+.nav-logo {
+  width: 225px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  margin-left: 50px;
+}
+
+.nav-search {
+  flex: 1;
+  max-width: 525px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #FFD1C3;
+  border-radius: 25px;
+  padding: 0 14px;
+  height: 44px;
+  margin-left: 55px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #000000;
+  background: transparent;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+
+}
+
+.nav-item span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.nav-icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+.search-mag {
+  font-size: 24px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  color: #6B6B6B;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   body {
@@ -200,6 +289,16 @@ body {
   .login-btn {
     width: 100%;
     margin-left: 0;
+  }
+
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+  }
+
+  .nav-search {
+    width: 100%;
   }
 }
 
