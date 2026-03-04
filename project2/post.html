@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArtSpot - Create a Post</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700;900&family=Roboto:wght@400&display=swap" rel="stylesheet"/>
+</head>
+<body class="create-page">
+
+  <nav class="navbar">
+    <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
+    <div class="nav-search">
+      <span class="search-mag">&#9906;</span>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <a href="#"><img src="images/navigation.png" alt="Search" class="search-icon" /></a>
+    </div>
+    <div class="nav-item">
+      <img src="images/explore.png" alt="Explore" class="nav-icon" />
+      <span>Explore</span>
+    </div>
+    <div class="nav-item">
+      <a href="create.html"><img src="images/create.png" alt="Create" class="nav-icon" /></a>
+      <span>Create</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/bell.png" alt="Alerts" class="nav-icon" />
+      <span>Alerts</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/user.png" alt="Profile" class="nav-icon" />
+      <span>Profile</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/settings.png" alt="Settings" class="nav-icon" />
+      <span>Settings</span>
+    </div>
+  </nav>
+
+  <div class="create-container">
+
+    <h1 class="create-title">Create a Post</h1>
+    <p class="create-subtitle">Choose an image</p>
+
+    <div class="upload-box">
+      <img src="images/upload.png" alt="Upload" class="upload-icon" />
+      <p class="upload-text">Click to upload or drag and drop.</p>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Title</label>
+      <input type="text" class="field-input" placeholder="Give your work a title" />
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Description</label>
+       <textarea class="field-input field-textarea" placeholder="Tell the story behind your work."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Tags</label>
+      <input type="text" class="field-input" placeholder="#photography, #digitalart, #painting" />
+    </div>
+
+    <div class="create-buttons">
+      <button class="btn-cancel">Cancel</button>
+      <button class="btn-upload">Upload</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -282,6 +282,13 @@ body.feed-page {
   white-space: nowrap;
   padding: 20px 24px;
   flex-shrink: 0;
+  transition: transform 0.2s ease;  /* ADD THIS - smooth animation */
+  text-decoration: none;
+}
+
+.tag-btn:hover {
+  transform: scale(1.05);  /* ADD THIS - makes button 5% bigger on hover */
+  text-decoration: none;
 }
 
 .for-you-title {
@@ -401,6 +408,134 @@ font-family: 'Geologica', sans-serif;
   padding: 15px 30px;  /* INCREASED from 10px 20px - makes button physically bigger */
   cursor: pointer;
   font-weight: 600;  /* ADD THIS - makes text bolder/more visible */
+}
+
+/* ===== CREATE PAGE ===== */
+/* ===== CREATE PAGE ===== */
+body.create-page {
+  overflow: auto;
+}
+
+.create-container {
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create-title {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #000000;
+}
+
+.create-subtitle {
+  font-family: 'Geologica', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.upload-box {
+  width: 100%;
+  height: 467px;
+  border: 2px dashed #aaaaaa;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.upload-icon {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.upload-text {
+  font-family: 'Geologica', sans-serif;
+  font-size: 32px;
+  color: #B5B5B5;
+  font-weight: 400;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #000000;
+}
+
+.field-input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #767676;
+  border: 2px solid #3A7D82;
+  border-radius: 8px;
+  outline: none;
+  padding: 12px 20px;
+  background: #ffffff;
+  width: 100%;
+}
+
+.field-input:focus {
+  border-color: #3A7D82;
+}
+
+.field-textarea {
+  height: 150px;
+  resize: none;
+}
+
+.create-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-cancel {
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  color: #AF2523;
+  background: transparent;
+  border: 2px solid #FFD1C3;
+  border-radius: 8px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.btn-upload {
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #FC5552;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.btn-upload:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 
