@@ -158,7 +158,16 @@ body.feed-page {
   gap: 65px;
   box-sizing: border-box;
    padding: 0 50px 0 50px;
-  
+  text-decoration: none;  /* Removes underline */
+  color: inherit;  /* Keeps original text color */
+}
+
+.nav-item:hover {
+  text-decoration: none;  /* Keeps underline off on hover */
+}
+
+a {
+  text-decoration: none;
 }
 
 .nav-logo {
@@ -538,6 +547,247 @@ body.create-page {
   transition: transform 0.2s ease;
 }
 
+/* ===== EXPLORE PAGE ===== */
+.explore-page {
+  overflow: auto;
+}
+
+.explore-content {
+  margin-top: 20px;
+  padding: 0 50px;
+}
+
+.explore-title {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.explore-subtitle {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.keep-looking {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Explore Tag Buttons */
+.explore-tag-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.explore-tag-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.explore-tag-btn {
+  background-color: #3A7D82;
+  color: #ffffff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  width: 275px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 20px 24px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.explore-tag-btn:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* Browse by Category */
+.category-title {
+  font-family: 'Geologica', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  color: #000000;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.category-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: scale(1.05);  /* ADD THIS - makes button 5% bigger on hover */
+  text-decoration: none;  /* ADD THIS */
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(223, 246, 248, 1),
+   rgba(100, 100, 100, 0.8),
+    rgba(223, 246, 248, 0)
+  );
+  display: flex;
+  align-items: flex-start;  /* CHANGED from center to flex-start - moves to top */
+  justify-content: left;
+  border-radius: 15px;
+  padding-top: 20px;  /* ADD THIS - adds space from the very top edge */
+}
+
+
+.category-text {
+  font-family: 'Geologica', sans-serif;
+  font-size: 32px;
+  color: #000000;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+/* Explore Image Grid */
+.explore-row {
+  display: flex;
+  padding: 0;
+}
+
+.explore-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 8px;
+}
+
+.explore-column img {
+  width: 100%;
+  height: auto;
+  margin-top: 12px;
+  display: block;
+  border-radius: 15px;
+}
+
+.explore-img-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.explore-img-card img {
+  width: 100%;
+  display: block;
+}
+
+.explore-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(223, 246, 248, 0.9),
+    rgba(223, 246, 248, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 15px;
+}
+
+.explore-img-card:hover .explore-overlay {
+  opacity: 1;
+}
+
+.explore-overlay-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.explore-img-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: #000;
+  align-self: flex-end;
+  margin-left: 5px;
+}
+
+.explore-artist {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-end;
+  margin-right: 40px;
+  margin-top: -10px;
+}
+
+.explore-artist-icon {
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px !important;
+  min-height: 25px !important;
+  max-width: 25px !important;
+  max-height: 25px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex: 0 0 25px !important;
+}
+
+.explore-artist span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.explore-save-btn {
+  align-self: flex-end;
+  background-color: #FC5552;
+  color: #fff;
+  font-family: 'Geologica', sans-serif;
+  font-size: 32px;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
