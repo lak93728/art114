@@ -32,7 +32,11 @@ const filteredPosts = posts.filter((post: any) =>
 
   <ul>
     {filteredPosts.map((post: any) => (
-      <li><a href={post.url}>{post.frontmatter.title}</a></li>
+      <li>
+        <a href={`${import.meta.env.BASE_URL}${post.url}`}>
+          {post.frontmatter.title}
+        </a>
+      </li>
     ))}
   </ul>
 </BaseLayout>
