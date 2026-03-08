@@ -15,43 +15,78 @@
 <body class="explore-page">
 
   <!-- ===== NAVBAR ===== -->
- <!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-  <a href="feed.html">
-    <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
-  </a>
+  <nav class="navbar">
+    <a href="feed.html">
+      <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
+    </a>
 
-  <div class="nav-search">
-    <span class="search-mag">&#9906;</span>
-    <input type="text" placeholder="Search..." class="search-input" />
-    <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    <div class="nav-search">
+      <span class="search-mag">&#9906;</span>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    </div>
+
+    <!-- Desktop nav items -->
+    <a href="explore.html" class="nav-item">
+      <img src="images/explore.png" class="nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="nav-item">
+      <img src="images/create.png" class="nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="nav-item">
+      <img src="images/bell.png" class="nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+      <img src="images/user.png" class="nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <img src="images/Settings.png" class="nav-icon" />
+      <span>Settings</span>
+    </a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
   </div>
 
-  <a href="explore.html" class="nav-item">
-    <img src="images/explore.png" class="nav-icon" />
-    <span>Explore</span>
-  </a>
+  <!-- Mobile search bar (shows below navbar on mobile) -->
+  <div class="explore-search-mobile">
+    <span class="search-mag">&#9906;</span>
+    <input type="text" placeholder="Search..." class="search-input" />
+  </div>
 
-  <a href="post.html" class="nav-item">
-    <img src="images/create.png" class="nav-icon" />
-    <span>Create</span>
-  </a>
-
-  <a href="notifications.html" class="nav-item">
-    <img src="images/bell.png" class="nav-icon" />
-    <span>Alerts</span>
-  </a>
-
-  <a href="profile.html" class="nav-item">
-    <img src="images/user.png" class="nav-icon" />
-    <span>Profile</span>
-  </a>
-
-  <a href="settings.html" class="nav-item">
-    <img src="images/Settings.png" class="nav-icon" />
-    <span>Settings</span>
-  </a>
-</nav>
   <!-- ===== EXPLORE CONTENT ===== -->
   <div class="explore-content">
     <h2 class="explore-title">Explore</h2>
@@ -72,57 +107,48 @@
 
     <!-- CATEGORY BUTTONS -->
     <div class="category-grid">
-      <!-- Row 1 -->
       <div class="category-card">
         <img src="images/purple.jpg" alt="Photography">
         <div class="category-overlay">
           <span class="category-text">Photography</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/flower.jpg" alt="Illustration">
         <div class="category-overlay">
           <span class="category-text">Illustration</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/splash.jpg" alt="Digital Art">
         <div class="category-overlay">
           <span class="category-text">Digital Art</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/computer.jpg" alt="UI Design">
         <div class="category-overlay">
           <span class="category-text">UI Design</span>
         </div>
       </div>
-
-      <!-- Row 2 -->
       <div class="category-card">
         <img src="images/statue.jpg" alt="Character Design">
         <div class="category-overlay">
           <span class="category-text">Character Design</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/boat.jpg" alt="Painting">
         <div class="category-overlay">
           <span class="category-text">Painting</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/bonton.jpg" alt="Branding">
         <div class="category-overlay">
           <span class="category-text">Branding</span>
         </div>
       </div>
-
       <div class="category-card">
         <img src="images/box.jpg" alt="Packaging">
         <div class="category-overlay">
@@ -138,187 +164,208 @@
 
       <!-- COLUMN 1 -->
       <div class="explore-column">
-        <div class="explore-img-card">
-          <img src="images/mountain.jpg" alt="Beautiful photo">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/mountain.jpg" alt="Beautiful photo">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/polaroid.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/polaroid.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/mural.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/mural.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- COLUMN 2 -->
       <div class="explore-column">
-        <div class="explore-img-card">
-          <img src="images/sketch.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/sketch.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/pattern.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/pattern.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/shapes.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/shapes.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- COLUMN 3 -->
       <div class="explore-column">
-        <div class="explore-img-card">
-          <img src="images/frame.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/frame.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/warm.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/warm.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/photography.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/photography.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- COLUMN 4 -->
       <div class="explore-column">
-        <div class="explore-img-card">
-          <img src="images/plant.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/plant.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/lake.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/lake.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
-
-        <div class="explore-img-card">
-          <img src="images/book.jpg">
-          <div class="explore-overlay">
-            <div class="explore-overlay-top">
-              <div class="explore-img-title">Beautiful Photo</div>
-              <div class="explore-artist">
-                <img src="images/hippie.jpg" class="explore-artist-icon">
-                <span>good_artist</span>
+        </a>
+        <a href="click.html" class="explore-img-card-link">
+          <div class="explore-img-card">
+            <img src="images/book.jpg">
+            <div class="explore-overlay">
+              <div class="explore-overlay-top">
+                <div class="explore-img-title">Beautiful Photo</div>
+                <div class="explore-artist">
+                  <img src="images/hippie.jpg" class="explore-artist-icon">
+                  <span>good_artist</span>
+                </div>
               </div>
+              <button class="explore-save-btn">Save</button>
             </div>
-            <button class="explore-save-btn">Save</button>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>
-
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

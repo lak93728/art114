@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArtSpot - Photo</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+
+<body class="click-page">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="feed.html">
+      <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
+    </a>
+
+    <div class="nav-search">
+      <span class="search-mag">&#9906;</span>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    </div>
+
+    <!-- Desktop nav items -->
+    <a href="explore.html" class="nav-item">
+      <img src="images/explore.png" class="nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="nav-item">
+      <img src="images/create.png" class="nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="nav-item">
+      <img src="images/bell.png" class="nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+      <img src="images/user.png" class="nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <img src="images/Settings.png" class="nav-icon" />
+      <span>Settings</span>
+    </a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
+  </div>
+
+  <button class="back-btn" onclick="history.back()">&#8592;</button>
+
+  <!-- ===== PHOTO DETAIL CONTENT ===== -->
+  <div class="click-content">
+
+    <div class="click-layout">
+
+      <!-- LEFT SIDE -->
+      <div class="click-left">
+        <img src="images/mountain.jpg" alt="Beautiful Photo" class="click-photo" />
+
+        <div class="click-artist-row">
+          <div class="click-artist-info">
+            <img src="images/hippie.jpg" alt="Artist" class="click-artist-avatar" />
+            <span class="click-artist-name">good_artist</span>
+          </div>
+          <button class="click-save-btn">Save</button>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="click-right">
+        <h1 class="click-title">Beautiful Photo</h1>
+        <p class="click-date">02-15-2026</p>
+        <p class="click-description">
+          Captured this breathtaking sunrise in the Swiss Alps. The golden hour light was absolutely perfect. I took this photo last minute just before the lighting went away but I'm glad I was able to get it just in time. <br>
+          <br> The camera I used was a canon and I did some editing on Photoshop after. Feel free to ask any questions I'd love to answer them!
+        </p>
+
+        <h3 class="click-tags-title">Tags</h3>
+        <div class="click-tags">
+          <div class="click-tag-row">
+            <a href="#" class="click-tag-btn">#landscape</a>
+            <a href="#" class="click-tag-btn">#nature</a>
+          </div>
+          <div class="click-tag-row">
+            <a href="#" class="click-tag-btn">#photography</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments-container">
+      <h2 class="comments-title">Comments (1K+)</h2>
+
+      <div class="add-comment-section">
+        <img src="images/smile.jpg" alt="User" class="comment-avatar" />
+        <input type="text" class="comment-input" placeholder="Add a comment..." />
+      </div>
+
+      <button class="post-comment-btn">Post Comment</button>
+
+      <!-- EXISTING COMMENTS -->
+      <div class="comment-item">
+        <img src="images/man.jpg" alt="User" class="comment-avatar" />
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="comment-username">john.designs</span>
+            <span class="comment-date">2026-02-17</span>
+          </div>
+          <p class="comment-text">This is absolutely stunning! The scene palette is incredible.</p>
+        </div>
+      </div>
+
+      <div class="comment-item">
+        <img src="images/sunglasses.jpg" alt="User" class="comment-avatar" />
+        <div class="comment-content">
+          <div class="comment-header">
+            <span class="comment-username">artlover</span>
+            <span class="comment-date">2026-02-16</span>
+          </div>
+          <p class="comment-text">Love the composition! What software did you use for this?</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

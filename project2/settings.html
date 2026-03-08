@@ -18,6 +18,8 @@
       <input type="text" placeholder="Search..." class="search-input" />
       <img src="images/Navigation.png" alt="Search" class="search-icon" />
     </div>
+
+    <!-- Desktop nav items -->
     <a href="explore.html" class="nav-item">
       <img src="images/explore.png" class="nav-icon" />
       <span>Explore</span>
@@ -38,7 +40,39 @@
       <img src="images/Settings.png" class="nav-icon" />
       <span>Settings</span>
     </a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="alerts.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
+  </div>
 
   <div class="settings-container">
 
@@ -109,6 +143,12 @@
     </div>
 
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

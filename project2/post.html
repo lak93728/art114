@@ -9,44 +9,72 @@
 </head>
 <body class="create-page">
 
- <!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-  <a href="feed.html">
-    <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
-  </a>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="feed.html">
+      <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
+    </a>
 
-  <div class="nav-search">
-    <span class="search-mag">&#9906;</span>
-    <input type="text" placeholder="Search..." class="search-input" />
-    <img src="images/Navigation.png" alt="Search" class="search-icon" />
-  </div>
+    <div class="nav-search">
+      <span class="search-mag">&#9906;</span>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    </div>
 
-  <a href="explore.html" class="nav-item">
-    <img src="images/explore.png" class="nav-icon" />
-    <span>Explore</span>
-  </a>
+    <!-- Desktop nav items -->
+    <a href="explore.html" class="nav-item">
+      <img src="images/explore.png" class="nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="nav-item">
+      <img src="images/create.png" class="nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="nav-item">
+      <img src="images/bell.png" class="nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+      <img src="images/user.png" class="nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <img src="images/Settings.png" class="nav-icon" />
+      <span>Settings</span>
+    </a>
 
-  <a href="post.html" class="nav-item">
-    <img src="images/create.png" class="nav-icon" />
-    <span>Create</span>
-  </a>
-
-  <a href="notifications.html" class="nav-item">
-    <img src="images/bell.png" class="nav-icon" />
-    <span>Alerts</span>
-  </a>
-
-  <a href="profile.html" class="nav-item">
-    <img src="images/user.png" class="nav-icon" />
-    <span>Profile</span>
-  </a>
-
-  <a href="settings.html" class="nav-item">
-    <img src="images/Settings.png" class="nav-icon" />
-    <span>Settings</span>
-  </a>
-</nav>
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
+  </div>
 
   <div class="create-container">
 
@@ -65,7 +93,7 @@
 
     <div class="field-group">
       <label class="field-label">Description</label>
-       <textarea class="field-input field-textarea" placeholder="Tell the story behind your work."></textarea>
+      <textarea class="field-input field-textarea" placeholder="Tell the story behind your work."></textarea>
     </div>
 
     <div class="field-group">
@@ -79,6 +107,12 @@
     </div>
 
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

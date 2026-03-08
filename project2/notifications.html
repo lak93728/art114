@@ -18,6 +18,8 @@
       <input type="text" placeholder="Search..." class="search-input" />
       <img src="images/Navigation.png" alt="Search" class="search-icon" />
     </div>
+
+    <!-- Desktop nav items -->
     <a href="explore.html" class="nav-item">
       <img src="images/explore.png" class="nav-icon" />
       <span>Explore</span>
@@ -38,12 +40,49 @@
       <img src="images/Settings.png" class="nav-icon" />
       <span>Settings</span>
     </a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="alerts.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
+  </div>
+
+  <!-- Mobile search bar -->
+  <div class="alerts-search-mobile">
+    <span class="search-mag">&#9906;</span>
+    <input type="text" placeholder="Search..." class="search-input" />
+  </div>
 
   <div class="alerts-container">
     <h1 class="alerts-title">Alerts</h1>
 
-    <!-- ALERT ITEM (repeat 9 times) -->
     <div class="alert-item">
       <div class="alert-left">
         <img src="images/sunny.jpg" alt="User" class="alert-avatar" />
@@ -72,7 +111,7 @@
       <div class="alert-left">
         <img src="images/man.jpg" alt="User" class="alert-avatar" />
         <div class="alert-text">
-          <p class="alert-message"><strong>john.designs</strong> on your post “Amazing work!”</p>
+          <p class="alert-message"><strong>john.designs</strong> on your post "Amazing work!"</p>
           <p class="alert-time">4 hours ago</p>
         </div>
       </div>
@@ -152,7 +191,7 @@
     </div>
     <div class="alert-divider"></div>
 
-        <div class="alert-item">
+    <div class="alert-item">
       <div class="alert-left">
         <img src="images/man.jpg" alt="User" class="alert-avatar" />
         <div class="alert-text">
@@ -166,6 +205,12 @@
     <a href="#" class="view-more">View More</a>
 
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>

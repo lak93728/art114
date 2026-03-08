@@ -15,248 +15,305 @@
 <body class="feed-page">
 
   <!-- ===== NAVBAR ===== -->
-  <!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-  <a href="feed.html">
-    <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
-  </a>
+  <nav class="navbar">
+    <a href="feed.html">
+      <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
+    </a>
 
-  <div class="nav-search">
-    <span class="search-mag">&#9906;</span>
-    <input type="text" placeholder="Search..." class="search-input" />
-    <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    <div class="nav-search">
+      <span class="search-mag">&#9906;</span>
+      <input type="text" placeholder="Search..." class="search-input" />
+      <img src="images/Navigation.png" alt="Search" class="search-icon" />
+    </div>
+
+    <!-- Desktop nav items -->
+    <a href="explore.html" class="nav-item">
+      <img src="images/explore.png" class="nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="nav-item">
+      <img src="images/create.png" class="nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="nav-item">
+      <img src="images/bell.png" class="nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+      <img src="images/user.png" class="nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="nav-item">
+      <img src="images/Settings.png" class="nav-icon" />
+      <span>Settings</span>
+    </a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
+    <a href="explore.html" class="mobile-nav-item">
+      <img src="images/explore.png" class="mobile-nav-icon" />
+      <span>Explore</span>
+    </a>
+    <a href="post.html" class="mobile-nav-item">
+      <img src="images/create.png" class="mobile-nav-icon" />
+      <span>Create</span>
+    </a>
+    <a href="notifications.html" class="mobile-nav-item">
+      <img src="images/bell.png" class="mobile-nav-icon" />
+      <span>Alerts</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <img src="images/user.png" class="mobile-nav-icon" />
+      <span>Profile</span>
+    </a>
+    <a href="settings.html" class="mobile-nav-item">
+      <img src="images/Settings.png" class="mobile-nav-icon" />
+      <span>Settings</span>
+    </a>
   </div>
 
-  <a href="explore.html" class="nav-item">
-    <img src="images/explore.png" class="nav-icon" />
-    <span>Explore</span>
-  </a>
-
-  <a href="post.html" class="nav-item">
-    <img src="images/create.png" class="nav-icon" />
-    <span>Create</span>
-  </a>
-
-  <a href="notifications.html" class="nav-item">
-    <img src="images/bell.png" class="nav-icon" />
-    <span>Alerts</span>
-  </a>
-
-  <a href="profile.html" class="nav-item">
-    <img src="images/user.png" class="nav-icon" />
-    <span>Profile</span>
-  </a>
-
-  <a href="settings.html" class="nav-item">
-    <img src="images/Settings.png" class="nav-icon" />
-    <span>Settings</span>
-  </a>
-</nav>
   <!-- ===== TRENDING ===== -->
   <div class="feed-content">
     <h2 class="trending-title">Trending Today</h2>
 
     <div class="tag-buttons">
       <div class="tag-row">
-  <a href="explore.html" class="tag-btn">#minimalism</a>
-  <a href="explore.html" class="tag-btn">#abstract</a>
-  <a href="explore.html" class="tag-btn">#portrait</a>
-  <a href="explore.html" class="tag-btn">#landscape</a>
-  <a href="explore.html" class="tag-btn">#typography</a>
-</div>
-  </div>
-
-  <h2 class="for-you-title">For You</h2>
-
-  <!-- ===== IMAGE GRID ===== -->
-  <div class="row">
-
-    <!-- COLUMN 1 -->
-    <div class="column">
-
-      <div class="img-card">
-        <img src="images/mountain.jpg" alt="Beautiful photo">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/polaroid.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/mural.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- COLUMN 2 -->
-    <div class="column">
-      <div class="img-card">
-        <img src="images/sketch.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/pattern.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/shapes.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
+        <a href="explore.html" class="tag-btn">#minimalism</a>
+        <a href="explore.html" class="tag-btn">#abstract</a>
+        <a href="explore.html" class="tag-btn">#portrait</a>
+        <a href="explore.html" class="tag-btn">#landscape</a>
+        <a href="explore.html" class="tag-btn">#typography</a>
       </div>
     </div>
 
-    <!-- COLUMN 3 -->
-    <div class="column">
-      <div class="img-card">
-        <img src="images/frame.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
+    <h2 class="for-you-title">For You</h2>
+
+    <!-- ===== IMAGE GRID ===== -->
+    <div class="row">
+
+      <!-- COLUMN 1 -->
+      <div class="column">
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/mountain.jpg" alt="Beautiful photo">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
             </div>
           </div>
-          <button class="save-btn">Save</button>
-        </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/polaroid.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/mural.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
       </div>
 
-      <div class="img-card">
-        <img src="images/warm.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
+      <!-- COLUMN 2 -->
+      <div class="column">
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/sketch.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
             </div>
           </div>
-          <button class="save-btn">Save</button>
-        </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/pattern.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/shapes.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
       </div>
 
-      <div class="img-card">
-        <img src="images/photography.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
+      <!-- COLUMN 3 -->
+      <div class="column">
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/frame.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
             </div>
           </div>
-          <button class="save-btn">Save</button>
-        </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/warm.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/photography.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
       </div>
+
+      <!-- COLUMN 4 -->
+      <div class="column">
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/plant.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/lake.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="click.html" class="img-card-link">
+          <div class="img-card">
+            <img src="images/book.jpg">
+            <div class="overlay">
+              <div class="overlay-top">
+                <div class="title">Beautiful Photo</div>
+                <div class="artist">
+                  <img src="images/hippie.jpg" class="artist-icon">
+                  <span>good_artist</span>
+                </div>
+              </div>
+              <button class="save-btn">Save</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
-
-    <!-- COLUMN 4 -->
-    <div class="column">
-      <div class="img-card">
-        <img src="images/plant.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/lake.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-
-      <div class="img-card">
-        <img src="images/book.jpg">
-        <div class="overlay">
-          <div class="overlay-top">
-            <div class="title">Beautiful Photo</div>
-            <div class="artist">
-              <img src="images/hippie.jpg" class="artist-icon">
-              <span>good_artist</span>
-            </div>
-          </div>
-          <button class="save-btn">Save</button>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <!-- JS -->
   <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
