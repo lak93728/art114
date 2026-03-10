@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ArtSpot - Photo</title>
 
-  <!-- CSS -->
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"/>
 </head>
 
 <body class="click-page">
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- nav bar -->
   <nav class="navbar">
     <a href="feed.html">
       <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
@@ -26,7 +26,6 @@
      
     </div>
 
-    <!-- Desktop nav items -->
     <a href="explore.html" class="nav-item">
       <img src="images/explore.png" class="nav-icon" />
       <span>Explore</span>
@@ -48,7 +47,7 @@
       <span>Settings</span>
     </a>
 
-    <!-- Hamburger button (mobile only) -->
+    <!-- menu button -->
     <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
       <span></span>
       <span></span>
@@ -56,7 +55,7 @@
     </button>
   </nav>
 
-  <!-- Mobile drawer -->
+  <!-- mobile nav -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
     <a href="explore.html" class="mobile-nav-item">
@@ -83,12 +82,12 @@
 
   <button class="back-btn" onclick="history.back()">&#8592;</button>
 
-  <!-- ===== PHOTO DETAIL CONTENT ===== -->
+  <!-- photo detail -->
   <div class="click-content">
 
     <div class="click-layout">
 
-      <!-- LEFT SIDE -->
+      <!-- left side -->
       <div class="click-left">
         <img src="images/mountain.jpg" alt="Beautiful Photo" class="click-photo" />
 
@@ -101,7 +100,7 @@
         </div>
       </div>
 
-      <!-- RIGHT SIDE -->
+      <!-- right side -->
       <div class="click-right">
         <h1 class="click-title">Beautiful Photo</h1>
         <p class="click-date">02-15-2026</p>
@@ -124,7 +123,7 @@
 
     </div>
 
-    <!-- COMMENTS SECTION -->
+    <!-- comments -->
     <div class="comments-container">
       <h2 class="comments-title">Comments (1K+)</h2>
 
@@ -135,7 +134,7 @@
 
       <button class="post-comment-btn">Post Comment</button>
 
-      <!-- EXISTING COMMENTS -->
+      <!-- real comments -->
       <div class="comment-item">
         <img src="images/man.jpg" alt="User" class="comment-avatar" />
         <div class="comment-content">

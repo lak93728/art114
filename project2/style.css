@@ -14,7 +14,7 @@ body.feed-page {
   overflow: auto;
 }
 
-/* ===== SPLASH PAGE ===== */
+/* the splash page code */
 .splash-container {
   width: 1440px;
   max-width: 100%;
@@ -145,7 +145,7 @@ body.feed-page {
   background-color: #e03e3b;
 }
 
-/* ===== NAVBAR ===== */
+/* nav code */
 .navbar {
   width: 100%;
   height: 100px;
@@ -156,15 +156,16 @@ body.feed-page {
   align-items: center;
   gap: 45px;
   box-sizing: border-box;
-  text-decoration: none;  /* Removes underline */
-  color: inherit;  /* Keeps original text color */
+  text-decoration: none;
+  color: inherit;
   margin-right: 50px;
 }
 
 .nav-item:hover {
-  text-decoration: none;  /* Keeps underline off on hover */
+  text-decoration: none;
 }
 
+/* strips underlines from every <a> tag */
 a {
   text-decoration: none;
 }
@@ -212,7 +213,6 @@ a {
   flex-shrink: 0;
 }
 
-
 .nav-item:hover {
   background-color: #FFD1C3; 
 }
@@ -239,6 +239,7 @@ a {
   object-fit: contain;
   margin-top: 10px;
 }
+
 .search-mag {
   font-size: 24px;
   margin-right: 8px;
@@ -246,7 +247,7 @@ a {
   color: #6B6B6B;
 }
 
-/* ===== FEED PAGE ===== */
+/* feed page */
 .feed-content {
   margin-top: 20px;
   margin-right: 50px;
@@ -265,9 +266,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  
-  
 }
 
 .tag-row {
@@ -294,12 +292,12 @@ a {
   white-space: nowrap;
   padding: 20px 24px;
   flex-shrink: 0;
-  transition: transform 0.2s ease;  /* ADD THIS - smooth animation */
+  transition: transform 0.2s ease;
   text-decoration: none;
 }
 
 .tag-btn:hover {
-  transform: scale(1.05);  /* ADD THIS - makes button 5% bigger on hover */
+  transform: scale(1.05);
   text-decoration: none;
 }
 
@@ -312,7 +310,8 @@ font-family: 'Geologica', sans-serif;
   margin-top: 20px;
 
 }
-  
+
+/* masonry-style image grid from w3schools https://www.w3schools.com/howto/howto_js_image_grid.asp */
 .row {
   display: flex;
 }
@@ -380,13 +379,15 @@ font-family: 'Geologica', sans-serif;
 
 .artist {
   display: flex;
-  align-items: center;  /* CHANGED from flex-start to center - vertically centers items */
+  align-items: center;
   gap: 6px;
   align-self: flex-end;
   margin-right: 40px;
   margin-top: -15px;
 }
 
+/* !important overrides here because .column img
+   set broad styles that wont resize the avatars for some reaosn */
 .artist-icon {
   width: 25px !important;
   height: 25px !important;
@@ -397,32 +398,30 @@ font-family: 'Geologica', sans-serif;
   border-radius: 50% !important;
   object-fit: cover !important;
   display: block !important;
-  flex: 0 0 25px !important;  /* CHANGED from 15px to 25px */
+  flex: 0 0 25px !important;
 }
 
 .artist span {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #000;
-  line-height: 1.2;  /* CHANGED from 0.5 to 1.2 - was squishing the text */
+  line-height: 1.2;
 }
-
 
 .save-btn {
   align-self: flex-end;
   background-color: #FC5552;
   color: #fff;
   font-family: 'Geologica', sans-serif;
-  font-size: 22px;  /* INCREASED from 28px */
+  font-size: 22px;
   border: none;
-  border-radius: 10px;  /* INCREASED from 8px */
-  padding: 8px 16px;  /* INCREASED from 10px 20px - makes button physically bigger */
+  border-radius: 10px;
+  padding: 8px 16px;
   cursor: pointer;
-  font-weight: 600;  /* ADD THIS - makes text bolder/more visible */
+  font-weight: 600;
 }
 
-/* ===== CREATE PAGE ===== */
-/* ===== CREATE PAGE ===== */
+/* create page */
 body.create-page {
   overflow: auto;
 }
@@ -549,7 +548,7 @@ body.create-page {
   transition: transform 0.2s ease;
 }
 
-/* ===== EXPLORE PAGE ===== */
+/* explore page note to self: dont forget to resize the images  */
 .explore-page {
   overflow: auto;
 }
@@ -580,7 +579,6 @@ body.create-page {
   margin-bottom: 20px;
 }
 
-/* Explore Tag Buttons */
 .explore-tag-buttons {
   display: flex;
   flex-direction: column;
@@ -620,7 +618,6 @@ body.create-page {
   text-decoration: none;
 }
 
-/* Browse by Category */
 .category-title {
   font-family: 'Geologica', sans-serif;
   font-weight: 700;
@@ -630,6 +627,7 @@ body.create-page {
   margin-bottom: 10px;
 }
 
+/* CSS Grid auto-sizes 4 equal columns with repeat(4, 1fr) */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -647,8 +645,8 @@ body.create-page {
 }
 
 .category-card:hover {
-  transform: scale(1.05);  /* ADD THIS - makes button 5% bigger on hover */
-  text-decoration: none;  /* ADD THIS */
+  transform: scale(1.05);
+  text-decoration: none;
 }
 
 .category-card img {
@@ -658,6 +656,7 @@ body.create-page {
   display: block;
 }
 
+/* this is the gradient hover */
 .category-overlay {
   position: absolute;
   inset: 0;
@@ -668,11 +667,10 @@ body.create-page {
     rgba(223, 246, 248, 0)
   );
   display: flex;
-  align-items: flex-start;  /* CHANGED from center to flex-start - moves to top */
+  align-items: flex-start;
   justify-content: left;
   border-radius: 15px;
 }
-
 
 .category-text {
   font-family: 'Geologica', sans-serif;
@@ -683,7 +681,7 @@ body.create-page {
   margin-top: 10px;
 }
 
-/* Explore Image Grid */
+/* explore image grid with the same layout as feed page grid */
 .explore-row {
   display: flex;
   padding: 0;
@@ -784,15 +782,15 @@ body.create-page {
   background-color: #FC5552;
   color: #fff;
   font-family: 'Geologica', sans-serif;
-  font-size: 22px;      /* DECREASED from 32px */
+  font-size: 22px;
   border: none;
   border-radius: 10px;
-  padding: 8px 16px;    /* DECREASED from 14px 16px */
+  padding: 8px 16px;
   cursor: pointer;
   font-weight: 600;
 }
 
-/* ===== PROFILE PAGE ===== */
+/* profile page */
 body.profile-page {
   overflow: auto;
 }
@@ -889,7 +887,7 @@ body.profile-page {
   border-radius: 15px;
 }
 
-/* ===== ALERTS PAGE ===== */
+/* alerts page */
 body.alerts-page {
   overflow: auto;
 }
@@ -980,7 +978,7 @@ body.alerts-page {
   display: inline-block;
 }
 
-/* ===== SETTINGS PAGE ===== */
+/* settings page */
 body.settings-page {
   overflow: auto;
 }
@@ -1096,7 +1094,6 @@ body.settings-page {
   color: #000000;
 }
 
-/* Toggle Switch */
 .toggle {
   position: relative;
   display: inline-block;
@@ -1171,6 +1168,7 @@ body.settings-page {
   align-self: flex-start;
   white-space: nowrap;
 }
+
 .settings-cancel {
   font-family: 'Geologica', sans-serif;
   font-size: 24px;
@@ -1181,7 +1179,6 @@ body.settings-page {
   padding: 10px 60px;
   cursor: pointer;
 }
-
 
 .change-photo-btn:hover {
   transform: scale(1.05);
@@ -1203,7 +1200,7 @@ body.settings-page {
   transition: transform 0.2s ease;
 }
 
-/* ===== CLICK PAGE (PHOTO DETAIL) ===== */
+/* photo full view page) */
 .click-page {
   overflow: auto;
 }
@@ -1218,7 +1215,6 @@ body.settings-page {
   margin-bottom: 40px;
 }
 
-/* LEFT SIDE */
 .click-left {
   position: relative;
   flex-shrink: 0;
@@ -1231,6 +1227,7 @@ body.settings-page {
   border-radius: 15px;
   display: block;
 }
+
 .click-artist-row {
   display: flex;
   justify-content: space-between;
@@ -1273,7 +1270,6 @@ body.settings-page {
   background-color: #e03e3b;
 }
 
-/* RIGHT SIDE */
 .click-right {
   flex: 1;
   margin-left: 20px;
@@ -1335,7 +1331,7 @@ body.settings-page {
   text-decoration: none;
   display: inline-block;
   transition: transform 0.2s ease;
-   min-width: 275px;        /* ADD THIS */
+  min-width: 275px;
   text-align: center;
   margin-top: 5px;
 }
@@ -1344,7 +1340,7 @@ body.settings-page {
   transform: scale(1.05);
 }
 
-/* COMMENTS SECTION */
+/* comments section */
 .comments-container {
   background-color: #FFF5F2;
   padding: 40px 40px;
@@ -1381,13 +1377,13 @@ body.settings-page {
   font-family: 'Geologica', sans-serif;
   font-size: 20px;
   color: #000000;
-  border: 2px solid #FFD1C3;   /* CHANGED - matches comment boxes */
-  border-bottom: none;          /* REMOVE the old single bottom border */
-  border-radius: 10px;          /* ADD THIS */
-  background: #ffffff;          /* ADD THIS */
-  padding: 15px;                /* CHANGED to match comment-content */
+  border: 2px solid #FFD1C3;
+  border-bottom: none;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 15px;
   outline: none;
-  min-height: 85px;            /* ADD THIS - same height as comment boxes */
+  min-height: 85px;
 }
 
 .comment-input::placeholder {
@@ -1421,10 +1417,10 @@ body.settings-page {
 .comment-content {
   flex: 1;
   background-color: #ffffff;
-  border: 2px solid #FFD1C3;   /* CHANGED from #3A7D82 */
+  border: 2px solid #FFD1C3;
   border-radius: 10px;
   padding: 30px;
-  min-height: 120px;            /* ADD THIS - makes boxes taller */
+  min-height: 120px;
 }
 
 .comment-header {
@@ -1458,7 +1454,7 @@ body.settings-page {
 .back-btn {
   background-color: #FC5552;
   color: #ffffff;
-  font-size: 28px;        /* DECREASED slightly */
+  font-size: 28px;
   border: none;
   border-radius: 50%;
   width: 55px;
@@ -1467,8 +1463,8 @@ body.settings-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;          /* ADD THIS */
-  padding-bottom: 4px;     /* ADD THIS - fine-tune vertical centering */
+  line-height: 1;
+  padding-bottom: 4px;
   margin: 20px 0 0 30px;
   transition: transform 0.2s ease;
 }
@@ -1477,7 +1473,7 @@ body.settings-page {
   transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE ===== */
+/* responsive splash page and keeps desktop stuff */
 @media (max-width: 768px) {
   body {
     overflow: auto;
@@ -1583,7 +1579,7 @@ body.settings-page {
   }
 }
 
-/* ===== HAMBURGER BUTTON ===== */
+/* menu button for responsive nav */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1596,6 +1592,7 @@ body.settings-page {
   margin-left: auto;
 }
 
+/* each span is one bar of the hamburger icon */
 .hamburger span {
   display: block;
   width: 30px;
@@ -1604,7 +1601,7 @@ body.settings-page {
   border-radius: 3px;
 }
 
-/* ===== MOBILE DRAWER ===== */
+/* menu starts off screen at right and slides in */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -1676,18 +1673,18 @@ body.settings-page {
   display: none;
 }
 
-/* ===== SHOW/HIDE ON MOBILE ===== */
+/* responsive stuff a little meshed together it got confusing here */
 @media (max-width: 768px) {
   .nav-item {
-    display: none;   /* hide desktop nav items */
+    display: none;
   }
 
   .hamburger {
-    display: flex;   /* show hamburger */
+    display: flex;
   }
 
   .mobile-menu {
-    display: flex;   /* allow the drawer to show when .open is added */
+    display: flex;
   }
 
   .nav-search {
@@ -1706,7 +1703,6 @@ body.settings-page {
 
   @media (max-width: 768px) {
 
-  /* Tags: 2 column grid */
   .tag-buttons {
     margin: 0;
   }
@@ -1723,7 +1719,6 @@ body.settings-page {
     padding: 14px 10px;
   }
 
-  /* Image grid: 2 columns */
   .row {
     flex-wrap: wrap;
   }
@@ -1748,7 +1743,6 @@ body.settings-page {
 
 @media (max-width: 768px) {
 
-  /* Move search bar below navbar */
   .explore-content {
     padding: 0 12px;
     margin-top: 0;
@@ -1766,7 +1760,6 @@ body.settings-page {
     margin: 40px 12px 20px 12px;
   }
 
-  /* Tag buttons: 2 columns */
   .explore-tag-buttons {
     margin: 0;
   }
@@ -1783,12 +1776,10 @@ body.settings-page {
     padding: 14px 10px;
   }
 
-  /* Category grid: 2 columns */
   .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Image grid: 2 columns */
   .explore-row {
     flex-wrap: wrap;
   }
@@ -1798,7 +1789,6 @@ body.settings-page {
     max-width: 50%;
   }
 
-  /* Tighten titles */
   .explore-title {
     font-size: 48px;
   }
@@ -1839,7 +1829,6 @@ body.settings-page {
     flex: 0 0 18px !important;
   }
 
-  /* Explore overlays */
   .explore-overlay {
     flex-direction: column;
     justify-content: space-between;
@@ -1957,7 +1946,7 @@ body.settings-page {
 
  .alert-item {
     padding: 10px 0;
-    justify-content: space-between;  /* CHANGED from center */
+    justify-content: space-between;
     gap: 10px;
     width: 100%;
   }
@@ -1981,7 +1970,6 @@ body.settings-page {
     margin: 20px 12px;
   }
 
-  /* Stack profile header vertically */
   .profile-header {
     flex-direction: column;
     align-items: flex-start;
@@ -2019,7 +2007,6 @@ body.settings-page {
     font-size: 32px;
   }
 
-  /* Created posts: 2 columns */
   .post-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2045,7 +2032,6 @@ body.settings-page {
     margin-bottom: 10px;
   }
 
-  /* Stack photo row vertically */
   .settings-photo-row {
     flex-direction: column;
     align-items: flex-start;
@@ -2062,7 +2048,6 @@ body.settings-page {
     margin-left: 0;
   }
 
-  /* Stack buttons and stretch full width */
   .settings-btns {
     flex-direction: row;
     gap: 10px;
@@ -2075,7 +2060,6 @@ body.settings-page {
     padding: 10px;
   }
 
-  /* Notification rows stack vertically */
   .settings-notif-row {
     flex-direction: column;
     align-items: flex-start;
@@ -2083,7 +2067,6 @@ body.settings-page {
     padding-right: 0;
   }
 
-  /* Logout card stack vertically */
   .settings-logout-card {
     flex-direction: column;
     align-items: flex-start;
@@ -2106,13 +2089,13 @@ body.settings-page {
   }
 
     .settings-avatar {
-    width: 180px;    /* INCREASED from 120px */
-    height: 180px;   /* INCREASED from 120px */
+    width: 180px;
+    height: 180px; 
   }
 
   .change-photo-btn {
-    font-size: 16px;   /* DECREASED */
-    padding: 8px 20px; /* DECREASED */
+    font-size: 16px;
+    padding: 8px 20px;
   }
 
   @media (max-width: 768px) {
@@ -2121,7 +2104,6 @@ body.settings-page {
     margin: 20px 12px 0 12px;
   }
 
-  /* Stack layout vertically */
   .click-layout {
     flex-direction: column;
     gap: 16px;
@@ -2163,7 +2145,6 @@ body.settings-page {
     min-width: 0;
   }
 
-  /* Comments */
   .comments-container {
     padding: 20px 12px;
   }
@@ -2205,7 +2186,6 @@ body.settings-page {
 
   @media (max-width: 768px) {
 
-  /* Tags stretch full width */
   .click-tags {
     width: 100%;
   }
@@ -2222,7 +2202,6 @@ body.settings-page {
     width: 235px;
   }
 
-  /* Save button below artist name */
   .click-artist-row {
     flex-direction: column;
     align-items: flex-start;
@@ -2233,12 +2212,11 @@ body.settings-page {
     width: auto;
   }
 
-  /* Smaller post comment button */
-    .post-comment-btn {
+  .post-comment-btn {
     width: auto;
     font-size: 16px;
     padding: 10px 24px;
-    margin-left: 80px;  /* matches comment-avatar width + gap */
+    margin-left: 80px;
   }
 
     .title {
@@ -2249,6 +2227,4 @@ body.settings-page {
 }
 }
 }
-} 
-
-
+}

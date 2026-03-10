@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ArtSpot - Explore</title>
 
-  <!-- CSS -->
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"/>
 </head>
 
 <body class="explore-page">
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- nav bar -->
   <nav class="navbar">
     <a href="feed.html">
       <img src="images/artspot.png" alt="ArtSpot Logo" class="nav-logo" />
@@ -26,7 +26,6 @@
       
     </div>
 
-    <!-- Desktop nav items -->
     <a href="explore.html" class="nav-item">
       <img src="images/explore.png" class="nav-icon" />
       <span>Explore</span>
@@ -48,7 +47,7 @@
       <span>Settings</span>
     </a>
 
-    <!-- Hamburger button (mobile only) -->
+    <!-- menu button -->
     <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
       <span></span>
       <span></span>
@@ -56,7 +55,7 @@
     </button>
   </nav>
 
-  <!-- Mobile drawer -->
+  <!-- mobile nav -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu-close" onclick="toggleMenu()">&#10005;</button>
     <a href="explore.html" class="mobile-nav-item">
@@ -81,13 +80,12 @@
     </a>
   </div>
 
-  <!-- Mobile search bar (shows below navbar on mobile) -->
   <div class="explore-search-mobile">
 <img src="images/search.png" alt="Search" class="search-icon" />
     <input type="text" placeholder="Search..." class="search-input" />
   </div>
 
-  <!-- ===== EXPLORE CONTENT ===== -->
+  <!-- explore -->
   <div class="explore-content">
     <h2 class="explore-title">Explore</h2>
 
@@ -105,7 +103,7 @@
 
     <h3 class="category-title">Browse by Category</h3>
 
-    <!-- CATEGORY BUTTONS -->
+    <!-- category buttions -->
     <div class="category-grid">
       <div class="category-card">
         <img src="images/purple.jpg" alt="Photography">
@@ -159,10 +157,10 @@
 
     <p class="explore-subtitle keep-looking">Keep Looking</p>
 
-    <!-- ===== IMAGE GRID ===== -->
+    <!-- grid -->
     <div class="explore-row">
 
-      <!-- COLUMN 1 -->
+      <!-- col 1 -->
       <div class="explore-column">
         <a href="click.html" class="explore-img-card-link">
           <div class="explore-img-card">
@@ -211,7 +209,7 @@
         </a>
       </div>
 
-      <!-- COLUMN 2 -->
+      <!-- col 2 -->
       <div class="explore-column">
         <a href="click.html" class="explore-img-card-link">
           <div class="explore-img-card">
@@ -260,7 +258,7 @@
         </a>
       </div>
 
-      <!-- COLUMN 3 -->
+      <!-- col 3 -->
       <div class="explore-column">
         <a href="click.html" class="explore-img-card-link">
           <div class="explore-img-card">
@@ -309,7 +307,7 @@
         </a>
       </div>
 
-      <!-- COLUMN 4 -->
+      <!-- col 4 -->
       <div class="explore-column">
         <a href="click.html" class="explore-img-card-link">
           <div class="explore-img-card">
