@@ -627,7 +627,6 @@ body.create-page {
   margin-bottom: 10px;
 }
 
-/* CSS Grid auto-sizes 4 equal columns with repeat(4, 1fr) */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
