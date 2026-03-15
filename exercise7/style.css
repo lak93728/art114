@@ -26,6 +26,20 @@
 .title {
   font-size: 48px;
   margin-bottom: 20px;
+  opacity: 0;        
+  transform: translateX(800px);
+  animation: slideIn 2.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .date {
