@@ -18,13 +18,11 @@ body {
   text-align: center;
 }
 
-/* Header */
 header {
   background: #b7c9e2;
   padding: 20px;
 }
 
-/* Navigation Bar */
 nav {
   background: #6a7fa3;
   padding: 15px 0;
@@ -58,7 +56,6 @@ main {
   margin: 40px auto;
 }
 
-/* Articles */
 article {
   margin-bottom: 40px;
   padding-bottom: 20px;
@@ -69,7 +66,6 @@ h2 {
   color: #2f3d55;
 }
 
-/* Buttons */
 button,
 input[type="submit"],
 .wp-block-button__link {

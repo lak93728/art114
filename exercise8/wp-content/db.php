@@ -11,7 +11,6 @@
  * @package wp-sqlite-integration
  */
 
-define( 'SQLITE_MAIN_FILE', __FILE__ );
 define( 'SQLITE_DB_DROPIN_VERSION', '1.8.0' );
 
 // Tweak to allow copy-pasting the file without having to run string-replacements.
