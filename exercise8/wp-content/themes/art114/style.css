@@ -1,0 +1,88 @@
+/*
+Theme Name: My First Theme
+Theme URI: https://example.com/my-first-theme
+Author: Lacie Kirby
+Author URI: https://example.com
+Description: My custom WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-first-theme
+*/
+
+body {
+  background: #e8eff7;
+  color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: #b7c9e2;
+  padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  background: #6a7fa3;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* Articles */
+article {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #9fb0c9;
+}
+
+h2 {
+  color: #2f3d55;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+.wp-block-button__link {
+  background: #6a7fa3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.wp-block-button__link:hover {
+  background: #4a5c7a;
+}
