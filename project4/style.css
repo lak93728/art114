@@ -1,0 +1,269 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+}
+
+/* PAGE WRAPPER — fixed 1440px */
+.page-wrapper {
+  width: 1440px;
+  min-width: 1440px;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+.navbar {
+  width: 1440px;
+  height: 170px;
+  background: #D7EEEE;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 400px;
+  width: auto;
+}
+
+.nav-links {
+  margin-left: 375px;
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.nav-links a {
+  font-family: 'Alata', sans-serif;
+  font-size: 30px;
+  color: #07303C;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #307589;
+  text-decoration: underline;
+}
+
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero {
+  width: 1440px;
+  padding: 100px 100px 100px 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #ffffff;
+}
+
+.hero-photo {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 2px solid #d0d0d0;
+}
+
+.hero-text {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.hero-headline {
+  font-family: 'Jua', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  color: #07303C;
+  line-height: 1.4;
+  max-width: 800px;
+}
+
+.hero-sub {
+  margin-top: 45px;
+  font-family: 'Amiko', sans-serif;
+  font-size: 35px;
+  color: #07303C;
+}
+
+
+/* =============================================
+   WORK GRID SECTION
+   ============================================= */
+.work-section {
+  width: 1440px;
+  background: #F7EEE3;
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.work-title {
+  font-family: 'Amiko', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #07303C;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 412px 412px 412px;
+  grid-template-rows: 412px 412px;
+  justify-content: center;
+  gap: 18px;
+}
+
+.grid-img {
+  width: 412px;
+  height: 412px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #d0d0d0;
+}
+
+.portfolio-btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+
+/* =============================================
+   SHARED BUTTON STYLES
+   ============================================= */
+.btn {
+  display: inline-block;
+  font-family: 'Alata', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  background: #307589;
+  text-decoration: none;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 38px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  background: #245e6e;
+  transform: scale(1.02);
+}
+
+.btn-portfolio {
+  /* inherits .btn */
+}
+
+.btn-contact {
+  /* inherits .btn */
+}
+
+
+/* =============================================
+   CONTACT SECTION
+   ============================================= */
+.contact-section {
+  width: 1440px;
+  background: #F7EEE3;
+  margin-top: 100px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-family: 'Amiko', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #07303C;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.contact-sub {
+  font-family: 'Amiko', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #07303C;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  line-height: 1.6;
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  width: 1440px;
+  height: 200px;
+  background: #307589;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.footer-copy {
+  margin-left: 70px;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  color: #D7EEEE;
+}
+
+.footer-icons {
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-icons a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.icon-svg {
+  width: 65px;
+  height: 65px;
+  fill: #ffffff;
+  transition: opacity 0.2s ease;
+}
+
+.footer-icons a:hover .icon-svg {
+  opacity: 0.75;
+}
