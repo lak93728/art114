@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,17 +5,15 @@
 }
 
 body {
-  background: #f0f0f0;
-  display: flex;
-  justify-content: center;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-/* PAGE WRAPPER — fixed 1440px */
+/* PAGE WRAPPER — full width, bleeds edge to edge */
 .page-wrapper {
-  width: 1440px;
-  min-width: 1440px;
+  width: 100%;
   background: #ffffff;
-  overflow-x: hidden;
 }
 
 
@@ -24,39 +21,39 @@ body {
    NAVBAR
    ============================================= */
 .navbar {
-  width: 1440px;
+  width: 100%;
   height: 170px;
   background: #D7EEEE;
   display: flex;
   align-items: center;
+  padding: 0 50px;
 }
 
 .nav-left {
-  margin-left: 50px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-logo {
-  height: 400px;
+  height: 120px;
   width: auto;
 }
 
 .nav-links {
-  margin-left: 375px;
+  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 75px;
-  margin-top: 20px;
-  margin-right: 50px;
+  gap: 50px;
 }
 
 .nav-links a {
   font-family: 'Alata', sans-serif;
-  font-size: 30px;
+  font-size: clamp(16px, 2vw, 30px);
   color: #07303C;
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -69,17 +66,18 @@ body {
    HERO SECTION
    ============================================= */
 .hero {
-  width: 1440px;
-  padding: 100px 100px 100px 100px;
+  width: 100%;
+  padding: 80px 5%;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 50px;
   background: #ffffff;
 }
 
 .hero-photo {
-  width: 500px;
-  height: 600px;
+  width: 35%;
+  max-width: 500px;
+  aspect-ratio: 5 / 6;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 4px;
@@ -87,25 +85,25 @@ body {
 }
 
 .hero-text {
-  padding-top: 10px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 .hero-headline {
   font-family: 'Jua', sans-serif;
   font-weight: 400;
-  font-size: 50px;
+  font-size: clamp(24px, 3.5vw, 50px);
   color: #07303C;
   line-height: 1.4;
-  max-width: 800px;
 }
 
 .hero-sub {
-  margin-top: 45px;
+  margin-top: 40px;
   font-family: 'Amiko', sans-serif;
-  font-size: 35px;
+  font-size: clamp(18px, 2.5vw, 35px);
   color: #07303C;
 }
 
@@ -114,33 +112,30 @@ body {
    WORK GRID SECTION
    ============================================= */
 .work-section {
-  width: 1440px;
+  width: 100%;
   background: #F7EEE3;
-  padding-top: 15px;
+  padding: 40px 5%;
   margin-top: 10px;
 }
 
 .work-title {
   font-family: 'Amiko', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: clamp(22px, 3vw, 40px);
   color: #07303C;
   text-align: center;
   margin-bottom: 30px;
-  margin-top: 30px;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: 412px 412px 412px;
-  grid-template-rows: 412px 412px;
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
 .grid-img {
-  width: 412px;
-  height: 412px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
   border: 2px solid #d0d0d0;
@@ -148,8 +143,7 @@ body {
 
 .portfolio-btn-wrap {
   text-align: center;
-  margin-top: 20px;
-  padding-bottom: 15px;
+  margin-top: 30px;
 }
 
 
@@ -159,18 +153,18 @@ body {
 .btn {
   display: inline-block;
   font-family: 'Alata', sans-serif;
-  font-size: 30px;
+  font-size: clamp(16px, 2vw, 30px);
   font-weight: 400;
   color: #ffffff;
   background: #307589;
   text-decoration: none;
   border: none;
   border-radius: 40px;
-  padding: 18px 38px;
+  padding: 16px 36px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
@@ -178,24 +172,15 @@ body {
   transform: scale(1.02);
 }
 
-.btn-portfolio {
-  /* inherits .btn */
-}
-
-.btn-contact {
-  /* inherits .btn */
-}
-
 
 /* =============================================
    CONTACT SECTION
    ============================================= */
 .contact-section {
-  width: 1440px;
+  width: 100%;
   background: #F7EEE3;
-  margin-top: 100px;
-  padding-top: 10px;
-  padding-bottom: 50px;
+  margin-top: 80px;
+  padding: 40px 5% 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,50 +189,49 @@ body {
 .contact-title {
   font-family: 'Amiko', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: clamp(22px, 3vw, 40px);
   color: #07303C;
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 30px;
 }
 
 .contact-sub {
   font-family: 'Amiko', sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: clamp(16px, 2.2vw, 32px);
   color: #07303C;
   text-align: center;
-  margin-bottom: 20px;
-  max-width: 1000px;
+  max-width: 800px;
   line-height: 1.6;
 }
 
 
 /* =============================================
-   FOOTER
+   FOOTER — content stays fixed, only bg bleeds
    ============================================= */
 .footer {
-  width: 1440px;
+  width: 100%;
   height: 200px;
   background: #307589;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
+  padding: 0 70px;
+  margin-top: 80px;
 }
 
 .footer-copy {
-  margin-left: 70px;
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   color: #D7EEEE;
+  white-space: nowrap;
 }
 
 .footer-icons {
-  margin-right: 70px;
   display: flex;
   align-items: center;
   gap: 40px;
+  flex-shrink: 0;
 }
 
 .footer-icons a {
