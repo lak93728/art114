@@ -5,17 +5,15 @@
 }
 
 body {
-  background: #f0f0f0;
-  display: flex;
-  justify-content: center;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-/* PAGE WRAPPER — fixed 1440px */
+/* PAGE WRAPPER — full width so backgrounds bleed edge to edge */
 .page-wrapper {
-  width: 1440px;
-  min-width: 1440px;
+  width: 100%;
   background: #ffffff;
-  overflow-x: hidden;
 }
 
 
@@ -23,17 +21,26 @@ body {
    NAVBAR
    ============================================= */
 .navbar {
-  width: 1440px;
+  width: 100%;
   height: 170px;
   background: #D7EEEE;
   display: flex;
   align-items: center;
 }
 
-.nav-left {
-  margin-left: 50px;
+/* Inner content centered, fixed width */
+.navbar-inner {
+  width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  padding: 0 50px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-logo {
@@ -42,12 +49,10 @@ body {
 }
 
 .nav-links {
-  margin-left: 375px;
+  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 75px;
-  margin-top: 20px;
-  margin-right: 50px;
+  gap: 50px;
 }
 
 .nav-links a {
@@ -55,7 +60,8 @@ body {
   font-size: 30px;
   color: #07303C;
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -68,12 +74,17 @@ body {
    HERO SECTION
    ============================================= */
 .hero {
+  width: 100%;
+  background: #ffffff;
+}
+
+.hero-inner {
   width: 1440px;
-  padding: 100px 100px 100px 100px;
+  margin: 0 auto;
+  padding: 100px 100px;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  background: #ffffff;
+  gap: 50px;
 }
 
 .hero-photo {
@@ -86,10 +97,9 @@ body {
 }
 
 .hero-text {
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  padding-top: 10px;
 }
 
 .hero-headline {
@@ -98,7 +108,6 @@ body {
   font-size: 50px;
   color: #07303C;
   line-height: 1.4;
-  max-width: 800px;
 }
 
 .hero-sub {
@@ -113,10 +122,15 @@ body {
    WORK GRID SECTION
    ============================================= */
 .work-section {
-  width: 1440px;
+  width: 100%;
   background: #F7EEE3;
-  padding-top: 15px;
   margin-top: 10px;
+}
+
+.work-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 40px 50px;
 }
 
 .work-title {
@@ -177,24 +191,20 @@ body {
   transform: scale(1.02);
 }
 
-.btn-portfolio {
-  /* inherits .btn */
-}
-
-.btn-contact {
-  /* inherits .btn */
-}
-
 
 /* =============================================
    CONTACT SECTION
    ============================================= */
 .contact-section {
-  width: 1440px;
+  width: 100%;
   background: #F7EEE3;
   margin-top: 100px;
-  padding-top: 10px;
-  padding-bottom: 50px;
+}
+
+.contact-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 10px 50px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +226,6 @@ body {
   font-size: 32px;
   color: #07303C;
   text-align: center;
-  margin-bottom: 20px;
   max-width: 1000px;
   line-height: 1.6;
 }
@@ -226,24 +235,32 @@ body {
    FOOTER
    ============================================= */
 .footer {
-  width: 1440px;
+  width: 100%;
   height: 200px;
   background: #307589;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
 }
 
 .footer-copy {
-  margin-left: 70px;
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   color: #D7EEEE;
+  white-space: nowrap;
 }
 
 .footer-icons {
-  margin-right: 70px;
   display: flex;
   align-items: center;
   gap: 40px;
