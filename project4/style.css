@@ -52,7 +52,7 @@ body {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 75px;
 }
 
 .nav-links a {
@@ -282,4 +282,183 @@ body {
 
 .footer-icons a:hover .icon-svg {
   opacity: 0.75;
+}
+
+/* =============================================
+   WORK PAGE STYLES
+   ============================================= */
+
+/* Active nav link — stays highlighted on current page */
+.nav-links a.active {
+  color: #307589;
+  text-decoration: underline;
+}
+
+/* Page Title */
+.work-page-title {
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+.work-page-title h1 {
+  font-family: 'Jua', sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #07303C;
+}
+
+/* Gallery Section */
+.work-gallery {
+  width: 100%;
+  background: #ffffff;
+  padding-bottom: 50px;
+}
+
+.work-gallery-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 50px 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Gallery Rows */
+.gallery-row {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+}
+
+.row-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Individual Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* Overlay — hidden by default */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(238, 254, 254, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-overlay span {
+  font-family: 'Alata', sans-serif;
+  font-size: 30px;
+  color: #07303C;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 0 20px;
+}
+
+/* Hover state */
+.gallery-item:hover .gallery-overlay {
+  background-color: rgba(238, 254, 254, 0.5);
+}
+
+.gallery-item:hover .gallery-overlay span {
+  opacity: 1;
+}
+
+/* =============================================
+   ABOUT PAGE STYLES
+   ============================================= */
+
+/* About Section — full bleed background */
+.about-section {
+  width: 100%;
+  background: #F7EEE3;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+/* Inner content — fixed width, centered */
+.about-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 20px 50px 40px 50px;
+}
+
+/* Title */
+.about-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 50px;
+  color: #07303C;
+  margin-bottom: 50px;
+  margin-top: 75px;
+  text-align: center;
+}
+
+/* Content row: text left, photo right */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+/* Bio text on the left */
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 50px;
+}
+
+.about-text p {
+  font-family: 'Amiko', sans-serif;
+  font-size: 32px;
+  color: #07303C;
+  line-height: 1.1;
+  
+}
+
+/* Photo column on the right */
+.about-photo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-bottom: 20px;
+}
+
+.about-photo {
+  width: 470px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.about-photo-col .btn {
+  margin-top: 30px;
+  margin-bottom: 0;
 }
