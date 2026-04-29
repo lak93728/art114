@@ -10,16 +10,12 @@ body {
   padding: 0;
 }
 
-/* PAGE WRAPPER — full width so backgrounds bleed edge to edge */
 .page-wrapper {
   width: 100%;
   background: #ffffff;
 }
 
 
-/* =============================================
-   NAVBAR
-   ============================================= */
 .navbar {
   width: 100%;
   height: 170px;
@@ -28,7 +24,6 @@ body {
   align-items: center;
 }
 
-/* Inner content centered, fixed width */
 .navbar-inner {
   width: 1440px;
   margin: 0 auto;
@@ -69,10 +64,6 @@ body {
   text-decoration: underline;
 }
 
-
-/* =============================================
-   HERO SECTION
-   ============================================= */
 .hero {
   width: 100%;
   background: #ffffff;
@@ -117,10 +108,6 @@ body {
   color: #07303C;
 }
 
-
-/* =============================================
-   WORK GRID SECTION
-   ============================================= */
 .work-section {
   width: 100%;
   background: #F7EEE3;
@@ -165,10 +152,6 @@ body {
   padding-bottom: 15px;
 }
 
-
-/* =============================================
-   SHARED BUTTON STYLES
-   ============================================= */
 .btn {
   display: inline-block;
   font-family: 'Alata', sans-serif;
@@ -191,10 +174,6 @@ body {
   transform: scale(1.02);
 }
 
-
-/* =============================================
-   CONTACT SECTION
-   ============================================= */
 .contact-section {
   width: 100%;
   background: #F7EEE3;
@@ -230,10 +209,6 @@ body {
   line-height: 1.6;
 }
 
-
-/* =============================================
-   FOOTER
-   ============================================= */
 .footer {
   width: 100%;
   height: 200px;
@@ -284,17 +259,11 @@ body {
   opacity: 0.75;
 }
 
-/* =============================================
-   WORK PAGE STYLES
-   ============================================= */
-
-/* Active nav link — stays highlighted on current page */
 .nav-links a.active {
   color: #307589;
   text-decoration: underline;
 }
 
-/* Page Title */
 .work-page-title {
   width: 100%;
   background: #ffffff;
@@ -310,7 +279,6 @@ body {
   color: #07303C;
 }
 
-/* Gallery Section */
 .work-gallery {
   width: 100%;
   background: #ffffff;
@@ -326,7 +294,6 @@ body {
   gap: 18px;
 }
 
-/* Gallery Rows */
 .gallery-row {
   display: grid;
   gap: 18px;
@@ -358,7 +325,6 @@ body {
   transition: filter 0.3s ease;
 }
 
-/* Overlay — hidden by default */
 .gallery-overlay {
   position: absolute;
   inset: 0;
@@ -379,7 +345,6 @@ body {
   padding: 0 20px;
 }
 
-/* Hover state */
 .gallery-item:hover .gallery-overlay {
   background-color: rgba(238, 254, 254, 0.5);
 }
@@ -388,11 +353,6 @@ body {
   opacity: 1;
 }
 
-/* =============================================
-   ABOUT PAGE STYLES
-   ============================================= */
-
-/* About Section — full bleed background */
 .about-section {
   width: 100%;
   background: #F7EEE3;
@@ -400,7 +360,6 @@ body {
   margin-bottom: 50px;
 }
 
-/* Inner content — fixed width, centered */
 .about-inner {
   width: 1440px;
   margin: 0 auto;
@@ -417,14 +376,12 @@ body {
   text-align: center;
 }
 
-/* Content row: text left, photo right */
 .about-content {
   display: flex;
   align-items: flex-start;
   gap: 70px;
 }
 
-/* Bio text on the left */
 .about-text {
   flex: 1;
   display: flex;
@@ -441,7 +398,6 @@ body {
   
 }
 
-/* Photo column on the right */
 .about-photo-col {
   display: flex;
   flex-direction: column;
