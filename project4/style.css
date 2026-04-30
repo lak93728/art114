@@ -15,7 +15,6 @@ body {
   background: #ffffff;
 }
 
-
 .navbar {
   width: 100%;
   height: 170px;
@@ -259,11 +258,16 @@ body {
   opacity: 0.75;
 }
 
+/* =============================================
+   WORK PAGE STYLES
+   ============================================= */
+ 
 .nav-links a.active {
   color: #307589;
   text-decoration: underline;
 }
-
+ 
+/* Page Title */
 .work-page-title {
   width: 100%;
   background: #ffffff;
@@ -271,20 +275,21 @@ body {
   padding-top: 30px;
   padding-bottom: 0;
 }
-
+ 
 .work-page-title h1 {
   font-family: 'Jua', sans-serif;
   font-size: 50px;
   font-weight: 400;
   color: #07303C;
 }
-
+ 
+/* Gallery Section */
 .work-gallery {
   width: 100%;
   background: #ffffff;
   padding-bottom: 50px;
 }
-
+ 
 .work-gallery-inner {
   width: 1440px;
   margin: 0 auto;
@@ -293,30 +298,30 @@ body {
   flex-direction: column;
   gap: 18px;
 }
-
+ 
+/* Gallery Rows */
 .gallery-row {
-  display: grid;
+  display: flex;
   gap: 18px;
   width: 100%;
+  align-items: center;
 }
-
-.row-2 {
-  grid-template-columns: 1fr 1fr;
-}
-
+ 
 .row-3 {
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
 }
-
-/* Individual Gallery Item */
+ 
+.row-3 .gallery-item {
+  flex: 1;
+}
+ 
+/* Individual Gallery Item — base */
 .gallery-item {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  width: 100%;
-  aspect-ratio: 4 / 3;
 }
-
+ 
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -324,7 +329,27 @@ body {
   display: block;
   transition: filter 0.3s ease;
 }
-
+ 
+/* Row 1 */
+.img-angelou  { flex: 1; height: 450px; }
+.img-tote     { width: 450px; height: 450px; flex-shrink: 0; }
+ 
+/* Row 2 */
+.img-cookbook { width: 450px; height: 450px; flex-shrink: 0; }
+.img-golden   { flex: 1; height: 450px; }
+ 
+/* Row 3 — uniform */
+.row-3 .gallery-item { height: 450px; flex: 1; }
+ 
+/* Row 4 */
+.img-wine     { width: 450px; height: 450px; flex-shrink: 0; }
+.img-brews    { flex: 1; height: 450px; }
+ 
+/* Row 5 */
+.img-unique   { flex: 1; height: 450px; }
+.img-artspot  { width: 450px; height: 450px; flex-shrink: 0; }
+ 
+/* Overlay — hidden by default */
 .gallery-overlay {
   position: absolute;
   inset: 0;
@@ -334,7 +359,7 @@ body {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
-
+ 
 .gallery-overlay span {
   font-family: 'Alata', sans-serif;
   font-size: 30px;
@@ -344,13 +369,20 @@ body {
   transition: opacity 0.3s ease;
   padding: 0 20px;
 }
-
+ 
+/* Hover state */
 .gallery-item:hover .gallery-overlay {
   background-color: rgba(238, 254, 254, 0.5);
 }
-
+ 
 .gallery-item:hover .gallery-overlay span {
   opacity: 1;
+}
+ 
+/* Gallery link wrapper */
+.gallery-link {
+  display: contents;
+  text-decoration: none;
 }
 
 .about-section {
@@ -417,4 +449,147 @@ body {
 .about-photo-col .btn {
   margin-top: 30px;
   margin-bottom: 0;
+}
+
+/* =============================================
+   CONTACT PAGE STYLES
+   ============================================= */
+
+/* Full bleed background section */
+.contact-page-section {
+  width: 100%;
+  background: #F7EEE3;
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+/* Fixed width inner content, centered */
+.contact-page-inner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 40px 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contact Me title */
+.contact-page-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 48px;
+  color: #07303C;
+  margin-bottom: 75px;
+}
+
+/* Email line */
+.contact-email {
+  font-family: 'Amiko', sans-serif;
+  font-size: 32px;
+  color: #07303C;
+  margin-bottom: 35px;
+}
+
+.contact-email a {
+  color: #07303C;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: #307589;
+  text-decoration: underline;
+}
+
+/* Blurb */
+.contact-blurb {
+  font-family: 'Amiko', sans-serif;
+  font-size: 32px;
+  color: #07303C;
+  margin-bottom: 35px;
+  max-width: 600px;
+  text-align: left;
+  margin-left: 120px;
+}
+
+/* Button spacing */
+.contact-page-inner .btn {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* =============================================
+   CALLIDUS DUST JACKET PAGE
+   ============================================= */
+
+.nav-links a.active {
+  color: #307589;
+  text-decoration: underline;
+}
+
+.dj-section {
+  width: 100%;
+  background: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.dj-inner {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.dj-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: #07303C;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+/* Info block */
+.dj-info {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+.dj-info p {
+  font-family: 'Amiko', sans-serif;
+  font-size: 32px;
+  color: #07303C;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.dj-info .bold {
+  font-weight: 700;
+}
+
+/* Images stacked with 20px gap */
+.dj-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Small left-aligned button */
+.dj-btn {
+  font-size: 32px;
+  padding: 24px 56px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+/* Override shared btn margins */
+.dj-inner .btn {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
