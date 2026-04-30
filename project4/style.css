@@ -261,13 +261,12 @@ body {
 /* =============================================
    WORK PAGE STYLES
    ============================================= */
- 
+
 .nav-links a.active {
   color: #307589;
   text-decoration: underline;
 }
- 
-/* Page Title */
+
 .work-page-title {
   width: 100%;
   background: #ffffff;
@@ -275,21 +274,20 @@ body {
   padding-top: 30px;
   padding-bottom: 0;
 }
- 
+
 .work-page-title h1 {
   font-family: 'Jua', sans-serif;
   font-size: 50px;
   font-weight: 400;
   color: #07303C;
 }
- 
-/* Gallery Section */
+
 .work-gallery {
   width: 100%;
   background: #ffffff;
   padding-bottom: 50px;
 }
- 
+
 .work-gallery-inner {
   width: 1440px;
   margin: 0 auto;
@@ -298,30 +296,28 @@ body {
   flex-direction: column;
   gap: 18px;
 }
- 
-/* Gallery Rows */
+
 .gallery-row {
   display: flex;
   gap: 18px;
   width: 100%;
   align-items: center;
 }
- 
+
 .row-3 {
   align-items: stretch;
 }
- 
+
 .row-3 .gallery-item {
   flex: 1;
 }
- 
-/* Individual Gallery Item — base */
+
 .gallery-item {
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
- 
+
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -329,27 +325,21 @@ body {
   display: block;
   transition: filter 0.3s ease;
 }
- 
-/* Row 1 */
+
 .img-angelou  { flex: 1; height: 450px; }
 .img-tote     { width: 450px; height: 450px; flex-shrink: 0; }
- 
-/* Row 2 */
+
 .img-cookbook { width: 450px; height: 450px; flex-shrink: 0; }
 .img-golden   { flex: 1; height: 450px; }
- 
-/* Row 3 — uniform */
+
 .row-3 .gallery-item { height: 450px; flex: 1; }
- 
-/* Row 4 */
+
 .img-wine     { width: 450px; height: 450px; flex-shrink: 0; }
 .img-brews    { flex: 1; height: 450px; }
- 
-/* Row 5 */
+
 .img-unique   { flex: 1; height: 450px; }
 .img-artspot  { width: 450px; height: 450px; flex-shrink: 0; }
- 
-/* Overlay — hidden by default */
+
 .gallery-overlay {
   position: absolute;
   inset: 0;
@@ -359,7 +349,7 @@ body {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
- 
+
 .gallery-overlay span {
   font-family: 'Alata', sans-serif;
   font-size: 30px;
@@ -369,21 +359,23 @@ body {
   transition: opacity 0.3s ease;
   padding: 0 20px;
 }
- 
-/* Hover state */
+
 .gallery-item:hover .gallery-overlay {
   background-color: rgba(238, 254, 254, 0.5);
 }
- 
+
 .gallery-item:hover .gallery-overlay span {
   opacity: 1;
 }
- 
-/* Gallery link wrapper */
+
 .gallery-link {
   display: contents;
   text-decoration: none;
 }
+
+/* =============================================
+   ABOUT PAGE STYLES
+   ============================================= */
 
 .about-section {
   width: 100%;
@@ -398,7 +390,6 @@ body {
   padding: 20px 50px 40px 50px;
 }
 
-/* Title */
 .about-title {
   font-family: 'Jua', sans-serif;
   font-size: 50px;
@@ -427,7 +418,6 @@ body {
   font-size: 32px;
   color: #07303C;
   line-height: 1.1;
-  
 }
 
 .about-photo-col {
@@ -455,7 +445,6 @@ body {
    CONTACT PAGE STYLES
    ============================================= */
 
-/* Full bleed background section */
 .contact-page-section {
   width: 100%;
   background: #F7EEE3;
@@ -463,7 +452,6 @@ body {
   margin-bottom: 0px;
 }
 
-/* Fixed width inner content, centered */
 .contact-page-inner {
   width: 1440px;
   margin: 0 auto;
@@ -474,7 +462,6 @@ body {
   text-align: center;
 }
 
-/* Contact Me title */
 .contact-page-title {
   font-family: 'Jua', sans-serif;
   font-size: 48px;
@@ -482,7 +469,6 @@ body {
   margin-bottom: 75px;
 }
 
-/* Email line */
 .contact-email {
   font-family: 'Amiko', sans-serif;
   font-size: 32px;
@@ -500,7 +486,6 @@ body {
   text-decoration: underline;
 }
 
-/* Blurb */
 .contact-blurb {
   font-family: 'Amiko', sans-serif;
   font-size: 32px;
@@ -511,7 +496,6 @@ body {
   margin-left: 120px;
 }
 
-/* Button spacing */
 .contact-page-inner .btn {
   margin-top: 0;
   margin-bottom: 50px;
@@ -520,11 +504,6 @@ body {
 /* =============================================
    CALLIDUS DUST JACKET PAGE
    ============================================= */
-
-.nav-links a.active {
-  color: #307589;
-  text-decoration: underline;
-}
 
 .dj-section {
   width: 100%;
@@ -535,12 +514,11 @@ body {
 
 .dj-inner {
   width: 100%;
-  padding: 0 50px;
+  padding: 50px 150px;
   display: flex;
   flex-direction: column;
 }
 
-/* Title */
 .dj-title {
   font-family: 'Jua', sans-serif;
   font-size: 52px;
@@ -551,7 +529,6 @@ body {
   margin-top: 20px;
 }
 
-/* Info block */
 .dj-info {
   display: flex;
   flex-direction: column;
@@ -571,7 +548,6 @@ body {
   font-weight: 700;
 }
 
-/* Images stacked with 20px gap */
 .dj-img {
   width: 100%;
   height: auto;
@@ -579,7 +555,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Small left-aligned button */
 .dj-btn {
   font-size: 32px;
   padding: 24px 56px;
@@ -588,8 +563,74 @@ body {
   align-self: flex-start;
 }
 
-/* Override shared btn margins */
 .dj-inner .btn {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+/* =============================================
+   UNITED BY BLUE PAGE STYLES
+   ============================================= */
+
+.p2-section {
+  width: 100%x;
+  background: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.p2-inner {
+  width: 100%;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p2-title {
+  font-family: 'Jua', sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: #07303C;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+.p2-info {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+.p2-info p {
+  font-family: 'Amiko', sans-serif;
+  font-size: 32px;
+  color: #07303C;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.p2-info .bold {
+  font-weight: 700;
+}
+
+.p2-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.p2-img-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.p2-img-half {
+  flex: 1;
+  width: 50%;
+  height: auto;
+  display: block;
 }
