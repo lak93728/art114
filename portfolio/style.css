@@ -553,6 +553,7 @@ body {
   font-weight: 700;
 }
 
+
 .dj-img {
   width: 100%;
   height: auto;
@@ -1611,7 +1612,7 @@ body {
     height: 50px;
   }
 
-  /* About page */
+  /* about page starts here */
   .about-inner {
     width: 100%;
     padding: 20px 24px 40px;
@@ -1651,7 +1652,7 @@ body {
     margin-top: 40px;
   }
 
-  /* Contact page */
+  /* vontact page starts here*/
   .contact-page-inner {
     width: 100%;
     padding: 30px 24px 40px;
@@ -1677,7 +1678,7 @@ body {
     margin-top: 50px;
   }
 
-  /* Project pages (dj, p2-p11) */
+  /* here are the project ages */
   .dj-inner,
   .p2-inner, .p3-inner, .p4-inner, .p5-inner,
   .p6-inner, .p7-inner, .p8-inner, .p9-inner,
