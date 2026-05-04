@@ -324,6 +324,7 @@ body {
   object-fit: cover;
   display: block;
   transition: filter 0.3s ease;
+  border: 2px solid #d0d0d0;
 }
 
 .img-angelou  { flex: 1; height: 450px; }
@@ -556,6 +557,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .dj-btn {
@@ -626,6 +628,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p2-img-row {
@@ -640,6 +643,7 @@ body {
   width: 50%;
   height: auto;
   display: block;
+  border: 2px solid #d0d0d0;
 }
 
 /* =============================================
@@ -697,6 +701,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p3-img-row {
@@ -704,6 +709,7 @@ body {
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p3-img-half {
@@ -711,6 +717,7 @@ body {
   width: 50%;
   height: auto;
   display: block;
+  border: 2px solid #d0d0d0;
 }
 
 /* =============================================
@@ -768,6 +775,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p4-img-row {
@@ -775,6 +783,7 @@ body {
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p4-img-half {
@@ -782,6 +791,7 @@ body {
   width: 50%;
   height: auto;
   display: block;
+  border: 2px solid #d0d0d0;
 }
 
 .p5-section {
@@ -835,6 +845,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p6-section {
@@ -888,6 +899,7 @@ body {
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p6-img-half {
@@ -957,6 +969,7 @@ body {
   height: auto;
   display: block;
   margin-bottom: 20px;
+  border: 2px solid #d0d0d0;
 }
 
 .p7-bottom-row {
@@ -977,6 +990,7 @@ body {
   height: auto;
   display: block;
   flex: 1;
+  border: 2px solid #d0d0d0;
 }
 
 .p7-single {
@@ -989,6 +1003,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  border: 2px solid #d0d0d0;
 }
 
 .p8-section {
@@ -1263,3 +1278,4 @@ body {
   margin-bottom: 20px;
   border: 2px solid #d0d0d0;
 }
+
