@@ -160,7 +160,7 @@ body {
   background: #307589;
   text-decoration: none;
   border: none;
-  border-radius: 40px;
+  border-radius: 100px;
   padding: 18px 38px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
@@ -440,7 +440,7 @@ body {
 .about-photo-col .btn {
   margin-top: 30px;
   margin-bottom: 0;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 /* =============================================
@@ -568,17 +568,13 @@ body {
   margin-top: 0;
   margin-bottom: 20px;
   align-self: flex-start;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 .dj-inner .btn {
   margin-top: 0;
   margin-bottom: 20px;
 }
-
-/* =============================================
-   UNITED BY BLUE PAGE STYLES
-   ============================================= */
 
 .p2-section {
   width: 100%;
@@ -1130,7 +1126,7 @@ body {
   padding: 24px 56px;
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 .p9-img {
@@ -1205,7 +1201,7 @@ body {
   padding: 24px 56px;
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 .p10-img {
@@ -1271,7 +1267,7 @@ body {
   padding: 24px 56px;
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 40px;
+  border-radius: 100px;
 }
 
 .p11-img {
@@ -1558,7 +1554,7 @@ body {
   .btn {
     font-size: 22px;
     padding: 14px 28px;
-    border-radius: 40px;
+    border-radius: 100px;
   }
 
   /* Contact section */
