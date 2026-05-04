@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Jua&family=Amiko:wght@400;700&family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
@@ -16,17 +16,28 @@
 
     <nav class="navbar">
       <div class="navbar-inner">
-<div class="nav-left">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Logo" class="nav-logo" />
-  </a>
-</div>
+        <div class="nav-left">
+          <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="nav-logo" />
+          </a>
+        </div>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="work.html">Work</a>
           <a href="about.html" class="active">About</a>
           <a href="contact.html">Contact</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
 
@@ -46,7 +57,7 @@
 
           <div class="about-photo-col">
             <img src="images/headshot2.jpg" alt="Lacie Kirby" class="about-photo" />
-            <a href="#" class="btn">View My Resume</a>
+            <a href="https://drive.google.com/file/d/1k32COrN8Pfmjutf_V8nQFeAMVP0QueBB/view?usp=drive_link" class="btn">View My Resume</a>
           </div>
 
         </div>
@@ -54,14 +65,14 @@
       </div>
     </section>
 
-<footer class="footer">
+ <footer class="footer">
       <div class="footer-inner">
         <span class="footer-copy">Copyright &copy; 2026 Lacie Kirby</span>
         <div class="footer-icons">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/laciedesignss/" target="_blank" aria-label="Instagram">
             <img src="images/instagram.png" alt="Instagram" width="63" height="63" />
           </a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/lacie-kirby-4206812a0/" target="_blank" aria-label="LinkedIn">
             <img src="images/linkedin.png" alt="LinkedIn" width="63" height="63" />
           </a>
         </div>
@@ -69,6 +80,8 @@
     </footer>
 
   </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

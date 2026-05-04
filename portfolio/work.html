@@ -8,13 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Jua&family=Amiko:wght@400;700&family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="work.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 
   <div class="page-wrapper">
 
-    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="navbar-inner">
         <div class="nav-left">
@@ -28,141 +27,231 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
 
-    <!-- PAGE TITLE -->
     <section class="work-page-title">
       <h1>My Work</h1>
     </section>
 
-    <!-- WORK GRID -->
-    <section class="work-gallery">
+
+    <!-- DESKTOP GALLERY — hidden on mobile -->
+    <section class="work-gallery desktop-gallery">
       <div class="work-gallery-inner">
 
-        <!-- Row 1: 2 images -->
         <div class="gallery-row row-2">
           <a href="dustjacket.html" class="gallery-link">
             <div class="gallery-item img-angelou">
               <img src="images/angelou.jpg" alt="Maya Angelou" />
-              <div class="gallery-overlay">
-                <span>Callidus Dust Jacket</span>
-              </div>
+              <div class="gallery-overlay"><span>Callidus Dust Jacket</span></div>
             </div>
           </a>
           <a href="project2.html" class="gallery-link">
             <div class="gallery-item img-tote">
               <img src="images/tote.jpg" alt="Tote Bag" />
-              <div class="gallery-overlay">
-                <span>United By Blue</span>
-              </div>
+              <div class="gallery-overlay"><span>United By Blue</span></div>
             </div>
           </a>
         </div>
 
-        <!-- Row 2: 2 images -->
-       <div class="gallery-row row-2">
-  <a href="project3.html" class="gallery-link">
-    <div class="gallery-item img-cookbook">
-      <img src="images/cookbook.jpg" alt="Cookbook" />
-      <div class="gallery-overlay">
-        <span>Fantasy Treats</span>
-      </div>
-    </div>
-  </a>
-          <div class="gallery-item img-golden">
-            <a href="project4.html" class="gallery-link">
-            <img src="images/golden.jpg" alt="Golden" />
-            <div class="gallery-overlay">
-              <span>Type Designer Booklet</span>
-            </div>
-          </div>
-        </div>
-          </a>
-        <!-- Row 3: 3 images -->
-        <div class="gallery-row row-3">
-          <div class="gallery-item img-suntone">
-            <a href="project5.html" class="gallery-link">
-            <img src="images/suntonesocial.jpg" alt="Suntone Social" />
-            <div class="gallery-overlay">
-              <span>Suntone Video Advertisements</span>
-            </div>
-          </div>
-        </a>
-          <div class="gallery-item img-hacc">
-            <a href="project6.html" class="gallery-link">
-            <img src="images/hacclogo.png" alt="HACC Logo" />
-            <div class="gallery-overlay">
-              <span>Level Up with HACC</span>
-            </div>
-          </div>
-        </a>
-          <div class="gallery-item img-suriname">
-            <a href="project7.html" class="gallery-link">
-            <img src="images/suriname.png" alt="Suriname" />
-            <div class="gallery-overlay">
-              <span>Be In the Know</span>
-            </div>
-          </div>
-        </div>
-        </a>
-        <!-- Row 4: 2 images -->
         <div class="gallery-row row-2">
-          <div class="gallery-item img-wine">
-            <a href="project8.html" class="gallery-link">
-            <img src="images/wine.jpg" alt="Wine Design" />
-            <div class="gallery-overlay">
-              <span>Amor Wines</span>
+          <a href="project3.html" class="gallery-link">
+            <div class="gallery-item img-cookbook">
+              <img src="images/cookbook.jpg" alt="Cookbook" />
+              <div class="gallery-overlay"><span>Fantasy Treats</span></div>
             </div>
-          </div>
-        </a>
-          <div class="gallery-item img-brews">
-            <a href="project9.html" class="gallery-link">
-            <img src="images/brews.png" alt="Brews and Bonds" />
-            <div class="gallery-overlay">
-              <span>Brews &amp; Bonds</span>
-            </div>
-          </div>
-        </div>
           </a>
-        <!-- Row 5: 2 images -->
+          <a href="project4.html" class="gallery-link">
+            <div class="gallery-item img-golden">
+              <img src="images/golden.jpg" alt="Golden" />
+              <div class="gallery-overlay"><span>Type Designer Booklet</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-row row-3">
+          <a href="project5.html" class="gallery-link">
+            <div class="gallery-item img-suntone">
+              <img src="images/suntonesocial.jpg" alt="Suntone Social" />
+              <div class="gallery-overlay"><span>Suntone Video Advertisements</span></div>
+            </div>
+          </a>
+          <a href="project6.html" class="gallery-link">
+            <div class="gallery-item img-hacc">
+              <img src="images/hacclogo.png" alt="HACC Logo" />
+              <div class="gallery-overlay"><span>Level Up with HACC</span></div>
+            </div>
+          </a>
+          <a href="project7.html" class="gallery-link">
+            <div class="gallery-item img-suriname">
+              <img src="images/suriname.png" alt="Suriname" />
+              <div class="gallery-overlay"><span>Be In the Know</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-row row-2">
+          <a href="project8.html" class="gallery-link">
+            <div class="gallery-item img-wine">
+              <img src="images/wine.jpg" alt="Wine Design" />
+              <div class="gallery-overlay"><span>Amor Wines</span></div>
+            </div>
+          </a>
+          <a href="project9.html" class="gallery-link">
+            <div class="gallery-item img-brews">
+              <img src="images/brews.png" alt="Brews and Bonds" />
+              <div class="gallery-overlay"><span>Brews &amp; Bonds</span></div>
+            </div>
+          </a>
+        </div>
+
         <div class="gallery-row row-2">
           <a href="project10.html" class="gallery-link">
-          <div class="gallery-item img-unique">
-            <img src="images/unique.png" alt="Unique" />
-            <div class="gallery-overlay">
-              <span>Unique</span>
+            <div class="gallery-item img-unique">
+              <img src="images/unique.png" alt="Unique" />
+              <div class="gallery-overlay"><span>Unique</span></div>
             </div>
-          </div>
-        </a>
-          <div class="gallery-item img-artspot">
-            <a href="project11.html" class="gallery-link">
-            <img src="images/artspot.png" alt="ArtSpot" />
-            <div class="gallery-overlay">
-              <span>ArtSpot</span>
+          </a>
+          <a href="project11.html" class="gallery-link">
+            <div class="gallery-item img-artspot">
+              <img src="images/artspot.png" alt="ArtSpot" />
+              <div class="gallery-overlay"><span>ArtSpot</span></div>
             </div>
-          </div>
+          </a>
         </div>
-      </a>
 
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- MOBILE GALLERY — hidden on desktop, exact layout specified -->
+    <section class="work-gallery mobile-gallery">
+      <div class="mobile-gallery-inner">
+
+        <!-- 1. angelou full width -->
+        <div class="mob-row mob-full">
+          <a href="dustjacket.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/angelou.jpg" alt="Maya Angelou" />
+              <div class="gallery-overlay"><span>Callidus Dust Jacket</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 2. tote + cookbook side by side -->
+        <div class="mob-row mob-half">
+          <a href="project2.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/tote.jpg" alt="Tote Bag" />
+              <div class="gallery-overlay"><span>United By Blue</span></div>
+            </div>
+          </a>
+          <a href="project3.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/cookbook.jpg" alt="Cookbook" />
+              <div class="gallery-overlay"><span>Fantasy Treats</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 3. golden full width -->
+        <div class="mob-row mob-full">
+          <a href="project4.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/golden.jpg" alt="Golden" />
+              <div class="gallery-overlay"><span>Type Designer Booklet</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 4. suntone + hacc side by side -->
+        <div class="mob-row mob-half">
+          <a href="project5.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/suntonesocial.jpg" alt="Suntone Social" />
+              <div class="gallery-overlay"><span>Suntone Video Advertisements</span></div>
+            </div>
+          </a>
+          <a href="project6.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/hacclogo.png" alt="HACC Logo" />
+              <div class="gallery-overlay"><span>Level Up with HACC</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 5. suriname + wine side by side -->
+        <div class="mob-row mob-half">
+          <a href="project7.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/suriname.png" alt="Suriname" />
+              <div class="gallery-overlay"><span>Be In the Know</span></div>
+            </div>
+          </a>
+          <a href="project8.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/wine.jpg" alt="Wine Design" />
+              <div class="gallery-overlay"><span>Amor Wines</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 6. brews full width -->
+        <div class="mob-row mob-full">
+          <a href="project9.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/brews.png" alt="Brews and Bonds" />
+              <div class="gallery-overlay"><span>Brews &amp; Bonds</span></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- 7. unique + artspot side by side -->
+        <div class="mob-row mob-half">
+          <a href="project10.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/unique.png" alt="Unique" />
+              <div class="gallery-overlay"><span>Unique</span></div>
+            </div>
+          </a>
+          <a href="project11.html" class="gallery-link">
+            <div class="gallery-item">
+              <img src="images/artspot.png" alt="ArtSpot" />
+              <div class="gallery-overlay"><span>ArtSpot</span></div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+ <footer class="footer">
       <div class="footer-inner">
         <span class="footer-copy">Copyright &copy; 2026 Lacie Kirby</span>
         <div class="footer-icons">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/laciedesignss/" target="_blank" aria-label="Instagram">
             <img src="images/instagram.png" alt="Instagram" width="63" height="63" />
           </a>
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/lacie-kirby-4206812a0/" target="_blank" aria-label="LinkedIn">
             <img src="images/linkedin.png" alt="LinkedIn" width="63" height="63" />
           </a>
         </div>
       </div>
     </footer>
 
-  </div><!-- end .page-wrapper -->
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
