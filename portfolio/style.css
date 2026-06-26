@@ -258,10 +258,6 @@ body {
   opacity: 0.75;
 }
 
-/* =============================================
-   WORK PAGE STYLES
-   ============================================= */
-
 .nav-links a.active {
   color: #307589;
   text-decoration: underline;
@@ -374,10 +370,6 @@ body {
   text-decoration: none;
 }
 
-/* =============================================
-   ABOUT PAGE STYLES
-   ============================================= */
-
 .about-section {
   width: 100%;
   background: #F7EEE3;
@@ -443,10 +435,6 @@ body {
   border-radius: 100px;
 }
 
-/* =============================================
-   CONTACT PAGE STYLES
-   ============================================= */
-
 .contact-page-section {
   width: 100%;
   background: #F7EEE3;
@@ -502,10 +490,6 @@ body {
   margin-top: 0;
   margin-bottom: 50px;
 }
-
-/* =============================================
-   CALLIDUS DUST JACKET PAGE
-   ============================================= */
 
 .dj-section {
   width: 100%;
@@ -645,10 +629,6 @@ body {
   border: 2px solid #d0d0d0;
 }
 
-/* =============================================
-   FANTASY TREATS PAGE STYLES
-   ============================================= */
-
 .p3-section {
   width: 100%;
   background: #ffffff;
@@ -717,10 +697,6 @@ body {
   display: block;
   border: 2px solid #d0d0d0;
 }
-
-/* =============================================
-   TYPE DESIGNER BOOKLET PAGE STYLES
-   ============================================= */
 
 .p4-section {
   width: 100%;
@@ -1278,10 +1254,6 @@ body {
   border: 2px solid #d0d0d0;
 }
 
-/* =============================================
-   HAMBURGER MENU
-   ============================================= */
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -1367,10 +1339,6 @@ body {
   display: none;
 }
 
-/* =============================================
-   MOBILE GALLERY LAYOUT
-   ============================================= */
-
 .mobile-gallery-inner {
   display: flex;
   flex-direction: column;
@@ -1453,10 +1421,6 @@ body {
   opacity: 1;
 }
 
-/* =============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================= */
-
 @media (max-width: 900px) {
 
   /* Navbar */
@@ -1486,7 +1450,6 @@ body {
     top: 100px;
   }
 
-  /* Swap gallery visibility */
   .desktop-gallery {
     display: none;
   }
@@ -1495,12 +1458,10 @@ body {
     display: block;
   }
 
-  /* Work page title */
   .work-page-title h1 {
     font-size: 34px;
   }
 
-  /* Hero */
   .hero-inner {
     width: 100%;
     flex-direction: column;
@@ -1529,7 +1490,6 @@ body {
     margin-top: 24px;
   }
 
-  /* Home work section */
   .work-inner {
     width: 100%;
     padding: 30px 20px;
@@ -1557,7 +1517,6 @@ body {
     border-radius: 100px;
   }
 
-  /* Contact section */
   .contact-section {
     margin-top: 50px;
   }
@@ -1575,7 +1534,6 @@ body {
     font-size: 22px;
   }
 
-  /* Footer */
   .footer {
     height: auto;
     padding: 30px 24px;
